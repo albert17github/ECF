@@ -1,0 +1,2567 @@
+{
+  "stable_upstream": "https://github.com/iNavFlight/inav",
+  "stable_commit": "e519b69b02e27c8bdc03b4a0889f1baaae211a54",
+  "stable_tag": "9.1.0",
+  "can_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+  "unchanged_retained_upstream_files": 3320,
+  "modified_retained_files": [
+    {
+      "path": "cmake/arm-none-eabi-checks.cmake",
+      "baseline_git_blob": "a379f559213a4d0b2294179a6fdfc87da2662665",
+      "sha256": "a93b0efdc4bb266e227c65ee1495e3d3b1af6be389534ed8c8960e08d8da7333"
+    },
+    {
+      "path": "cmake/at32.cmake",
+      "baseline_git_blob": "bd6f1e28196176d96eaff0b6e9aa1633e20202c5",
+      "sha256": "32c9669f310b244984b67486cb0f4f898f076504a274dbd6559179236b4af82b"
+    },
+    {
+      "path": "cmake/settings.cmake",
+      "baseline_git_blob": "979b5e17220bdd7dec8f2f8ced171b41843ae6be",
+      "sha256": "b5c33c2254433b42fc09f4ca77c1df038fd78e4f61146b918ac8b226ae6c463d"
+    },
+    {
+      "path": "cmake/stm32.cmake",
+      "baseline_git_blob": "1954093e9b9768ea1b0887797eb1e10bbc30731d",
+      "sha256": "75ae325fa2f18e6c02775853b567d82f2a532e855efebabcfd04fdbbd132819a"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "baseline_git_blob": "24a0fe83ca0f1042cb72426f6bc821ba95cb7310",
+      "sha256": "bf63743813a27a571642cebb0c0a4170a6554e2453b397b45a1dec4c849b7056"
+    },
+    {
+      "path": "docs/Settings.md",
+      "baseline_git_blob": "3d7351dc3719690ea71e8a7321a3d3353910b2e3",
+      "sha256": "09066586fedae33a9fa6833b292936efda98a0d3b3ed44d31bae76d4003121c8"
+    },
+    {
+      "path": "src/main/CMakeLists.txt",
+      "baseline_git_blob": "c243d9215f3e30e3ba17123e66b468636a57f24b",
+      "sha256": "647b4287768d3e2e51ab1df2e600d9f2088643526a84d8cd704146639031fd85"
+    },
+    {
+      "path": "src/main/common/log.h",
+      "baseline_git_blob": "bc6795e5dd9f3cd5e0e2daee8e8efaee0087b107",
+      "sha256": "016569a577ac1605906b4c212be6e3084d879509309cd8b5e654b9f909a5b0c0"
+    },
+    {
+      "path": "src/main/config/config_eeprom.h",
+      "baseline_git_blob": "4475caa645adaef70c76b641273fc689a98e0baa",
+      "sha256": "20db82ba0b2c1b1bcf7b8f11a446f8e0635f80bdc337cc7993ccb1085328e22f"
+    },
+    {
+      "path": "src/main/config/parameter_group_ids.h",
+      "baseline_git_blob": "2acb9c8172e81d63f2ff0ae244b1bf68b8e1dd8b",
+      "sha256": "c5f9bc771c6229e0f050e21a041ee1766711c91fb4e0db1956fb115de6c047e9"
+    },
+    {
+      "path": "src/main/drivers/bus.h",
+      "baseline_git_blob": "385fbd36c0e8e047b2dabc989762a48b88606ee8",
+      "sha256": "cd96f2f47e7f68fc3afaeeba1712dc2941ea1ec4c31a9a8375c29f737bc2ebe3"
+    },
+    {
+      "path": "src/main/drivers/bus_i2c_hal.c",
+      "baseline_git_blob": "3b1459ab1fb1a9cf37343c9ff0fb09081de20d93",
+      "sha256": "c538c15f00f3d3c7f661c50bf0c4f254a9e7965beaf11f447977c3edf946e384"
+    },
+    {
+      "path": "src/main/drivers/light_ws2811strip.c",
+      "baseline_git_blob": "fe5f405d032ddf2f4e0f75a247f45184ce79b970",
+      "sha256": "f8671ecd2b6bfb616555046ad1e9dc078cd532adc2342bf0eb9c8a2183ff4916"
+    },
+    {
+      "path": "src/main/drivers/light_ws2811strip.h",
+      "baseline_git_blob": "94c36445ec7532cb2868e3e6cae2c51cad2d9d8f",
+      "sha256": "47e553c1302acae1488fa6ef2fbc9175a46a61f8c2b1f0d554c5ca5636a75cb7"
+    },
+    {
+      "path": "src/main/drivers/nvic.h",
+      "baseline_git_blob": "cb484937d3dd533cbb1f86d9e8d4b272a9d6f36d",
+      "sha256": "073d37a62c8b539a80b95b201d704dc76dafab38e97fa69eb4a198673ef27937"
+    },
+    {
+      "path": "src/main/drivers/resource.c",
+      "baseline_git_blob": "20619135236b80c1ef41fc1ef393112264c570f1",
+      "sha256": "aae339201ccc7823019b10aea9e553376da8813ff4b4f5867605af507788ae29"
+    },
+    {
+      "path": "src/main/drivers/resource.h",
+      "baseline_git_blob": "be092ac209c0421fdba2992d7c1f595b98256d01",
+      "sha256": "8bd699048ea1219c3c9e6bdce0bcc50e5cd1e02d478a4b4e601a252cc5f1d216"
+    },
+    {
+      "path": "src/main/drivers/sdcard/sdmmc_sdio_hal.c",
+      "baseline_git_blob": "a0813bd35d83752dcfe80089a238f4cb0d109c5b",
+      "sha256": "813713da9768eaacb3e66064d6e3a3f2ae12706dd235d883f294582c1d58c9da"
+    },
+    {
+      "path": "src/main/drivers/timer_def.h",
+      "baseline_git_blob": "c5cdc820301a8726901702940258c55a76767cb1",
+      "sha256": "3e5750c3a34dcabae68dcebbdbc9f398bcfdd74dd03ec85f998f62ee217f24e7"
+    },
+    {
+      "path": "src/main/drivers/usb_io.c",
+      "baseline_git_blob": "b2f4157eeb930120ef689a29b12cb2ea512b94f6",
+      "sha256": "04b2c71c92513396ab5ec5b26a73a27d0c9e7834cbc2ed7ae91745e02a6fe934"
+    },
+    {
+      "path": "src/main/drivers/usb_msc_h7xx.c",
+      "baseline_git_blob": "396a5951ba8e08eacbd38f7fb53757006a968983",
+      "sha256": "67198431451cc9e2134c98af21758bac1c3eee3cb02b6d1d4df89387c740f733"
+    },
+    {
+      "path": "src/main/fc/cli.c",
+      "baseline_git_blob": "9bb2c776883aa93e4222112c1e77b2a7c23761c4",
+      "sha256": "d9dea7b9b8f801aa6e13bd1d59b7cd8f967959bc58112d8fd58d9905f46459b6"
+    },
+    {
+      "path": "src/main/fc/config.c",
+      "baseline_git_blob": "d3021317ae56ae21a2b74a0897efc7d45136d252",
+      "sha256": "a2c7ff307a0ab0f6b33f6a22b546e45197ed11941dab397c9731692996a69ac8"
+    },
+    {
+      "path": "src/main/fc/fc_core.c",
+      "baseline_git_blob": "3223aca497ee66949ba6ef4a2c21022adc5d48b0",
+      "sha256": "20445079fe47ca5b3542290064d0cc821f4240dca84c700470a9d45b51d5d269"
+    },
+    {
+      "path": "src/main/fc/fc_init.c",
+      "baseline_git_blob": "a8ca6c0c199d1dc96df9fed62a720fab77b25159",
+      "sha256": "51002a58fcbb14e83c1e3601fae0f0740e47ba5547593f4b7a24c962236a6474"
+    },
+    {
+      "path": "src/main/fc/fc_msp.c",
+      "baseline_git_blob": "3ec3f89f3f085c5642ef538a5c7b4eb9e548ad6d",
+      "sha256": "92ff06ec51ddc80b972cd36e232440b2cee94bdd97edf5dcee76fb2a87a6c1e3"
+    },
+    {
+      "path": "src/main/fc/fc_tasks.c",
+      "baseline_git_blob": "4ca125d5c6afd28095f92cc45b3a97cce317b8c9",
+      "sha256": "4ecbc23206bfa7e9e254ec90a3f4a8542cdbaa84224a9ff5b46f9e0e0d6612bb"
+    },
+    {
+      "path": "src/main/fc/runtime_config.c",
+      "baseline_git_blob": "325ce862ce6c0fdaa8dca0d6934a313b749a0c56",
+      "sha256": "e0058722e0ab1e0f2d5ad7a3795e514978f3ea17681650427dffa8cf784e6d9f"
+    },
+    {
+      "path": "src/main/fc/runtime_config.h",
+      "baseline_git_blob": "faec9fdef15c2608e0ea4fcb269aa23084a1435a",
+      "sha256": "0f552434347d18ec1c595c9bf616aac215e520bd0b10c409432db49eeff30310"
+    },
+    {
+      "path": "src/main/fc/settings.yaml",
+      "baseline_git_blob": "4e8affb0221fedd30ab9b51fa4d185c8bdb168af",
+      "sha256": "78589a37b6df2b125fac9f532b2de60ebf3a7d9ab9b8f5c5650dd0563fab9c39"
+    },
+    {
+      "path": "src/main/io/asyncfatfs/asyncfatfs.c",
+      "baseline_git_blob": "d06fc2b8a76377bbb8abf781d697c6fb877e6edc",
+      "sha256": "4aa1af84697304b8bbb35e216456d1067d387590f642053584f894b9046a1604"
+    },
+    {
+      "path": "src/main/io/asyncfatfs/asyncfatfs.h",
+      "baseline_git_blob": "521bd48fba7ae300a7b71c04d8a8cb96863e2c08",
+      "sha256": "3a4972f963b9a379698a4a3944392010617b1ae9b275074ea39960b5a03f2189"
+    },
+    {
+      "path": "src/main/io/gps.c",
+      "baseline_git_blob": "41901e1e2093ae6bb731e3406c7e72d2216f34f0",
+      "sha256": "ae178ec1afac3297ec6a551fbcffbc303b257e61035782efa91dbc0cae90dec0"
+    },
+    {
+      "path": "src/main/io/gps.h",
+      "baseline_git_blob": "c14db4a76307ca7e06b84aef29ce6a8cdb901f79",
+      "sha256": "bbec406316064d6a08393a516a84291d4946f8c8b3d907542fcca07fa6c0bbf5"
+    },
+    {
+      "path": "src/main/io/gps_private.h",
+      "baseline_git_blob": "bad8992ce4542e4cdb4879a6dff421352c9ddf04",
+      "sha256": "9de09ddf8eb218203a5be69130d348e4bbf6034aee8ef71619a96f38f198ce97"
+    },
+    {
+      "path": "src/main/io/osd.c",
+      "baseline_git_blob": "aa0a01ce71bd1c169ee21e8cc1ae81c06d272523",
+      "sha256": "04b7ffebe7b60ccb1fa7b2656c17a7880c075ef65fd04a9881cfa5932a79d46c"
+    },
+    {
+      "path": "src/main/io/osd_dji_hd.c",
+      "baseline_git_blob": "a8adf663d577cd5a29293b472911b52b3aad4a3f",
+      "sha256": "d99bbd5454c6bed80094fb3547ed49b322aa8d4ed4f11f3db2e70880d3ffabd6"
+    },
+    {
+      "path": "src/main/io/serial.c",
+      "baseline_git_blob": "d88f071e7cd7bf9356929472002e03f46375e03b",
+      "sha256": "45578ba4eabedb0a482825f212dcbfc6ae22ec979b3ba310d6c05cb9b98291a8"
+    },
+    {
+      "path": "src/main/msp/msp_protocol_v2_inav.h",
+      "baseline_git_blob": "e50115d99ed3c844ac52d4d00050d7724e5b1713",
+      "sha256": "82083390ef55842b307b75ea117abd423cf6ad05a41078b6dae1f283ddd13235"
+    },
+    {
+      "path": "src/main/scheduler/scheduler.h",
+      "baseline_git_blob": "5d38a6dba5997d0c4c3226ee0df56d3f98184584",
+      "sha256": "f72320b42e813b48b146b31be9b7c89f2cae77b2c5384dd2fc6966a8a0b00210"
+    },
+    {
+      "path": "src/main/sensors/barometer.c",
+      "baseline_git_blob": "a9c2d8441dcf81a61fb3a0a2ed118c7c0abcfbde",
+      "sha256": "8bd380433193c457b9b24706e25fe2508d48e14cac8efdf8f652100127ce50b7"
+    },
+    {
+      "path": "src/main/sensors/barometer.h",
+      "baseline_git_blob": "0e8e918d70f98fb543ceffd12641c08dfc2ca50b",
+      "sha256": "3375db07746d8d4ac033d79b8ebec7e314cd877c9c7ea1673b167570f81492b9"
+    },
+    {
+      "path": "src/main/sensors/battery.c",
+      "baseline_git_blob": "e2e23cf21d43395c9b3e74598a4ead9b3706dec4",
+      "sha256": "72a1712b72ac48ce07946c1133623c228debfc92c8872346b17f4ff630667889"
+    },
+    {
+      "path": "src/main/sensors/battery_config_structs.h",
+      "baseline_git_blob": "7c4157cb4c0dbf6ada36d601728535963aad181c",
+      "sha256": "b89ecabf090f99c84c08f8d2d3e432b3ed6165d0f4a35c9598fad83754af0540"
+    },
+    {
+      "path": "src/main/sensors/compass.c",
+      "baseline_git_blob": "4e87b944168e25597fbf60a997c7a85ca5f6018e",
+      "sha256": "7246aee04be5836b682f08a93d66f430d7023f72f3bd3145304d534cc2d9002e"
+    },
+    {
+      "path": "src/main/sensors/compass.h",
+      "baseline_git_blob": "17930678f5827b523c2e32a163de51d199207a76",
+      "sha256": "41409e26598d5f7bd1b9263c44e3df4fe075e65980f600d9ee8233f19d4561ab"
+    },
+    {
+      "path": "src/main/target/CMakeLists.txt",
+      "baseline_git_blob": "65f9a19c489c9b69278a9e47bbe8289a18b81a79",
+      "sha256": "e12f848a835f79e0d0ad29a1db6103aaab42fc94ad5b3cc1757a4fa43b8f9ef8"
+    },
+    {
+      "path": "src/main/target/common_hardware.c",
+      "baseline_git_blob": "8314926184f86ee19b4e4b294a726bc6f3d4d14c",
+      "sha256": "c27067f4bb35075bb64a40cece763d3232a25ec6d6c83e8c5ff19283b5956e4f"
+    },
+    {
+      "path": "src/main/target/system_stm32h7xx.c",
+      "baseline_git_blob": "56a53cefcfbb2ca0b0be41ce32d921f918557618",
+      "sha256": "89290c16d523bab6cc998711245409cb4cee3ee99ca5a6f50797e533711e565f"
+    },
+    {
+      "path": "src/utils/compiler.rb",
+      "baseline_git_blob": "fe2868acd1501e9fb28dedd5706147f5e6eeb72d",
+      "sha256": "8c4725b656d4a41bb7b7666ca27191a3ad17ebe3aa8a859530705781fe971084"
+    }
+  ],
+  "added_files": [
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/dronecan.protocol.CanStats.h",
+      "sha256": "93b1726916534bba5649a2c09f7d9f5180fa392c1870ab8cc68fa9c9c9db87aa",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "93b1726916534bba5649a2c09f7d9f5180fa392c1870ab8cc68fa9c9c9db87aa",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/dronecan.protocol.FlexDebug.h",
+      "sha256": "388ffd67c9048ec2fe8d041984954c6872d4d0eb00401ba701e3ceeb73939b8a",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "388ffd67c9048ec2fe8d041984954c6872d4d0eb00401ba701e3ceeb73939b8a",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/dronecan.protocol.GlobalTime.h",
+      "sha256": "1371c49fb9c85ac5702569e04451dfa0a59a78c22026d79c6c316d152d3132ab",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "1371c49fb9c85ac5702569e04451dfa0a59a78c22026d79c6c316d152d3132ab",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/dronecan.protocol.Stats.h",
+      "sha256": "be98b085b9395811e616b28680300cb1a0f8a8c148d8121351d8c1559496772a",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "be98b085b9395811e616b28680300cb1a0f8a8c148d8121351d8c1559496772a",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/dronecan.remoteid.ArmStatus.h",
+      "sha256": "3f61c9021a7cd49ee2870b4fbe4674e93935015179b00dd4126eea001b9866fb",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "3f61c9021a7cd49ee2870b4fbe4674e93935015179b00dd4126eea001b9866fb",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/dronecan.remoteid.BasicID.h",
+      "sha256": "3ef7438be97e2940241afd94301927ac4209d313dbbe5d681823bff971a2b065",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "3ef7438be97e2940241afd94301927ac4209d313dbbe5d681823bff971a2b065",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/dronecan.remoteid.Location.h",
+      "sha256": "683a8426c6b4ee45d13d1326e60c75f88e1da21e396bdd2d1f41dd7a5b2ec6e9",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "683a8426c6b4ee45d13d1326e60c75f88e1da21e396bdd2d1f41dd7a5b2ec6e9",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/dronecan.remoteid.OperatorID.h",
+      "sha256": "827ba70fbc9a5dfc0ad0284c1174f86cfbb1f4bcd72b8357be73b7370e58c44f",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "827ba70fbc9a5dfc0ad0284c1174f86cfbb1f4bcd72b8357be73b7370e58c44f",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/dronecan.remoteid.SecureCommand.h",
+      "sha256": "76607ae8b36ea7190ea2d87263facaaa63b1e801c280c7cdf97500eb27f78e2c",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "76607ae8b36ea7190ea2d87263facaaa63b1e801c280c7cdf97500eb27f78e2c",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/dronecan.remoteid.SecureCommand_req.h",
+      "sha256": "6820c63c744a46eda559ae0244bae72f3750cc98cc05520fcfbb5b2cbf8c526a",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "6820c63c744a46eda559ae0244bae72f3750cc98cc05520fcfbb5b2cbf8c526a",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/dronecan.remoteid.SecureCommand_res.h",
+      "sha256": "32e347e9a7b1d8f64ef0ea0f24388620649e54dcd6e424d0b8bd75e121f16fdb",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "32e347e9a7b1d8f64ef0ea0f24388620649e54dcd6e424d0b8bd75e121f16fdb",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/dronecan.remoteid.SelfID.h",
+      "sha256": "639b7f2721eefd5f022b3bedcef2542f2340a4c66253c668ccbe0be51f519cb2",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "639b7f2721eefd5f022b3bedcef2542f2340a4c66253c668ccbe0be51f519cb2",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/dronecan.remoteid.System.h",
+      "sha256": "4e5fb4183fecc26743e66168d9b9a1535cdd1fe278bc71b4fdee7eb2636634ad",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "4e5fb4183fecc26743e66168d9b9a1535cdd1fe278bc71b4fdee7eb2636634ad",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/dronecan.sensors.hygrometer.Hygrometer.h",
+      "sha256": "ce59ba33d758362bd2264c17412169d65dbe543e0677316542cc16c267c2be87",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "ce59ba33d758362bd2264c17412169d65dbe543e0677316542cc16c267c2be87",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/dronecan.sensors.magnetometer.MagneticFieldStrengthHiRes.h",
+      "sha256": "8bbb94adc75ff29bfdf1c29963b87358a6b3f0ee3179e75bf3fd7ee6c4bb6809",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "8bbb94adc75ff29bfdf1c29963b87358a6b3f0ee3179e75bf3fd7ee6c4bb6809",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/dronecan.sensors.rc.RCInput.h",
+      "sha256": "8ab649a06f8d7daf26c2ef80bb5c273daffa87de5e9c715c622f5c199e7e39ec",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "8ab649a06f8d7daf26c2ef80bb5c273daffa87de5e9c715c622f5c199e7e39ec",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/dronecan.sensors.rpm.RPM.h",
+      "sha256": "17732487493f68c8a0c1058d08d93e1f0a996a75228dc11a76a87bf2e8a1d32f",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "17732487493f68c8a0c1058d08d93e1f0a996a75228dc11a76a87bf2e8a1d32f",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/dronecan_msgs.h",
+      "sha256": "46f239a9c65d05a788653067ed389d26fe5f63b6893659267337136be81313d2",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "46f239a9c65d05a788653067ed389d26fe5f63b6893659267337136be81313d2",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.CoarseOrientation.h",
+      "sha256": "5b84c5cf7b211f1dfb59525aa57e6095ee9b33c8dad13d8dc0b7551046628431",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "5b84c5cf7b211f1dfb59525aa57e6095ee9b33c8dad13d8dc0b7551046628431",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.Timestamp.h",
+      "sha256": "d7428f262a744b0eaa60bdc8b7205ec29cb206a37efdd2efd66b7950fcfff1ca",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "d7428f262a744b0eaa60bdc8b7205ec29cb206a37efdd2efd66b7950fcfff1ca",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.actuator.ArrayCommand.h",
+      "sha256": "f3b8fdd278f59abfd6c719c92b52aebc88361b933defb2aa5dec3fb6038f194d",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "f3b8fdd278f59abfd6c719c92b52aebc88361b933defb2aa5dec3fb6038f194d",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.actuator.Command.h",
+      "sha256": "849cdac9ebdb66e6c2386948dbf19fb6d30fc94d14c94132b0acbb8ae9e83aad",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "849cdac9ebdb66e6c2386948dbf19fb6d30fc94d14c94132b0acbb8ae9e83aad",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.actuator.Status.h",
+      "sha256": "8e00991fbc8aa581a23b61ae60318e3a02aae540a4c04f66a04f2df49ef12bcb",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "8e00991fbc8aa581a23b61ae60318e3a02aae540a4c04f66a04f2df49ef12bcb",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.ahrs.MagneticFieldStrength.h",
+      "sha256": "1066c308bec660f0aaa2a7933b4d8f411cbf218b584a46d2e98ceff539dc345a",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "1066c308bec660f0aaa2a7933b4d8f411cbf218b584a46d2e98ceff539dc345a",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.ahrs.MagneticFieldStrength2.h",
+      "sha256": "b237935caba228cbd4a09897fd2ce2b4ab71f9731491062c4b0db570bdcac1e1",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "b237935caba228cbd4a09897fd2ce2b4ab71f9731491062c4b0db570bdcac1e1",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.ahrs.RawIMU.h",
+      "sha256": "0f056900d51be99ee68e70c0723b84a4181da1774d8707902d18aa50e14fabec",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "0f056900d51be99ee68e70c0723b84a4181da1774d8707902d18aa50e14fabec",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.ahrs.Solution.h",
+      "sha256": "9e9aca84d481a5ce713a747dde42ab255fd3fe79cb00b718b6ebce2d22507b7c",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "9e9aca84d481a5ce713a747dde42ab255fd3fe79cb00b718b6ebce2d22507b7c",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.air_data.AngleOfAttack.h",
+      "sha256": "41a68abb93894f98443af7eba0f268bc07e03ff0d64505e8fc6c40ed0059d7e6",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "41a68abb93894f98443af7eba0f268bc07e03ff0d64505e8fc6c40ed0059d7e6",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.air_data.IndicatedAirspeed.h",
+      "sha256": "ff5c8828f24b181bd527d4ec3542282f7b38a9fe2be8b0deb40a35641464255c",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "ff5c8828f24b181bd527d4ec3542282f7b38a9fe2be8b0deb40a35641464255c",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.air_data.RawAirData.h",
+      "sha256": "b1282802d2c7db5568e49f910957fdccdb5d67c5bf1f68e92d28fad796ea2812",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "b1282802d2c7db5568e49f910957fdccdb5d67c5bf1f68e92d28fad796ea2812",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.air_data.Sideslip.h",
+      "sha256": "83af26c45ebcc9a107c7c1edac3b685d7c15338aab3fcef837b77564c8f47342",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "83af26c45ebcc9a107c7c1edac3b685d7c15338aab3fcef837b77564c8f47342",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.air_data.StaticPressure.h",
+      "sha256": "15db36f1852f9e568c6b7c019aebac0f5913dfff0968a11f7dab04d4ba83fee7",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "15db36f1852f9e568c6b7c019aebac0f5913dfff0968a11f7dab04d4ba83fee7",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.air_data.StaticTemperature.h",
+      "sha256": "9484724d533b16c6f9577ebdcb08e34d962c8d5fc08f34586a2145fb6adbc71f",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "9484724d533b16c6f9577ebdcb08e34d962c8d5fc08f34586a2145fb6adbc71f",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.air_data.TrueAirspeed.h",
+      "sha256": "2f51252daae73d5eb3c4ba9c2835881cd725263e1e9b293612cf1e9d3926a6ef",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "2f51252daae73d5eb3c4ba9c2835881cd725263e1e9b293612cf1e9d3926a6ef",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.camera_gimbal.AngularCommand.h",
+      "sha256": "ee60919d5b9f27e8811b8a3aea5e202ce5ec11bd1ba2b4aabcc64f7561f1e442",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "ee60919d5b9f27e8811b8a3aea5e202ce5ec11bd1ba2b4aabcc64f7561f1e442",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.camera_gimbal.GEOPOICommand.h",
+      "sha256": "bce431222cbfe7a5da5f59f07d3c5febd663be1842ca3d7df6f0f51ca302e8aa",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "bce431222cbfe7a5da5f59f07d3c5febd663be1842ca3d7df6f0f51ca302e8aa",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.camera_gimbal.Mode.h",
+      "sha256": "f0e17b9a101165393e058ddeeea7e5cea81c2db7c869d3c8b76bfe60306a1468",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "f0e17b9a101165393e058ddeeea7e5cea81c2db7c869d3c8b76bfe60306a1468",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.camera_gimbal.Status.h",
+      "sha256": "bd21609107eb3926e3a43539ecba0765de83a8884cb4a51cae1bedab8cfc0d18",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "bd21609107eb3926e3a43539ecba0765de83a8884cb4a51cae1bedab8cfc0d18",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.device.Temperature.h",
+      "sha256": "e116c447e6e3aa044e682d18ddd7dc37f6c0417b85835273f629fce938aabb35",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "e116c447e6e3aa044e682d18ddd7dc37f6c0417b85835273f629fce938aabb35",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.esc.RPMCommand.h",
+      "sha256": "bbdeb0d3cdc89314aa3a2169a5358611cf58d1a11632056eebee7633d45c8754",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "bbdeb0d3cdc89314aa3a2169a5358611cf58d1a11632056eebee7633d45c8754",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.esc.RawCommand.h",
+      "sha256": "2b4eefc2aeac48a6af71996c67747e5e41636299a8ad7a6ef0140beacfbdd27b",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "2b4eefc2aeac48a6af71996c67747e5e41636299a8ad7a6ef0140beacfbdd27b",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.esc.Status.h",
+      "sha256": "8fd7d4196084e5ab03f1f174e50a017fd9a942f858c609aac45a55ab60f7aca3",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "8fd7d4196084e5ab03f1f174e50a017fd9a942f858c609aac45a55ab60f7aca3",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.esc.StatusExtended.h",
+      "sha256": "7d2eb10ac4f6f2b9d5902ec5fa47aaec889ef7675b52ac642609c6f01113e78f",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "7d2eb10ac4f6f2b9d5902ec5fa47aaec889ef7675b52ac642609c6f01113e78f",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.gnss.Auxiliary.h",
+      "sha256": "49f27679a745ec86609865e2547f130269c2039e3259b53de2ec25d011e27eef",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "49f27679a745ec86609865e2547f130269c2039e3259b53de2ec25d011e27eef",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.gnss.ECEFPositionVelocity.h",
+      "sha256": "d15e062a0b39eca6c8aef4e438f0e4c3c221ea0e9b4d84bd364926bfe32fc122",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "d15e062a0b39eca6c8aef4e438f0e4c3c221ea0e9b4d84bd364926bfe32fc122",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.gnss.Fix.h",
+      "sha256": "f8ac4c5e8203a7e1303365256462eb3be6f8a013c6f094ab2bbf252df68c9c3d",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "f8ac4c5e8203a7e1303365256462eb3be6f8a013c6f094ab2bbf252df68c9c3d",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.gnss.Fix2.h",
+      "sha256": "38ddeb2d5d5cdb5874099fab6273fe6ee8e15246b247a01b9939bcc0ed05ff94",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "38ddeb2d5d5cdb5874099fab6273fe6ee8e15246b247a01b9939bcc0ed05ff94",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.gnss.RTCMStream.h",
+      "sha256": "077c1cf08eaf33aa4f9683ee5a403ed8d5af5b17f7f6b7f0b11f92d386d38579",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "077c1cf08eaf33aa4f9683ee5a403ed8d5af5b17f7f6b7f0b11f92d386d38579",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.hardpoint.Command.h",
+      "sha256": "60b6009d793a6ee2fb0d238a919c2e553693c9a497b2407b0277b1e797ce8bf8",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "60b6009d793a6ee2fb0d238a919c2e553693c9a497b2407b0277b1e797ce8bf8",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.hardpoint.Status.h",
+      "sha256": "6ebca982885fdba82dcff6c3e01f6b9eeb3e3c5f8ac019e8e060ffcc755481df",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "6ebca982885fdba82dcff6c3e01f6b9eeb3e3c5f8ac019e8e060ffcc755481df",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.ice.FuelTankStatus.h",
+      "sha256": "33496d507e60cd3f62a7181d332ba878fb671d7d15fd02d43c81ca063c153c8c",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "33496d507e60cd3f62a7181d332ba878fb671d7d15fd02d43c81ca063c153c8c",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.ice.reciprocating.CylinderStatus.h",
+      "sha256": "1eea87a4fcda89d32bba57f5b529533e1b5087114f8b409b395ec0fff549069f",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "1eea87a4fcda89d32bba57f5b529533e1b5087114f8b409b395ec0fff549069f",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.ice.reciprocating.Status.h",
+      "sha256": "569f1bb53ab0f8c8343a0a4b1f0db0be57bf3c23a3079ae5d7712d687ce70053",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "569f1bb53ab0f8c8343a0a4b1f0db0be57bf3c23a3079ae5d7712d687ce70053",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.indication.BeepCommand.h",
+      "sha256": "0be6edd0bbc66fcc6bd9fc43e71d0621c6d7b4323b38901a37b86df92ba99f3e",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "0be6edd0bbc66fcc6bd9fc43e71d0621c6d7b4323b38901a37b86df92ba99f3e",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.indication.LightsCommand.h",
+      "sha256": "2195ba6b0628c25c28911a42c603304d52d409986cd40e476c50ba6e09b8ec91",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "2195ba6b0628c25c28911a42c603304d52d409986cd40e476c50ba6e09b8ec91",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.indication.RGB565.h",
+      "sha256": "8fdea128b484f937d8d16ddaa9b073f6e044c501e5f1831c3f877a47deb48c3d",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "8fdea128b484f937d8d16ddaa9b073f6e044c501e5f1831c3f877a47deb48c3d",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.indication.SingleLightCommand.h",
+      "sha256": "790a3fd194afbbff03c3c07b527d2724ac74da08b91d7a68b6173f96b0fe074c",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "790a3fd194afbbff03c3c07b527d2724ac74da08b91d7a68b6173f96b0fe074c",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.power.BatteryInfo.h",
+      "sha256": "ec65f595bb243ec848f71830091299626609a28ca0fdf53934f40d97df2eecbe",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "ec65f595bb243ec848f71830091299626609a28ca0fdf53934f40d97df2eecbe",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.power.CircuitStatus.h",
+      "sha256": "9561e523c09adc1ddccff482d9e6fa8cd0eea689993b7c6358fe946cd6ed0701",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "9561e523c09adc1ddccff482d9e6fa8cd0eea689993b7c6358fe946cd6ed0701",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.power.PrimaryPowerSupplyStatus.h",
+      "sha256": "3c5aa0e0ab5a3d6e1beca5ad9dc049caeaf79b7ae7a30affcec27193a76f1140",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "3c5aa0e0ab5a3d6e1beca5ad9dc049caeaf79b7ae7a30affcec27193a76f1140",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.range_sensor.Measurement.h",
+      "sha256": "34c8dffca49539cf89cf8ead115846b438116eb108be43019f92d76116ec8391",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "34c8dffca49539cf89cf8ead115846b438116eb108be43019f92d76116ec8391",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.equipment.safety.ArmingStatus.h",
+      "sha256": "6de0e18fc43036efa9446ff6558916e9d23751662b25868998d97a4568d89a0e",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "6de0e18fc43036efa9446ff6558916e9d23751662b25868998d97a4568d89a0e",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.navigation.GlobalNavigationSolution.h",
+      "sha256": "4627e4a70a275ed33f3d19db3d10cd1d15a267c5af72ca8a31b8383b796a4694",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "4627e4a70a275ed33f3d19db3d10cd1d15a267c5af72ca8a31b8383b796a4694",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.AccessCommandShell.h",
+      "sha256": "3fddfa95a6ab5968db09f4a9bc43827661e498079b2ab839b2e4d696ef4e69ef",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "3fddfa95a6ab5968db09f4a9bc43827661e498079b2ab839b2e4d696ef4e69ef",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.AccessCommandShell_req.h",
+      "sha256": "0090594ba025871de0a898d8820f4774058d207580b464cd3c4950030d840dd0",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "0090594ba025871de0a898d8820f4774058d207580b464cd3c4950030d840dd0",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.AccessCommandShell_res.h",
+      "sha256": "9087abb6da35ecde6847dc30fd837ebf69077f67fff7a0dbcda080749730acf2",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "9087abb6da35ecde6847dc30fd837ebf69077f67fff7a0dbcda080749730acf2",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.CANIfaceStats.h",
+      "sha256": "66e43f179f1690dff68c2ac01f6144b9bd2c6ac11dbbb815a361c943d0f0dfa4",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "66e43f179f1690dff68c2ac01f6144b9bd2c6ac11dbbb815a361c943d0f0dfa4",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.DataTypeKind.h",
+      "sha256": "efdc546c18b60d9e360fc61969f42914912b53382a0368f819f53e32d7a950c4",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "efdc546c18b60d9e360fc61969f42914912b53382a0368f819f53e32d7a950c4",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.GetDataTypeInfo.h",
+      "sha256": "418501321a553390d29fd7c3fc22948da3aa7d3dba2e6b5dbce10f08613aa747",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "418501321a553390d29fd7c3fc22948da3aa7d3dba2e6b5dbce10f08613aa747",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.GetDataTypeInfo_req.h",
+      "sha256": "8a4a045a9250a09c3c1aeb715c0b6684cbc1deb046b675aee2f822f58ba58117",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "8a4a045a9250a09c3c1aeb715c0b6684cbc1deb046b675aee2f822f58ba58117",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.GetDataTypeInfo_res.h",
+      "sha256": "9441de4514710121245e7a9e75eac46f68b691ef72eb7744095f9c385fd15365",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "9441de4514710121245e7a9e75eac46f68b691ef72eb7744095f9c385fd15365",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.GetNodeInfo.h",
+      "sha256": "422f17bc4d684d48535aad532bdae25a3b84f3f3b5402e96980f2a82a82b4ef9",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "422f17bc4d684d48535aad532bdae25a3b84f3f3b5402e96980f2a82a82b4ef9",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.GetNodeInfo_req.h",
+      "sha256": "6b3a47fecb01029821ba965cf5f205e82f829aea02df59b35608debbca5f5de0",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "6b3a47fecb01029821ba965cf5f205e82f829aea02df59b35608debbca5f5de0",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.GetNodeInfo_res.h",
+      "sha256": "a500f3221e348692512846ac9756775a33a216abe7619d0d36642b717cc4cbd6",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "a500f3221e348692512846ac9756775a33a216abe7619d0d36642b717cc4cbd6",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.GetTransportStats.h",
+      "sha256": "ce6863b860be5311fcfe6ccbe2f7a62f0b224e635603ff55b563f61a65220fc8",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "ce6863b860be5311fcfe6ccbe2f7a62f0b224e635603ff55b563f61a65220fc8",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.GetTransportStats_req.h",
+      "sha256": "2a5da9abeeecc56b61649b403296b03255b4382a3e75cccbf91727dd31b935e1",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "2a5da9abeeecc56b61649b403296b03255b4382a3e75cccbf91727dd31b935e1",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.GetTransportStats_res.h",
+      "sha256": "2b4271a8802f93fd066c0e5fbeba13234575b7e59f1eac76c822f857ed9c7234",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "2b4271a8802f93fd066c0e5fbeba13234575b7e59f1eac76c822f857ed9c7234",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.GlobalTimeSync.h",
+      "sha256": "bcc798991a7c1fcbab743c4222ee1cac87c5acbe3dbad18d90448f1344c6d92a",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "bcc798991a7c1fcbab743c4222ee1cac87c5acbe3dbad18d90448f1344c6d92a",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.HardwareVersion.h",
+      "sha256": "de5e2fec238ee05bd08efb1bfd914b726e427dac5098eea21d288ee09b78c25e",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "de5e2fec238ee05bd08efb1bfd914b726e427dac5098eea21d288ee09b78c25e",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.NodeStatus.h",
+      "sha256": "0807307be73d5bcc6fec986f0f145b47d5bfe70bdbf3c0ea93483a41f50c419a",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "0807307be73d5bcc6fec986f0f145b47d5bfe70bdbf3c0ea93483a41f50c419a",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.Panic.h",
+      "sha256": "f04e88707f846fc71ec29d7634214f7acd5d1a3895f702fa1e4434804ecd7635",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "f04e88707f846fc71ec29d7634214f7acd5d1a3895f702fa1e4434804ecd7635",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.RestartNode.h",
+      "sha256": "09224f7f9f596fdcca85c577ad578a219e9bb2067c04f9b12639c91647182538",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "09224f7f9f596fdcca85c577ad578a219e9bb2067c04f9b12639c91647182538",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.RestartNode_req.h",
+      "sha256": "c86acdcd5606762c1e19ebdffeaf8ded1ad69cdbc103e791aa0cc0d8b9466504",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "c86acdcd5606762c1e19ebdffeaf8ded1ad69cdbc103e791aa0cc0d8b9466504",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.RestartNode_res.h",
+      "sha256": "c8d8aa62a1b6b1bef0ebaf179a655e1fb74866f65cc14c4defdb1e7653771c47",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "c8d8aa62a1b6b1bef0ebaf179a655e1fb74866f65cc14c4defdb1e7653771c47",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.SoftwareVersion.h",
+      "sha256": "a449f155c310255f300e46c7446fc47d53927a4c2cd6fc700bd943b07cc222a8",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "a449f155c310255f300e46c7446fc47d53927a4c2cd6fc700bd943b07cc222a8",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.debug.KeyValue.h",
+      "sha256": "a6e823d4329e55adc376f80a02913deebde307a7a3c96cf6ff9caeb6875301c1",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "a6e823d4329e55adc376f80a02913deebde307a7a3c96cf6ff9caeb6875301c1",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.debug.LogLevel.h",
+      "sha256": "f9de1807c2908dec19dab96cad0b46d5c30d7d55256dc43624643e59ed205b2a",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "f9de1807c2908dec19dab96cad0b46d5c30d7d55256dc43624643e59ed205b2a",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.debug.LogMessage.h",
+      "sha256": "c6c199edaf615828e85c0249cdb5b6342fba911329e96d857185329c32ece27f",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "c6c199edaf615828e85c0249cdb5b6342fba911329e96d857185329c32ece27f",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.dynamic_node_id.Allocation.h",
+      "sha256": "cab7d69e16a173961cc6d962cc7c7fb5f8409056767bef6cd7d41f9c3400b500",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "cab7d69e16a173961cc6d962cc7c7fb5f8409056767bef6cd7d41f9c3400b500",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.dynamic_node_id.server.AppendEntries.h",
+      "sha256": "52f41922e2ccd826fb89e2d5ff7f7cba2d5a7bfa0aa84ef16c3bcbae4cf41b47",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "52f41922e2ccd826fb89e2d5ff7f7cba2d5a7bfa0aa84ef16c3bcbae4cf41b47",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.dynamic_node_id.server.AppendEntries_req.h",
+      "sha256": "15f5a5f8dd736b3403b7607c7d2488ba872106bfacd865f6eed2b5b9e3bb8234",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "15f5a5f8dd736b3403b7607c7d2488ba872106bfacd865f6eed2b5b9e3bb8234",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.dynamic_node_id.server.AppendEntries_res.h",
+      "sha256": "569c794eb7a6575b46b569b9308911ce5a9772afde68eaf539978581f273afd7",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "569c794eb7a6575b46b569b9308911ce5a9772afde68eaf539978581f273afd7",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.dynamic_node_id.server.Discovery.h",
+      "sha256": "2947595287f0763c024b887af9aba17f137dfc2f2904c768274b3aada51e9c79",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "2947595287f0763c024b887af9aba17f137dfc2f2904c768274b3aada51e9c79",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.dynamic_node_id.server.Entry.h",
+      "sha256": "acc3c4f09fcb1d9dda77a017d577999700cd9efa88e6ae5e5310614647b2de6f",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "acc3c4f09fcb1d9dda77a017d577999700cd9efa88e6ae5e5310614647b2de6f",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.dynamic_node_id.server.RequestVote.h",
+      "sha256": "cdd4fce238ebb3f264c5d57f74cb7b6d3cc048ec5b86de7e9b8f2c9c069eba63",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "cdd4fce238ebb3f264c5d57f74cb7b6d3cc048ec5b86de7e9b8f2c9c069eba63",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.dynamic_node_id.server.RequestVote_req.h",
+      "sha256": "a5b0aa62f34262028b2e384f3dcc229c7fba21ad8f4887372cd7a7764b820ca3",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "a5b0aa62f34262028b2e384f3dcc229c7fba21ad8f4887372cd7a7764b820ca3",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.dynamic_node_id.server.RequestVote_res.h",
+      "sha256": "81a1924ce9311a53b2b6e370504a7cee69278825e6dce4d5f87325b0d65354e6",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "81a1924ce9311a53b2b6e370504a7cee69278825e6dce4d5f87325b0d65354e6",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.enumeration.Begin.h",
+      "sha256": "7c6822102236fb0240fd9512741ddd28d901ddca5c95281cacaea0daa4ac18e3",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "7c6822102236fb0240fd9512741ddd28d901ddca5c95281cacaea0daa4ac18e3",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.enumeration.Begin_req.h",
+      "sha256": "fa48da4855f3ecdc98d6b0ae095bdbb52d38d30c5b31aba1f39401a30b34aad4",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "fa48da4855f3ecdc98d6b0ae095bdbb52d38d30c5b31aba1f39401a30b34aad4",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.enumeration.Begin_res.h",
+      "sha256": "5f4fff10b5aff48a9ec6764301aca12a64f42815886ea08e81875c96ab9cfe51",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "5f4fff10b5aff48a9ec6764301aca12a64f42815886ea08e81875c96ab9cfe51",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.enumeration.Indication.h",
+      "sha256": "1b55531d9571ae3ab6aad94a6f427645677433a445a495601f0f561593a8836b",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "1b55531d9571ae3ab6aad94a6f427645677433a445a495601f0f561593a8836b",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.BeginFirmwareUpdate.h",
+      "sha256": "2c61cebdc1e62d7d4f189d57aab35cb4d713b6447ff89be2d0af50261ebb6e73",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "2c61cebdc1e62d7d4f189d57aab35cb4d713b6447ff89be2d0af50261ebb6e73",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.BeginFirmwareUpdate_req.h",
+      "sha256": "5f4d7cf633cf03eea185c9bb5c52887d07a5a06468d8dd8c2ee605a294191225",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "5f4d7cf633cf03eea185c9bb5c52887d07a5a06468d8dd8c2ee605a294191225",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.BeginFirmwareUpdate_res.h",
+      "sha256": "7a7bee143e1a397c436cd15a332bab20e520615ae7082c4b9f4e1c96954c8062",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "7a7bee143e1a397c436cd15a332bab20e520615ae7082c4b9f4e1c96954c8062",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.Delete.h",
+      "sha256": "23b62334fcf74ac3472bdcd0c24b2090c3624d48f8e09bbf0b77e2d11a0a7155",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "23b62334fcf74ac3472bdcd0c24b2090c3624d48f8e09bbf0b77e2d11a0a7155",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.Delete_req.h",
+      "sha256": "1ead2e837ddb9357157ae47bdd38ddb198e041705dd3f8a75b40d981a7d62931",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "1ead2e837ddb9357157ae47bdd38ddb198e041705dd3f8a75b40d981a7d62931",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.Delete_res.h",
+      "sha256": "52511bfa05aa0d62edc869d1ed358298a188896a72469c7b582d7a6916bc87aa",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "52511bfa05aa0d62edc869d1ed358298a188896a72469c7b582d7a6916bc87aa",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.EntryType.h",
+      "sha256": "26b273d398db99ceda72047ee5fb64852acfcd800d8d3e2d5e2a3e9705db3767",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "26b273d398db99ceda72047ee5fb64852acfcd800d8d3e2d5e2a3e9705db3767",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.Error.h",
+      "sha256": "55bce8082ccdf897d8537b38ec7b24f04a14bb09027c980281e0bd4d04e14acb",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "55bce8082ccdf897d8537b38ec7b24f04a14bb09027c980281e0bd4d04e14acb",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.GetDirectoryEntryInfo.h",
+      "sha256": "8900601f46c8114dbb5bc1afafad2942412186d20bedd5883c52366730d73d63",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "8900601f46c8114dbb5bc1afafad2942412186d20bedd5883c52366730d73d63",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.GetDirectoryEntryInfo_req.h",
+      "sha256": "bf6939aa9572b627d2f6f8af9f2984b2087346368bd40e7e5739b728fbca7dca",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "bf6939aa9572b627d2f6f8af9f2984b2087346368bd40e7e5739b728fbca7dca",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.GetDirectoryEntryInfo_res.h",
+      "sha256": "901d1f79af4f71dfff75da0a2e403ef08b8d45c3a536ba6c5e91afa5600be1f8",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "901d1f79af4f71dfff75da0a2e403ef08b8d45c3a536ba6c5e91afa5600be1f8",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.GetInfo.h",
+      "sha256": "62248ee568fe4e46a03b2319179a713cfcf02638890155322f6db23fbb1f67cd",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "62248ee568fe4e46a03b2319179a713cfcf02638890155322f6db23fbb1f67cd",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.GetInfo_req.h",
+      "sha256": "6de3cddd57eb47c55920fa60f4a815b12789486b3476c367e836d58e02859812",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "6de3cddd57eb47c55920fa60f4a815b12789486b3476c367e836d58e02859812",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.GetInfo_res.h",
+      "sha256": "632ec9e495248b6bd0f858aaab8c9cb397fffcacf7065baa26b035a877cd8117",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "632ec9e495248b6bd0f858aaab8c9cb397fffcacf7065baa26b035a877cd8117",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.Path.h",
+      "sha256": "492a5c0039cac9f74a898b06c62aedd11072630cce41f9109b5bba4b883e9675",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "492a5c0039cac9f74a898b06c62aedd11072630cce41f9109b5bba4b883e9675",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.Read.h",
+      "sha256": "a548cc06bf4ce8ac4fcc8f3b4427abe0991085ef2037219d3eb16853fade41cb",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "a548cc06bf4ce8ac4fcc8f3b4427abe0991085ef2037219d3eb16853fade41cb",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.Read_req.h",
+      "sha256": "d08e1fb0b4eaeee192f10b84bfdbe4f3a826b850c9ebcf2f9120b53be98f6a6c",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "d08e1fb0b4eaeee192f10b84bfdbe4f3a826b850c9ebcf2f9120b53be98f6a6c",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.Read_res.h",
+      "sha256": "33541a20881c3dae596c43a9620abca10a2f40cf44c52a62aadec4fe88a5c315",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "33541a20881c3dae596c43a9620abca10a2f40cf44c52a62aadec4fe88a5c315",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.Write.h",
+      "sha256": "4afbc937aec0738e8b2cce14ccd27e4c1490900d9ab99c1915f978048428a792",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "4afbc937aec0738e8b2cce14ccd27e4c1490900d9ab99c1915f978048428a792",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.Write_req.h",
+      "sha256": "ddb60d47754e03c4ecc16ade0d809b94c421bbdc6c01c26146d68ee355677548",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "ddb60d47754e03c4ecc16ade0d809b94c421bbdc6c01c26146d68ee355677548",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.file.Write_res.h",
+      "sha256": "e72b1c8e54b8c066b98aa350a017ca96c455af0507136c7ca2e86dcc5224cea3",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "e72b1c8e54b8c066b98aa350a017ca96c455af0507136c7ca2e86dcc5224cea3",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.param.Empty.h",
+      "sha256": "f44ad5509147ae542527fd9478732bd8ab842b58f207c5f1862ed1ed7b70d66e",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "f44ad5509147ae542527fd9478732bd8ab842b58f207c5f1862ed1ed7b70d66e",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.param.ExecuteOpcode.h",
+      "sha256": "51d9b6abb469240d71d366ed465329d648df86233ac8077376bf862af48ced19",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "51d9b6abb469240d71d366ed465329d648df86233ac8077376bf862af48ced19",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.param.ExecuteOpcode_req.h",
+      "sha256": "c06789eec9cb0c224af7b41f1b6c35f596850a5d6e9000f957aee6146639f9eb",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "c06789eec9cb0c224af7b41f1b6c35f596850a5d6e9000f957aee6146639f9eb",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.param.ExecuteOpcode_res.h",
+      "sha256": "1687f4648825a69ca33fcb8660d08147a481283fc84be547a296a67dc9aed0ed",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "1687f4648825a69ca33fcb8660d08147a481283fc84be547a296a67dc9aed0ed",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.param.GetSet.h",
+      "sha256": "7afd6a8a2382c82695715171de9b2b4c7f0a6eeda4d8512c147af97257eba4ff",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "7afd6a8a2382c82695715171de9b2b4c7f0a6eeda4d8512c147af97257eba4ff",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.param.GetSet_req.h",
+      "sha256": "2ee910c0625710689515afb01f74bd7e5f0a15acfb907738f79c32624ee2ccc3",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "2ee910c0625710689515afb01f74bd7e5f0a15acfb907738f79c32624ee2ccc3",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.param.GetSet_res.h",
+      "sha256": "34b9baf2fd7f4c508b8a2bd529206aaf01eb618d08891b6516c29cd7e414dc1f",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "34b9baf2fd7f4c508b8a2bd529206aaf01eb618d08891b6516c29cd7e414dc1f",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.param.NumericValue.h",
+      "sha256": "9205e017673cb6f69c77bf6261215a4f811badf82e3fd86a51a5e0cb93f7fab4",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "9205e017673cb6f69c77bf6261215a4f811badf82e3fd86a51a5e0cb93f7fab4",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.protocol.param.Value.h",
+      "sha256": "d7fba80ad769d138b3aaa9692cfd3b442488c9c26e3b3f32022f2075c07e8970",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "d7fba80ad769d138b3aaa9692cfd3b442488c9c26e3b3f32022f2075c07e8970",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.tunnel.Broadcast.h",
+      "sha256": "83e9748cdcccaaea75d0e7a528af1a80e727db6729effeef00545de82fceb2ee",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "83e9748cdcccaaea75d0e7a528af1a80e727db6729effeef00545de82fceb2ee",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.tunnel.Call.h",
+      "sha256": "e697fc4e5ca3a3e3ae9928bf77808dd9c752dad1f40bd1b5bb45b6bf10908a1b",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "e697fc4e5ca3a3e3ae9928bf77808dd9c752dad1f40bd1b5bb45b6bf10908a1b",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.tunnel.Call_req.h",
+      "sha256": "c7a84dd0add6c6337ac30935fbd34f10364d4394c1fe2fa1552d7fb3b80acef2",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "c7a84dd0add6c6337ac30935fbd34f10364d4394c1fe2fa1552d7fb3b80acef2",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.tunnel.Call_res.h",
+      "sha256": "150eb682b5c7deaca482bb5e444dabeb39ade3fe7bdd1c9fe3bdd03812069631",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "150eb682b5c7deaca482bb5e444dabeb39ade3fe7bdd1c9fe3bdd03812069631",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.tunnel.Protocol.h",
+      "sha256": "09c6aae7ef890006529ab12b59af7c4f78c0c0f8fa495576d1e1a03029da4764",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "09c6aae7ef890006529ab12b59af7c4f78c0c0f8fa495576d1e1a03029da4764",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.tunnel.SerialConfig.h",
+      "sha256": "827ed6bb4eadd38955aa28310e31cc6ae7a4f4129167545cea3bb261e6ae4031",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "827ed6bb4eadd38955aa28310e31cc6ae7a4f4129167545cea3bb261e6ae4031",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/include/uavcan.tunnel.Targetted.h",
+      "sha256": "74026ffd156b0550639f4c3cb6d0ad923a61793fac959b2462acb506f5d84d3b",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "74026ffd156b0550639f4c3cb6d0ad923a61793fac959b2462acb506f5d84d3b",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/dronecan.protocol.CanStats.c",
+      "sha256": "5788cc7edd583b43282440b4bd286bb1c0ef1e306cf080d035b6daf9f6e56b7e",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "5788cc7edd583b43282440b4bd286bb1c0ef1e306cf080d035b6daf9f6e56b7e",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/dronecan.protocol.FlexDebug.c",
+      "sha256": "9e331ccb175b9872599ff1c01c21bdfa218d53605cf95e70753f0f6aff9ee06f",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "9e331ccb175b9872599ff1c01c21bdfa218d53605cf95e70753f0f6aff9ee06f",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/dronecan.protocol.GlobalTime.c",
+      "sha256": "3f17bfe480f3661fee86abfaf8c26ba27d221a525f9cbb7b700dc72903b93840",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "3f17bfe480f3661fee86abfaf8c26ba27d221a525f9cbb7b700dc72903b93840",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/dronecan.protocol.Stats.c",
+      "sha256": "95e6c713fb4e0f0dfeeeed31190c60d0f83310d033fb5bb8671ef430c9615dc2",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "95e6c713fb4e0f0dfeeeed31190c60d0f83310d033fb5bb8671ef430c9615dc2",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/dronecan.remoteid.ArmStatus.c",
+      "sha256": "c77b475cac556c623aa2317ad9f3b6999b952aae52322d9ff7325ca6cbb76f2a",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "c77b475cac556c623aa2317ad9f3b6999b952aae52322d9ff7325ca6cbb76f2a",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/dronecan.remoteid.BasicID.c",
+      "sha256": "e255a65e686904753f0456fef34a8964414b427b071b176c956b1ff82860a252",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "e255a65e686904753f0456fef34a8964414b427b071b176c956b1ff82860a252",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/dronecan.remoteid.Location.c",
+      "sha256": "3284a5592861414bdbdadc3dc849328d8fbb72cba045ee1afdda172869c29abe",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "3284a5592861414bdbdadc3dc849328d8fbb72cba045ee1afdda172869c29abe",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/dronecan.remoteid.OperatorID.c",
+      "sha256": "7d5a618f00c85cb1480e47c02b2f46f094fca4b7befe7aeca9ec4b1a78984f82",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "7d5a618f00c85cb1480e47c02b2f46f094fca4b7befe7aeca9ec4b1a78984f82",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/dronecan.remoteid.SecureCommand_req.c",
+      "sha256": "d79e2e772540593fe92348686835e730d14b4e97b8d26a545b9214b655f463a0",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "d79e2e772540593fe92348686835e730d14b4e97b8d26a545b9214b655f463a0",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/dronecan.remoteid.SecureCommand_res.c",
+      "sha256": "7b35e2e1c12a834e4676a3c07bb3117da665c6a859242ccb3d42a59266b01de5",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "7b35e2e1c12a834e4676a3c07bb3117da665c6a859242ccb3d42a59266b01de5",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/dronecan.remoteid.SelfID.c",
+      "sha256": "5873a2696bc0abd926356bb6a43eb9fefbfa5be5494b05745d8a60e272a637b9",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "5873a2696bc0abd926356bb6a43eb9fefbfa5be5494b05745d8a60e272a637b9",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/dronecan.remoteid.System.c",
+      "sha256": "7cb9e21dab95ca55f58cd0dd4214a00dbe3be2ce80ddf048c001f6bcb0bcfbec",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "7cb9e21dab95ca55f58cd0dd4214a00dbe3be2ce80ddf048c001f6bcb0bcfbec",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/dronecan.sensors.hygrometer.Hygrometer.c",
+      "sha256": "df2d17a6c95e6d0e2b2d39201a0b1ab8e7efcd6c818ff84ca823489317e4f05c",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "df2d17a6c95e6d0e2b2d39201a0b1ab8e7efcd6c818ff84ca823489317e4f05c",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/dronecan.sensors.magnetometer.MagneticFieldStrengthHiRes.c",
+      "sha256": "19efecaffb3c7df65e33c774ed146e30644237807de13eb84954896b613ead46",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "19efecaffb3c7df65e33c774ed146e30644237807de13eb84954896b613ead46",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/dronecan.sensors.rc.RCInput.c",
+      "sha256": "ae87b963887508d5e002441ed027cbc37bb07a03c48c63e9cae6c1caf4c836d3",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "ae87b963887508d5e002441ed027cbc37bb07a03c48c63e9cae6c1caf4c836d3",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/dronecan.sensors.rpm.RPM.c",
+      "sha256": "5073b6578261d21c2e51162fcd22b41eb46208f7fc0a6b5cfa944b496a84f071",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "5073b6578261d21c2e51162fcd22b41eb46208f7fc0a6b5cfa944b496a84f071",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/files.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.CoarseOrientation.c",
+      "sha256": "64df1b30406a10c73fdd494db1c514da5ea44ea72aa357f7b13fbfe9f73042fe",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "64df1b30406a10c73fdd494db1c514da5ea44ea72aa357f7b13fbfe9f73042fe",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.Timestamp.c",
+      "sha256": "b09de1a03666e038aad7eec780c57d4f4937f8885db83e6663c1d4585258aabf",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "b09de1a03666e038aad7eec780c57d4f4937f8885db83e6663c1d4585258aabf",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.actuator.ArrayCommand.c",
+      "sha256": "dcf582f31243b8e3d7842e5fe997398cbb211c245baa8ad79756a06843397714",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "dcf582f31243b8e3d7842e5fe997398cbb211c245baa8ad79756a06843397714",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.actuator.Command.c",
+      "sha256": "2bb37fd434fdf70a3424631a184359f54c502d19d5c6c9ced5165a009f09bc9b",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "2bb37fd434fdf70a3424631a184359f54c502d19d5c6c9ced5165a009f09bc9b",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.actuator.Status.c",
+      "sha256": "6361a30a94fba2577c2e93a8430cd2df722a0b31d14258d6c43335a264d4e94c",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "6361a30a94fba2577c2e93a8430cd2df722a0b31d14258d6c43335a264d4e94c",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.ahrs.MagneticFieldStrength.c",
+      "sha256": "105dc86bb34c2f80c6372fdb802e44ea195f6279199fc86a7a8bd201c27b01cb",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "105dc86bb34c2f80c6372fdb802e44ea195f6279199fc86a7a8bd201c27b01cb",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.ahrs.MagneticFieldStrength2.c",
+      "sha256": "c8e5136e08f9cadaf6b1b8524d43ecedbebb87e02c888e0fd0abfc626e0d506d",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "c8e5136e08f9cadaf6b1b8524d43ecedbebb87e02c888e0fd0abfc626e0d506d",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.ahrs.RawIMU.c",
+      "sha256": "d4380076e6b0cb33eba72c59140ea2e6db051cbc1d4bd2d8617982b06588fc1d",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "d4380076e6b0cb33eba72c59140ea2e6db051cbc1d4bd2d8617982b06588fc1d",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.ahrs.Solution.c",
+      "sha256": "43bfa8ad4da9b5ba1699c7ee4d4083915a9c4a8c4fc25412c8269ec0f4199244",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "43bfa8ad4da9b5ba1699c7ee4d4083915a9c4a8c4fc25412c8269ec0f4199244",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.air_data.AngleOfAttack.c",
+      "sha256": "4a5f4de7d060ce9d743f74c6b4e53fc341cd2c8226cd2d6d50dc3042fc69d506",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "4a5f4de7d060ce9d743f74c6b4e53fc341cd2c8226cd2d6d50dc3042fc69d506",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.air_data.IndicatedAirspeed.c",
+      "sha256": "ad43b35168a7e3e49b2947ecd77b6aeab5e6a163f96737986928244f408a62d6",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "ad43b35168a7e3e49b2947ecd77b6aeab5e6a163f96737986928244f408a62d6",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.air_data.RawAirData.c",
+      "sha256": "adf37ccf7b199abfdf38d3a5667b58fa56d137f0c9fe2e5d9bc047a993e90774",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "adf37ccf7b199abfdf38d3a5667b58fa56d137f0c9fe2e5d9bc047a993e90774",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.air_data.Sideslip.c",
+      "sha256": "9fbdf323a3fb153f90a137fc3ab89de0a00fd1a50551b6ebe67ed518f16ffd22",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "9fbdf323a3fb153f90a137fc3ab89de0a00fd1a50551b6ebe67ed518f16ffd22",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.air_data.StaticPressure.c",
+      "sha256": "3573191efb6f65d3ab918e22ee8f0c2da37848a692e9c92e2fe453bd7275aa6c",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "3573191efb6f65d3ab918e22ee8f0c2da37848a692e9c92e2fe453bd7275aa6c",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.air_data.StaticTemperature.c",
+      "sha256": "cd860b9b79468766bd1cd3e2ceff296746882d599a9502c963bb16dda7461987",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "cd860b9b79468766bd1cd3e2ceff296746882d599a9502c963bb16dda7461987",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.air_data.TrueAirspeed.c",
+      "sha256": "c93c0f9846f0913557165693a8d8c5587b59e8f095062ac392fcc98bddabcd29",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "c93c0f9846f0913557165693a8d8c5587b59e8f095062ac392fcc98bddabcd29",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.camera_gimbal.AngularCommand.c",
+      "sha256": "bd798db7d66e765fd7eb74a36c63c63f548008f3bea46522ea47d3d54cecdd41",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "bd798db7d66e765fd7eb74a36c63c63f548008f3bea46522ea47d3d54cecdd41",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.camera_gimbal.GEOPOICommand.c",
+      "sha256": "3fa9250670690f8bbf0d9979c303bdd1f6d0a4c8b73d7008b861b90632c15481",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "3fa9250670690f8bbf0d9979c303bdd1f6d0a4c8b73d7008b861b90632c15481",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.camera_gimbal.Mode.c",
+      "sha256": "7e06b591f62c2c463008185dda348b8893daebc5d623e849bb5a06fc41d3d6cc",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "7e06b591f62c2c463008185dda348b8893daebc5d623e849bb5a06fc41d3d6cc",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.camera_gimbal.Status.c",
+      "sha256": "fd32c5f326955d79ab4e1c34bec7174ce3f21a9b6481f3204a012ccb40efe97b",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "fd32c5f326955d79ab4e1c34bec7174ce3f21a9b6481f3204a012ccb40efe97b",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.device.Temperature.c",
+      "sha256": "faa9076d5571bd7e293d7226ad1ae8b35d1554fc5677edd50cfcbc28408e8ce0",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "faa9076d5571bd7e293d7226ad1ae8b35d1554fc5677edd50cfcbc28408e8ce0",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.esc.RPMCommand.c",
+      "sha256": "27de368e40be98df3494a0023ebcb9ba431b52a3f0484bcbbaa941ed921c0053",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "27de368e40be98df3494a0023ebcb9ba431b52a3f0484bcbbaa941ed921c0053",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.esc.RawCommand.c",
+      "sha256": "fa190f747d57e197c59cce195c40e87652093b8ce37e44fcf3d962cf7d6e30f4",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "fa190f747d57e197c59cce195c40e87652093b8ce37e44fcf3d962cf7d6e30f4",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.esc.Status.c",
+      "sha256": "ea98894723ec3013d858170028551abb72e9b469cfc8c9194d739dffa9e47fff",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "ea98894723ec3013d858170028551abb72e9b469cfc8c9194d739dffa9e47fff",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.esc.StatusExtended.c",
+      "sha256": "26cc0f166574511b7794e674bdfda2cd5558071f348d31b51077985714bb8bf3",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "26cc0f166574511b7794e674bdfda2cd5558071f348d31b51077985714bb8bf3",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.gnss.Auxiliary.c",
+      "sha256": "b7d9b2d2c95d38f257be04664c798a36f0d8b3d47d20b1300b7c99753da5092e",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "b7d9b2d2c95d38f257be04664c798a36f0d8b3d47d20b1300b7c99753da5092e",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.gnss.ECEFPositionVelocity.c",
+      "sha256": "f5bbf4f2f09c75670951cee77535a49bb993e1ea9d6e4f8d31d394572adb0bd6",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "f5bbf4f2f09c75670951cee77535a49bb993e1ea9d6e4f8d31d394572adb0bd6",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.gnss.Fix.c",
+      "sha256": "b67e49e647c95524767e4e2299c047adb5b89c315b1357e0c706f8ff2b31a7f2",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "b67e49e647c95524767e4e2299c047adb5b89c315b1357e0c706f8ff2b31a7f2",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.gnss.Fix2.c",
+      "sha256": "6c9dfe18351833d80449cb6c31449bcbf5a6c7a69160bdc65ac88a51d35def9d",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "6c9dfe18351833d80449cb6c31449bcbf5a6c7a69160bdc65ac88a51d35def9d",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.gnss.RTCMStream.c",
+      "sha256": "a8610e79ca1a31784ce36ee3f2c343b836f7f78634022645d85865ab90b4e39b",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "a8610e79ca1a31784ce36ee3f2c343b836f7f78634022645d85865ab90b4e39b",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.hardpoint.Command.c",
+      "sha256": "8d44963be342d9f4d551c51a7fdc36adf54aa5f2bee625e040b011145cb0cf5d",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "8d44963be342d9f4d551c51a7fdc36adf54aa5f2bee625e040b011145cb0cf5d",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.hardpoint.Status.c",
+      "sha256": "b9bfe235593e48e5c5a464c32d3072ac8ad978d1fb74412f45d2f25f76994d1d",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "b9bfe235593e48e5c5a464c32d3072ac8ad978d1fb74412f45d2f25f76994d1d",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.ice.FuelTankStatus.c",
+      "sha256": "187d810e4d11f96de010073eec62b362428f4836c2bbb7d0bc4393ed5a376d3c",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "187d810e4d11f96de010073eec62b362428f4836c2bbb7d0bc4393ed5a376d3c",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.ice.reciprocating.CylinderStatus.c",
+      "sha256": "a2448fa4e6eaefed0d1cf4f81275edb7dcb5df8d6fd842594b18f70d3ba39f17",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "a2448fa4e6eaefed0d1cf4f81275edb7dcb5df8d6fd842594b18f70d3ba39f17",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.ice.reciprocating.Status.c",
+      "sha256": "fb19ce276cf6b4460f44401026d78917d8953c16324f26ec1e55bed1d701d6ec",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "fb19ce276cf6b4460f44401026d78917d8953c16324f26ec1e55bed1d701d6ec",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.indication.BeepCommand.c",
+      "sha256": "d3b9e12cbacfaba643450d220c3d49c7dca057d29628085eb51bf20cdc07ff2d",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "d3b9e12cbacfaba643450d220c3d49c7dca057d29628085eb51bf20cdc07ff2d",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.indication.LightsCommand.c",
+      "sha256": "f4fe65c2c6fe54b5624a3b262f1b1af1ecdf9066fb97d855ada334d26537c36e",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "f4fe65c2c6fe54b5624a3b262f1b1af1ecdf9066fb97d855ada334d26537c36e",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.indication.RGB565.c",
+      "sha256": "e80b9b0ee55a7d0e12ee78b58dfffbda11e0a2117e74e3dc8a8266c91cdc76ab",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "e80b9b0ee55a7d0e12ee78b58dfffbda11e0a2117e74e3dc8a8266c91cdc76ab",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.indication.SingleLightCommand.c",
+      "sha256": "18220c88bf091d4b9dedc490deff04fc566bcb176d57ae2edeb718f6a8fe26e8",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "18220c88bf091d4b9dedc490deff04fc566bcb176d57ae2edeb718f6a8fe26e8",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.power.BatteryInfo.c",
+      "sha256": "941ae5db75012ecaeaf592cb8a534d69d2a0e22d9bc6165d43ca56d615f2119e",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "941ae5db75012ecaeaf592cb8a534d69d2a0e22d9bc6165d43ca56d615f2119e",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.power.CircuitStatus.c",
+      "sha256": "b1b3a820f43cf456a92db3d894bf0e9992dd7e3bb6c691de22c00dd7863599e3",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "b1b3a820f43cf456a92db3d894bf0e9992dd7e3bb6c691de22c00dd7863599e3",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.power.PrimaryPowerSupplyStatus.c",
+      "sha256": "abfd6590fc8d4f6c7623652be9e4ee1d87bb464dab3642ea9a31d3229b12fb4d",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "abfd6590fc8d4f6c7623652be9e4ee1d87bb464dab3642ea9a31d3229b12fb4d",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.range_sensor.Measurement.c",
+      "sha256": "8340a664d21f662bcd6a0ac24ce4c4f050c7fb3e259877684cc6a3f82d22aafd",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "8340a664d21f662bcd6a0ac24ce4c4f050c7fb3e259877684cc6a3f82d22aafd",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.equipment.safety.ArmingStatus.c",
+      "sha256": "4fe45ea0053075feee280de90e4fcb8dc7ba6b22dd6cef70b5008f6e3bccbb06",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "4fe45ea0053075feee280de90e4fcb8dc7ba6b22dd6cef70b5008f6e3bccbb06",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.navigation.GlobalNavigationSolution.c",
+      "sha256": "a3a0f162edde349bd630020216f6cc6a916e7f41a0952104dfc93fe651c72be7",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "a3a0f162edde349bd630020216f6cc6a916e7f41a0952104dfc93fe651c72be7",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.AccessCommandShell_req.c",
+      "sha256": "bd59647e37e18848be0f7706b4173eb1055cff835d02dd06735059da44e285a8",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "bd59647e37e18848be0f7706b4173eb1055cff835d02dd06735059da44e285a8",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.AccessCommandShell_res.c",
+      "sha256": "2f2d29072b3a9d16612c8a1e6abac268793d6a8cbb31417d5c1f9cfe59d099ac",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "2f2d29072b3a9d16612c8a1e6abac268793d6a8cbb31417d5c1f9cfe59d099ac",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.CANIfaceStats.c",
+      "sha256": "e6aa9628a67b1cac20d434b654b8e5e09e62bcded2338f464bc7e9ee11f2b846",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "e6aa9628a67b1cac20d434b654b8e5e09e62bcded2338f464bc7e9ee11f2b846",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.DataTypeKind.c",
+      "sha256": "fc92cba2f378c949175da695b8db6ea0ae8e6ce6b0305914220bc9f34db33939",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "fc92cba2f378c949175da695b8db6ea0ae8e6ce6b0305914220bc9f34db33939",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.GetDataTypeInfo_req.c",
+      "sha256": "e29ce427199a732264fd6676f19dea6f7820e94776db81602e1726d45c7cfdcd",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "e29ce427199a732264fd6676f19dea6f7820e94776db81602e1726d45c7cfdcd",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.GetDataTypeInfo_res.c",
+      "sha256": "54dd65fe458cfe4b90ee8e28b158296646f69f279e5afff79454ed9e2e9e86f8",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "54dd65fe458cfe4b90ee8e28b158296646f69f279e5afff79454ed9e2e9e86f8",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.GetNodeInfo_req.c",
+      "sha256": "089b6cae22a0f304a787f371eb7942266e148e808987b5c7228edbabbddd8709",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "089b6cae22a0f304a787f371eb7942266e148e808987b5c7228edbabbddd8709",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.GetNodeInfo_res.c",
+      "sha256": "622024e7ce5a4eae6af1e97ea9436929c8ff9771d5d6627cf091ef2d51d1bc0f",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "622024e7ce5a4eae6af1e97ea9436929c8ff9771d5d6627cf091ef2d51d1bc0f",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.GetTransportStats_req.c",
+      "sha256": "89fabe764e72f8d129aafd22527fae7d70ec0634acef2e27828388f33ed982ee",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "89fabe764e72f8d129aafd22527fae7d70ec0634acef2e27828388f33ed982ee",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.GetTransportStats_res.c",
+      "sha256": "ee38219facfcaf64a2e87b50b5f9482e518fc2e8587ffd8a83d5474f68cb3b7a",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "ee38219facfcaf64a2e87b50b5f9482e518fc2e8587ffd8a83d5474f68cb3b7a",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.GlobalTimeSync.c",
+      "sha256": "aff517ac444cf3fc237cf3c2e6cfa694c6a552b8e3095e2d20a90ccffe553329",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "aff517ac444cf3fc237cf3c2e6cfa694c6a552b8e3095e2d20a90ccffe553329",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.HardwareVersion.c",
+      "sha256": "25ac6a4694e73c558f5279db253a2173e7adc6437e60f81e34b4a1ed9339d676",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "25ac6a4694e73c558f5279db253a2173e7adc6437e60f81e34b4a1ed9339d676",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.NodeStatus.c",
+      "sha256": "ae6e3aa80f96b96b0c5c6dda83128a462f406a027b0aa39bf1448a8f8f844ba6",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "ae6e3aa80f96b96b0c5c6dda83128a462f406a027b0aa39bf1448a8f8f844ba6",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.Panic.c",
+      "sha256": "2b6bdaaafdad8c0da84a1db98f0d17fa0f0662ba658f387c05ad8ab548675398",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "2b6bdaaafdad8c0da84a1db98f0d17fa0f0662ba658f387c05ad8ab548675398",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.RestartNode_req.c",
+      "sha256": "5b1fdb217b11e600a935056647208c5c41294cb167f4a8c06ab430fa61eb8d45",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "5b1fdb217b11e600a935056647208c5c41294cb167f4a8c06ab430fa61eb8d45",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.RestartNode_res.c",
+      "sha256": "4edeed08d9ae3b5aee07655b4d3ef42cf94a9748effc9edbc37faa93361ec52e",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "4edeed08d9ae3b5aee07655b4d3ef42cf94a9748effc9edbc37faa93361ec52e",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.SoftwareVersion.c",
+      "sha256": "b412f7678be8f8cfaa44adc24deb35c4a258bfe6df2095da2da005d3b7b04d8b",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "b412f7678be8f8cfaa44adc24deb35c4a258bfe6df2095da2da005d3b7b04d8b",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.debug.KeyValue.c",
+      "sha256": "ab2a44a8b6cd1f2559968ad2fd96c167fa05fca6bb351ef92913846f3b6ffc1e",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "ab2a44a8b6cd1f2559968ad2fd96c167fa05fca6bb351ef92913846f3b6ffc1e",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.debug.LogLevel.c",
+      "sha256": "9f252d7b28dcba0c475ae2f5b4fd85a3b3a3baa22fbf84de6ba7c2010de6268c",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "9f252d7b28dcba0c475ae2f5b4fd85a3b3a3baa22fbf84de6ba7c2010de6268c",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.debug.LogMessage.c",
+      "sha256": "f7cece756e8bd3ff346b899569edf52013e067a2460dd56aebe1bcb160448f84",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "f7cece756e8bd3ff346b899569edf52013e067a2460dd56aebe1bcb160448f84",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.dynamic_node_id.Allocation.c",
+      "sha256": "974d5c7afba1b5915b2a0bd4c4f5966d5436478841dcffedb8fc654bbae106b7",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "974d5c7afba1b5915b2a0bd4c4f5966d5436478841dcffedb8fc654bbae106b7",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.dynamic_node_id.server.AppendEntries_req.c",
+      "sha256": "9266508241d9226a681a6902116594af4719f05cac7dce7874cdc1bfdce1a63c",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "9266508241d9226a681a6902116594af4719f05cac7dce7874cdc1bfdce1a63c",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.dynamic_node_id.server.AppendEntries_res.c",
+      "sha256": "91566943864fe7908d3ddb37b2b69fd4694b93b365e7ebe0caadb3a40499e9fe",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "91566943864fe7908d3ddb37b2b69fd4694b93b365e7ebe0caadb3a40499e9fe",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.dynamic_node_id.server.Discovery.c",
+      "sha256": "c3a6fcd0355c4b84fa0cb9eb39c42f3b9d36ee59a2d55ccd85b6d43142a56168",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "c3a6fcd0355c4b84fa0cb9eb39c42f3b9d36ee59a2d55ccd85b6d43142a56168",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.dynamic_node_id.server.Entry.c",
+      "sha256": "61cc135e2cf8312054cdaf00f8ad8e8eb5a60f376a53f7daf0cc1e8261a3bb68",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "61cc135e2cf8312054cdaf00f8ad8e8eb5a60f376a53f7daf0cc1e8261a3bb68",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.dynamic_node_id.server.RequestVote_req.c",
+      "sha256": "aa4b320d6d900d076fef3c76013ac59858fafc432690517b899d7e6428dbba06",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "aa4b320d6d900d076fef3c76013ac59858fafc432690517b899d7e6428dbba06",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.dynamic_node_id.server.RequestVote_res.c",
+      "sha256": "dc62cd2e4f03735c5dc71dad93027fb5d11474cedbc0101b258edac6d343c007",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "dc62cd2e4f03735c5dc71dad93027fb5d11474cedbc0101b258edac6d343c007",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.enumeration.Begin_req.c",
+      "sha256": "0be3d00035dbcf445d242532f12aead3436c5cccdf1122a76a2ff37c6d975246",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "0be3d00035dbcf445d242532f12aead3436c5cccdf1122a76a2ff37c6d975246",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.enumeration.Begin_res.c",
+      "sha256": "28d8512d446da262d3a39a089df3942a388264864ec4c080a99a54dcf72887a5",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "28d8512d446da262d3a39a089df3942a388264864ec4c080a99a54dcf72887a5",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.enumeration.Indication.c",
+      "sha256": "5e4b95ed150692d73a18f48fd160720c9caacff5acab098d72b48f865cc6fa61",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "5e4b95ed150692d73a18f48fd160720c9caacff5acab098d72b48f865cc6fa61",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.file.BeginFirmwareUpdate_req.c",
+      "sha256": "1f6c0c817bc6198581e528ca09824a4664ded68db478eec95c66477a6ce8ea49",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "1f6c0c817bc6198581e528ca09824a4664ded68db478eec95c66477a6ce8ea49",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.file.BeginFirmwareUpdate_res.c",
+      "sha256": "62992d43d3aff08afd0901d02d3f36a886c0d556dac83ef22c04df5709022154",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "62992d43d3aff08afd0901d02d3f36a886c0d556dac83ef22c04df5709022154",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.file.Delete_req.c",
+      "sha256": "193bcf065b4dfb6c938013357cf54b5de6b961decff9acf1dc6d989d4cd3585d",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "193bcf065b4dfb6c938013357cf54b5de6b961decff9acf1dc6d989d4cd3585d",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.file.Delete_res.c",
+      "sha256": "6a5fa52ba60a7d2a05c3237c6db149b352795994fb15e815a256c90097680828",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "6a5fa52ba60a7d2a05c3237c6db149b352795994fb15e815a256c90097680828",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.file.EntryType.c",
+      "sha256": "c5bb22253977c5c7091e5eb62e304c9053dce141dd20b502aaba2d5c8da3fc37",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "c5bb22253977c5c7091e5eb62e304c9053dce141dd20b502aaba2d5c8da3fc37",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.file.Error.c",
+      "sha256": "5910b9a6aecc9fd4aab5bfc32a9742807944e6e427c28fc67021ec67d80b1477",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "5910b9a6aecc9fd4aab5bfc32a9742807944e6e427c28fc67021ec67d80b1477",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.file.GetDirectoryEntryInfo_req.c",
+      "sha256": "c2c8c4805b885dbb87714e8cc9ac9c2f7c8bf3dfe4517e2c5249a04bed485612",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "c2c8c4805b885dbb87714e8cc9ac9c2f7c8bf3dfe4517e2c5249a04bed485612",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.file.GetDirectoryEntryInfo_res.c",
+      "sha256": "80533930062c9b9141a66d5d57c11af9e228f7f21c0064b59d966c08bc14ba57",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "80533930062c9b9141a66d5d57c11af9e228f7f21c0064b59d966c08bc14ba57",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.file.GetInfo_req.c",
+      "sha256": "391b749cbd599a1f1a698673b0e37cc10cf1f65b509cc993afb4ee931bd811ed",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "391b749cbd599a1f1a698673b0e37cc10cf1f65b509cc993afb4ee931bd811ed",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.file.GetInfo_res.c",
+      "sha256": "a61e3e8f51a4e842d1b340796b5b2bd1ecaca94c120528cff7d15ef5bf354da7",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "a61e3e8f51a4e842d1b340796b5b2bd1ecaca94c120528cff7d15ef5bf354da7",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.file.Path.c",
+      "sha256": "5d43a5a0421b617a9fb9fc58d31ecc5d27acebf69345f362b86467e19cfc16ff",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "5d43a5a0421b617a9fb9fc58d31ecc5d27acebf69345f362b86467e19cfc16ff",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.file.Read_req.c",
+      "sha256": "d632c964b2120443708e054ac4d6c84b5c95bc7460295622f7145118b61a5b3c",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "d632c964b2120443708e054ac4d6c84b5c95bc7460295622f7145118b61a5b3c",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.file.Read_res.c",
+      "sha256": "7b89c11d96c9519f5287d9a5e0b2fb9f279b92033cfba51fcba4be66c383e0dc",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "7b89c11d96c9519f5287d9a5e0b2fb9f279b92033cfba51fcba4be66c383e0dc",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.file.Write_req.c",
+      "sha256": "baf02a8f8c018f216eaa2bf5e602b10f5ab23d1b46d15232f6237c4149188394",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "baf02a8f8c018f216eaa2bf5e602b10f5ab23d1b46d15232f6237c4149188394",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.file.Write_res.c",
+      "sha256": "f88d048e098e0fe94ccc35657e30b667658b6671c597dff12fe6c50c7a90c9e7",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "f88d048e098e0fe94ccc35657e30b667658b6671c597dff12fe6c50c7a90c9e7",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.param.Empty.c",
+      "sha256": "eda8f498770d101e133832f900823d5ceb67351bb3e378549ca6eaf5c6c7dcb7",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "eda8f498770d101e133832f900823d5ceb67351bb3e378549ca6eaf5c6c7dcb7",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.param.ExecuteOpcode_req.c",
+      "sha256": "eb2ef8eef81d975d183a05f6dea8bd95de153d83550fcf6cf2676c2b7536983e",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "eb2ef8eef81d975d183a05f6dea8bd95de153d83550fcf6cf2676c2b7536983e",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.param.ExecuteOpcode_res.c",
+      "sha256": "202c0abc6992d07489431410c29c00a769fe76829cae44d7e9b3baff054ce5e7",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "202c0abc6992d07489431410c29c00a769fe76829cae44d7e9b3baff054ce5e7",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.param.GetSet_req.c",
+      "sha256": "1262c6686d70f91fef6d2938f91c78e76772caa9917eb218c68f18cb5a9f7d85",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "1262c6686d70f91fef6d2938f91c78e76772caa9917eb218c68f18cb5a9f7d85",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.param.GetSet_res.c",
+      "sha256": "ebb732deb59438606a542bce6395d8f4a59e5e6d0a554d987ec491412e9e0add",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "ebb732deb59438606a542bce6395d8f4a59e5e6d0a554d987ec491412e9e0add",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.param.NumericValue.c",
+      "sha256": "82e6cf5df0781f3093e4e85742cc829886b5e68252d6964e73438e1b880a86f7",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "82e6cf5df0781f3093e4e85742cc829886b5e68252d6964e73438e1b880a86f7",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.protocol.param.Value.c",
+      "sha256": "ee4978671fcdbc6bd1ac7158aabe91977e50270b39f6f054f7ccd9ef0fa1cfd9",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "ee4978671fcdbc6bd1ac7158aabe91977e50270b39f6f054f7ccd9ef0fa1cfd9",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.tunnel.Broadcast.c",
+      "sha256": "b69ebee18e27ad4671ef86f224d4c05c657ad1ab5b3468b45c6221a32ef8f8ea",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "b69ebee18e27ad4671ef86f224d4c05c657ad1ab5b3468b45c6221a32ef8f8ea",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.tunnel.Call_req.c",
+      "sha256": "80d7585a2e2fe9b7c91700348c4d066c440893d1d44d56fcbcba807660a148a9",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "80d7585a2e2fe9b7c91700348c4d066c440893d1d44d56fcbcba807660a148a9",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.tunnel.Call_res.c",
+      "sha256": "cd314f00c8ba32795bb9ac818e9020d08735680f2214d1701f6f51ab5cc65c7e",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "cd314f00c8ba32795bb9ac818e9020d08735680f2214d1701f6f51ab5cc65c7e",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.tunnel.Protocol.c",
+      "sha256": "b34dcfb73ec460b8183188900ad0ede65b17e849175c8a8dec02b3401afba29d",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "b34dcfb73ec460b8183188900ad0ede65b17e849175c8a8dec02b3401afba29d",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.tunnel.SerialConfig.c",
+      "sha256": "7557a763a69641aa3546404f98ceac310bca5231d5c27a5d9e56877c4a6571f9",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "7557a763a69641aa3546404f98ceac310bca5231d5c27a5d9e56877c4a6571f9",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "lib/main/Dronecan/dsdlc_generated/src/uavcan.tunnel.Targetted.c",
+      "sha256": "142034b7b6084d0338b39e1a92ad6f3b64f9b604646801c7638fcdc88bbff81d",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "142034b7b6084d0338b39e1a92ad6f3b64f9b604646801c7638fcdc88bbff81d",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "src/main/drivers/barometer/barometer_bmp581.c",
+      "sha256": "ab7813e7920f91f1eb676132c525481ecf8cfed1aa3a4500d545dd5d72052c93",
+      "origin": "ECFH743 board integration"
+    },
+    {
+      "path": "src/main/drivers/barometer/barometer_bmp581.h",
+      "sha256": "9363f5de0103620ba7ab6f87cc95823e790e659a3af931e58849207e4d1fae76",
+      "origin": "ECFH743 board integration"
+    },
+    {
+      "path": "src/main/drivers/compass/compass_mmc5983ma.c",
+      "sha256": "a0aaafead43d765fdf572a74068b9f24343be11d8ced5a028e7b73bb01323b97",
+      "origin": "ECFH743 board integration"
+    },
+    {
+      "path": "src/main/drivers/compass/compass_mmc5983ma.h",
+      "sha256": "142e5391cd98bab0b677b99be6db8dcf4ca5df45139ce57ea53a687ba6bfa60d",
+      "origin": "ECFH743 board integration"
+    },
+    {
+      "path": "src/main/drivers/dronecan/dronecan.c",
+      "sha256": "7689ff33d2d7dd13ef755bb595d2bfa23514cbeaa5e8ff4f825d50b330a0700f",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "ef81cbf341d8539dd078af5bf5561cdb301d87994d1bd7c69593bf51ca27b89e",
+      "unchanged_from_can_source": false
+    },
+    {
+      "path": "src/main/drivers/dronecan/dronecan.h",
+      "sha256": "be695022014e4e7ead8cd4be3cbb6b7637f17e5af4e1be96768966e296709778",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "e5c324b523bd454d6b2b98dd282b5cac7d33230607e55aa71d59ee028f28b34c",
+      "unchanged_from_can_source": false
+    },
+    {
+      "path": "src/main/drivers/dronecan/dronecan_async.c",
+      "sha256": "44528ab8be8f343bb320e6125d9b0056b8b7dbc517e87fffa030381f9057f515",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "44528ab8be8f343bb320e6125d9b0056b8b7dbc517e87fffa030381f9057f515",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "src/main/drivers/dronecan/dronecan_async.h",
+      "sha256": "8ed245ed9429a4a74377083f9124ee9b7eaa13fb0541355b7e89ac45ef86dcc3",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "8ed245ed9429a4a74377083f9124ee9b7eaa13fb0541355b7e89ac45ef86dcc3",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "src/main/drivers/dronecan/dronecan_dna_server.c",
+      "sha256": "ba90d0164314bc79de50cc62d2971c4028f749dba6f68ccf4d5c2c7815299ec0",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "ba90d0164314bc79de50cc62d2971c4028f749dba6f68ccf4d5c2c7815299ec0",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "src/main/drivers/dronecan/dronecan_dna_server.h",
+      "sha256": "1861e4549b7b9bfa6228d3c02d27b0778e978c374c69a0d8abf10220cea4b25c",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "1861e4549b7b9bfa6228d3c02d27b0778e978c374c69a0d8abf10220cea4b25c",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "src/main/drivers/dronecan/dronecan_node_status.c",
+      "sha256": "626967741313f5ce4768971bb81d3d0bc0c3fceb299be52717ff54b0e19c2e9b",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "47a07d297558e10257397b206d8360321dc80cbe6abb3ce8a85991b00e52e439",
+      "unchanged_from_can_source": false
+    },
+    {
+      "path": "src/main/drivers/dronecan/dronecan_node_status.h",
+      "sha256": "6d4c5c30d178221f935b2dbd842f3adf4a948d91902104a94131b81ce0635252",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "4e8ac92cdaf4d7366b8143252d35ab5479021b4a2c78e5d58d02fa860df6d3b3",
+      "unchanged_from_can_source": false
+    },
+    {
+      "path": "src/main/drivers/dronecan/ecf_can_diagnostics.c",
+      "sha256": "8522614d4faf28ad98267c925a563672ba48f26db028f76808ef9ce8c0569331",
+      "origin": "ECFH743 board integration"
+    },
+    {
+      "path": "src/main/drivers/dronecan/ecf_can_diagnostics.h",
+      "sha256": "81db88e7568ff06d47d8e1f9faaa8dd5b9b8c2dafdd30507cf71bdf989fed864",
+      "origin": "ECFH743 board integration"
+    },
+    {
+      "path": "src/main/drivers/dronecan/libcanard/canard.c",
+      "sha256": "d0770d2eebb88c07f4eddbbbc5bfe5c38eeba1de0f53423b8af035b3167df3d5",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "d0770d2eebb88c07f4eddbbbc5bfe5c38eeba1de0f53423b8af035b3167df3d5",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "src/main/drivers/dronecan/libcanard/canard.h",
+      "sha256": "3270c89f5b60cd9afb84fea751c4759f6c3894560500f8dcadbfa1dcafd9cc0d",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "3270c89f5b60cd9afb84fea751c4759f6c3894560500f8dcadbfa1dcafd9cc0d",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "src/main/drivers/dronecan/libcanard/canard_internals.h",
+      "sha256": "b4f30968020adfd7c4ee227dbef0084e75b4812e09a6ca7de95516767e32af22",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "b4f30968020adfd7c4ee227dbef0084e75b4812e09a6ca7de95516767e32af22",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "src/main/drivers/dronecan/libcanard/canard_sitl_driver.c",
+      "sha256": "ebc30b279dea7c0118f932413f268ca7686b71b0886c9fe2b3ef79803eda67c7",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "ebc30b279dea7c0118f932413f268ca7686b71b0886c9fe2b3ef79803eda67c7",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "src/main/drivers/dronecan/libcanard/canard_stm32_driver.h",
+      "sha256": "f3927bd1a836883fd107314779183c317c3dc36a3f54f7eda3c3d40db116a588",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "f3927bd1a836883fd107314779183c317c3dc36a3f54f7eda3c3d40db116a588",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "src/main/drivers/dronecan/libcanard/canard_stm32_timing.c",
+      "sha256": "d6fab0bf0b310819a42cf33338678de13cc98ab5a235c3b5c8e5b245e70f5b61",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "d6fab0bf0b310819a42cf33338678de13cc98ab5a235c3b5c8e5b245e70f5b61",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "src/main/drivers/dronecan/libcanard/canard_stm32_timing.h",
+      "sha256": "45ca1bcbf822106d5d538909d67f3a07f412550fb64edc68385a6b04112efb30",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "45ca1bcbf822106d5d538909d67f3a07f412550fb64edc68385a6b04112efb30",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "src/main/drivers/dronecan/libcanard/canard_stm32f7xx_driver.c",
+      "sha256": "444268fb8ae2d096e45dc3a61fea5f857359f838af2e33a5c06531c4c0a72c76",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "444268fb8ae2d096e45dc3a61fea5f857359f838af2e33a5c06531c4c0a72c76",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "src/main/drivers/dronecan/libcanard/canard_stm32h7xx_driver.c",
+      "sha256": "fe1e19b7c2f0474d6c1b58666bff031e39a31718aecc39ae55ebf23eaa3b0ac7",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "10a7f71b2bd178f7f0162ef85ffa65487df0846cdb38a643b94d5ad8a3468a53",
+      "unchanged_from_can_source": false
+    },
+    {
+      "path": "src/main/fc/fc_msp_dronecan.c",
+      "sha256": "b08bde6e9e423a43c842354ea8fefaeda8729468021eae049ee83a1239b18087",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "b08bde6e9e423a43c842354ea8fefaeda8729468021eae049ee83a1239b18087",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "src/main/fc/fc_msp_dronecan.h",
+      "sha256": "daa1ccc0eebe891f95fbb4f86db6bd29bc54bf67937ece9c2523ee87b037d95a",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "daa1ccc0eebe891f95fbb4f86db6bd29bc54bf67937ece9c2523ee87b037d95a",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "src/main/io/gps_dronecan.c",
+      "sha256": "6167d7a328bd6bc370af10dc81a2a7aab656c2426375d858dbf2aaefed1f1f67",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "6167d7a328bd6bc370af10dc81a2a7aab656c2426375d858dbf2aaefed1f1f67",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "src/main/sensors/battery_sensor_dronecan.c",
+      "sha256": "e1b913867e6b54c2494ff56c4185f484209886326b3576df0c060d722cdc5c37",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "e1b913867e6b54c2494ff56c4185f484209886326b3576df0c060d722cdc5c37",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "src/main/sensors/battery_sensor_dronecan.h",
+      "sha256": "2821740c9d7a2bab9af5a9d633092c259d142a167a3618f5976df991eaa2fe55",
+      "origin": "pinned upstream CAN backport",
+      "upstream_commit": "13ebed98e40c8990a6dd849eb8c809967976de40",
+      "original_sha256": "2821740c9d7a2bab9af5a9d633092c259d142a167a3618f5976df991eaa2fe55",
+      "unchanged_from_can_source": true
+    },
+    {
+      "path": "src/main/target/ECFH743/CMakeLists.txt",
+      "sha256": "890a61653301af206eb948399d8ed26d0bd668a730b93f6f82cd3c6c309c4ecd",
+      "origin": "ECFH743 board integration"
+    },
+    {
+      "path": "src/main/target/ECFH743/README.md",
+      "sha256": "d501fc04fd6e6b85665df72c93a4204486a6c2965f1d444336b4e7f88fdb781f",
+      "origin": "ECFH743 board integration"
+    },
+    {
+      "path": "src/main/target/ECFH743/config.c",
+      "sha256": "e37875c2fdcdf6befadd6871a13f0607311d352efbfd0edf4460bd88af86de99",
+      "origin": "ECFH743 board integration"
+    },
+    {
+      "path": "src/main/target/ECFH743/shared_io.h",
+      "sha256": "29d0d24fb8ac7727648516c860349ff031f5fd8c17f4dc83cb34ab5709dd80a0",
+      "origin": "ECFH743 board integration"
+    },
+    {
+      "path": "src/main/target/ECFH743/target.c",
+      "sha256": "ef0dccb6cf55046c2b21876333c1a80df0316cb83e45ee485dcbf252de49353e",
+      "origin": "ECFH743 board integration"
+    },
+    {
+      "path": "src/main/target/ECFH743/target.h",
+      "sha256": "1a94a0331214bbfef75a44cf5f95f744806414810780b6684c4997b24399048f",
+      "origin": "ECFH743 board integration"
+    }
+  ],
+  "selected_source_files": 3662,
+  "selected_source_bytes": 83476770,
+  "configuration_schema": 128,
+  "can_pg_version": 2,
+  "current_ecf_revision": 5,
+  "current_snapshot_date": "2026-10-28"
+}

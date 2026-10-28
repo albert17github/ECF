@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-28T03:30:56.251849+00:00",
+  "project": "INAV",
+  "passed": true,
+  "actual_source": "source/src/main/drivers/light_ws2811strip.c",
+  "source_sha256": "f8671ecd2b6bfb616555046ad1e9dc078cd532adc2342bf0eb9c8a2183ff4916",
+  "checks": 28,
+  "timer_wrap_checked": true,
+  "armed_bypass_checked": true,
+  "final_native_state_restored": true,
+  "physical_color_observed": false
+}

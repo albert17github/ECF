@@ -1,0 +1,133 @@
+/* ECF Core H743 target. SPDX-License-Identifier: GPL-3.0-or-later */
+#pragma once
+
+#define TARGET_BOARD_IDENTIFIER "ECF7"
+#define USBD_PRODUCT_STRING "ECF Core H743 INAV"
+#define USE_TARGET_CONFIG
+#define USE_HARDWARE_PREBOOT_SETUP
+#define ECF_RAW_SENSOR_BLACKBOX
+#define ECF_AFATFS_WRITE_STATS
+
+#define USE_VCP
+#define USE_UART1
+#define UART1_TX_PIN PA9
+#define UART1_RX_PIN PA10
+#define USE_UART3
+#define UART3_TX_PIN PD8
+#define UART3_RX_PIN PD9
+#define USE_UART4
+#define UART4_TX_PIN PD1
+#define UART4_RX_PIN PD0
+#define USE_UART5
+#define UART5_TX_PIN PB13
+#define UART5_RX_PIN PB12
+#define USE_UART6
+#define UART6_TX_PIN PC6
+#define UART6_RX_PIN PC7
+#define USE_UART7
+#define UART7_TX_PIN PE8
+#define UART7_RX_PIN PE7
+#define USE_UART8
+#define UART8_TX_PIN PE1
+#define UART8_RX_PIN PE0
+#define SERIAL_PORT_COUNT 8
+#define USE_USB_DETECT
+#define USB_DETECT_PIN PA15
+#define USB_DETECT_INPUT_FLOATING
+#define DEFAULT_RX_TYPE RX_TYPE_SERIAL
+
+#define USE_SPI
+#define USE_SPI_DEVICE_4
+#define SPI4_SCK_PIN PE2
+#define SPI4_MISO_PIN PE5
+#define SPI4_MOSI_PIN PE6
+#define USE_TARGET_IMU_HARDWARE_DESCRIPTORS
+#define USE_DUAL_GYRO
+#define USE_SPI_DEVICE_1
+#define SPI1_SCK_PIN PA5
+#define SPI1_MISO_PIN PA6
+#define SPI1_MOSI_PIN PA7
+#define USE_IMU_ICM45686
+#define ICM45686_SPI_BUS BUS_SPI1
+#define ICM45686_CS_PIN PA4
+#define IMU_ICM45686_ALIGN CW0_DEG
+
+#define USE_I2C
+#define USE_I2C_DEVICE_3
+#define I2C3_SCL PA8
+#define I2C3_SDA PC9
+#define USE_I2C_DEVICE_4
+#define I2C4_SCL PD12
+#define I2C4_SDA PD13
+#define USE_I2C_DEVICE_2
+#define I2C2_SCL PB10
+#define I2C2_SDA PB11
+#define DEFAULT_I2C_BUS BUS_I2C2
+#define USE_BARO
+#define USE_BARO_BMP581
+#define BARO_I2C_BUS BUS_I2C2
+#define USE_MAG
+#define USE_MAG_MMC5983MA
+#define MAG_I2C_BUS BUS_I2C3
+#define USE_TARGET_MAG_HARDWARE_DESCRIPTORS
+#define ECF_EXTERNAL_MAG_FALLBACK
+#define USE_MAG_HMC5883
+#define USE_MAG_QMC5883
+#define USE_MAG_QMC5883P
+#define USE_MAG_IST8310
+#define USE_MAG_LIS3MDL
+#define ECF_SHARED_IO_CONFIG
+
+/* UART8 takes precedence over shared analog inputs; scaling is carrier-specific. */
+#define USE_ADC
+#define ADC_INSTANCE ADC1
+#define ADC_CHANNEL_1_PIN PC5
+#define ADC_CHANNEL_2_PIN PC4
+#define VBAT_ADC_CHANNEL ADC_CHN_1
+#define CURRENT_METER_ADC_CHANNEL ADC_CHN_2
+#define VBAT_SCALE_DEFAULT 1100
+#define CURRENT_METER_SCALE 200
+#define CURRENT_METER_OFFSET 0
+
+#define USE_SDCARD
+#define USE_SDCARD_SDIO
+#define SDCARD_SDIO_DEVICE SDIODEV_2
+#define SDCARD_SDIO_4BIT
+#define SDCARD_SDIO2_CK_ALT
+#define SDCARD_SDIO2_CMD_ALT
+#define SDCARD_SDIO_NORMAL_SPEED
+#define SDCARD_SDIO_RISING_EDGE
+
+#define USE_LED_STRIP
+#define ECF_LED_BOOT_HUE 300
+#define WS2811_PIN PB7
+#define WS2811_TIMER_HZ 24000000
+#define WS2811_BIT_COMPARE_0 8
+#define WS2811_BIT_COMPARE_1 16
+#define WS2811_DELAY_BUFFER_LENGTH 256
+#define DEFAULT_FEATURES FEATURE_LED_STRIP
+
+#define MAX_PWM_OUTPUT_PORTS 8
+#define USE_DSHOT
+#define USE_DSHOT_DMAR
+#define USE_ESC_SENSOR
+#define TARGET_IO_PORTA (0xffff & ~(BIT(14) | BIT(13)))
+#define TARGET_IO_PORTB 0xffff
+#define TARGET_IO_PORTC 0xffff
+#define TARGET_IO_PORTD 0xffff
+#define TARGET_IO_PORTE 0xffff
+
+#include <stdbool.h>
+#include <stdint.h>
+uint8_t ecfSharedIoMode(void);
+void ecfValidateSharedInterfaces(void);
+bool ecfSerialPortAllowed(uint8_t identifier);
+bool ecfI2cDeviceAllowed(uint8_t device);
+
+#ifndef USE_DRONECAN
+#define USE_DRONECAN
+#endif
+#define CAN1_RX PB8
+#define CAN1_TX PB9
+#define CAN2_RX PB5
+#define CAN2_TX PB6

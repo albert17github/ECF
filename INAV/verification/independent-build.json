@@ -1,0 +1,22 @@
+{
+  "project": "INAV",
+  "revision": 5,
+  "passed": true,
+  "source_manifest_sha256": "8652f1c565c9e162a08e4eac8458aa9491922733bf7b11bb3c6ddde9c107dc98",
+  "clean_build_in_new_project": true,
+  "modified_source_allowed": false,
+  "compiler": "ARM GCC 13.3.1",
+  "products": {
+    "image": {
+      "sha256": "1a9ec0930096f42137b101d689322b20aa8e3359d40ffbf880660b149d5ec06d",
+      "bytes": 2620009,
+      "byte_identical_previous": true
+    },
+    "elf": {
+      "sha256": "66b5140f765d9db056767d5966e80f8c71dbf292b88f2d7c02e4ba3ff8da64b4",
+      "bytes": 9829628,
+      "byte_identical_previous": true
+    }
+  },
+  "final_source_zip_proof": "final-source-zip-rebuild.json in the release attachment directory"
+}
