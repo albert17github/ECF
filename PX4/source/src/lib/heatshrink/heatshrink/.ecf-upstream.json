@@ -1,0 +1,9 @@
+{
+  "path": "src/lib/heatshrink/heatshrink",
+  "commit": "052e6de72f67f1777198bce98f3de62f7f3c16a0",
+  "repository": "PX4/heatshrink",
+  "archive": "src__lib__heatshrink__heatshrink.tar.gz",
+  "bytes": 37046,
+  "sha256": "8d11b3f0c07799a4922a0f8582180e8f7b71388b3994805b1c5e099e8b18bf47",
+  "url": "https://codeload.github.com/PX4/heatshrink/tar.gz/052e6de72f67f1777198bce98f3de62f7f3c16a0"
+}

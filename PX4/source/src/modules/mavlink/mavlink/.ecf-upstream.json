@@ -1,0 +1,9 @@
+{
+  "path": "src/modules/mavlink/mavlink",
+  "commit": "33af200d25ec6f0925b49b1ba82bbf1294ea5f72",
+  "repository": "mavlink/mavlink",
+  "archive": "src__modules__mavlink__mavlink.tar.gz",
+  "bytes": 263860,
+  "sha256": "b37fe1f94f7883448ebe17f7a494e2feb5d6ee885ca3319dd00f50d8c8bde20c",
+  "url": "https://codeload.github.com/mavlink/mavlink/tar.gz/33af200d25ec6f0925b49b1ba82bbf1294ea5f72"
+}

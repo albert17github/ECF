@@ -1,0 +1,9 @@
+{
+  "path": "src/modules/mavlink/mavlink/pymavlink",
+  "repository": "ArduPilot/pymavlink",
+  "commit": "fcaa2c7d25e3169dc66155929c338487941555e9",
+  "archive": "src__modules__mavlink__mavlink__pymavlink.tar.gz",
+  "bytes": 4307889,
+  "sha256": "d92f502852d4f70f6430dca3be6c8f0a0959b831b9ff6238ee842eb3949d21bf",
+  "url": "https://codeload.github.com/ArduPilot/pymavlink/tar.gz/fcaa2c7d25e3169dc66155929c338487941555e9"
+}
