@@ -1,0 +1,3 @@
+source/obj/
+.build/
+__pycache__/

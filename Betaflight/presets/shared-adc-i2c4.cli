@@ -1,0 +1,20 @@
+# ECFH743 complete shared-pad profile; 3.3V logic only.
+resource SERIAL_TX 8 NONE
+resource SERIAL_RX 8 NONE
+serial UART8 0 115200 57600 0 115200
+resource ADC_BATT 1 C05
+resource ADC_CURR 1 C04
+set battery_meter = ADC
+set current_meter = ADC
+set vbat_scale = 110
+set vbat_divider = 10
+set vbat_multiplier = 1
+set ibata_scale = 200
+set ibata_offset = 0
+resource SERIAL_TX 3 NONE
+resource SERIAL_RX 3 NONE
+serial UART3 0 115200 57600 0 115200
+resource I2C_SCL 4 D12
+resource I2C_SDA 4 D13
+set i2c4_clockspeed_khz = 400
+save

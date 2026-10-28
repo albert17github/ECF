@@ -1,0 +1,18 @@
+{
+  "project": "Betaflight",
+  "target": "ECFH743",
+  "upstream_tag": "2026.6.2",
+  "upstream_commit": "e0b7bb01b17b21351057e9ead2d1ab39dd44fa16",
+  "source_verification": "release-snapshot-verified",
+  "compiler": "ARM GCC 13.3.1",
+  "compiler_sha256": "75e5cbb02f35e5c3e2c8d47e524ced78f5a22ae33cfc08fec55cda8466d34789",
+  "load_address": "0x08000000",
+  "configuration_start": "0x08020000",
+  "configuration_end_exclusive": "0x08040000",
+  "factory_image": "ECFH743-factory.hex",
+  "factory_image_resets_configuration": true,
+  "built_at": "2026-10-27T21:50:35.1754698+08:00",
+  "build": "passed",
+  "hardware_verification": "factory_defaults_led_and_brief_regression_passed",
+  "source_manifest_sha256": "40d1d813f072f39d36f90d77a47b471e90f5386309b55f9958dee4dc3d365a00"
+}

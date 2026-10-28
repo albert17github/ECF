@@ -1,0 +1,31 @@
+# ECF common interface preset. Save and reboot after applying.
+resource SERIAL_TX 8 NONE
+resource SERIAL_RX 8 NONE
+resource ADC_BATT 1 C05
+resource ADC_CURR 1 C04
+resource SERIAL_TX 3 D08
+resource SERIAL_RX 3 D09
+resource I2C_SCL 4 NONE
+resource I2C_SDA 4 NONE
+serial UART1 64 115200 57600 0 115200
+serial UART3 0 115200 57600 0 115200
+serial UART4 0 115200 57600 0 115200
+serial UART5 1 115200 57600 0 115200
+serial UART6 2 115200 57600 0 115200
+serial UART7 1024 115200 57600 0 115200
+serial UART8 0 115200 57600 0 115200
+feature RX_SERIAL
+feature GPS
+feature TELEMETRY
+feature ESC_SENSOR
+set serialrx_provider = CRSF
+set battery_meter = ADC
+set current_meter = ADC
+set vbat_scale = 110
+set vbat_divider = 10
+set vbat_multiplier = 1
+set ibata_scale = 200
+set ibata_offset = 0
+set dronecan_enabled = ON
+set dronecan_device = 1
+save

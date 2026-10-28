@@ -1,0 +1,5 @@
+set motor_pwm_protocol = DSHOT300
+set dshot_bitbang = AUTO
+set dshot_bitbang_timer = TIM8
+set dshot_bidir = ON
+save

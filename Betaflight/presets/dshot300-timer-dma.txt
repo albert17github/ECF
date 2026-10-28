@@ -1,0 +1,5 @@
+set motor_pwm_protocol = DSHOT300
+set dshot_bidir = OFF
+set dshot_bitbang = OFF
+set dshot_burst = ON
+save

@@ -1,0 +1,95 @@
+{
+  "project": "Betaflight",
+  "target": "ECFH743",
+  "package_revision": 4,
+  "tag": "2026.6.2",
+  "commit": "e0b7bb01b17b21351057e9ead2d1ab39dd44fa16",
+  "commit_role": "official upstream baseline",
+  "upstream": "https://github.com/betaflight/betaflight/releases/tag/2026.6.2",
+  "license": "GPL-3.0-or-later",
+  "msp_version_hex": "1a060208323032362e362e32",
+  "dependencies": [
+    {
+      "path": "src/config",
+      "commit": "3a406c5c30c20d7c3bc7dd5ed547cca961baf0a9",
+      "upstream": "https://github.com/betaflight/config"
+    },
+    {
+      "path": "lib/modules/dronecan/libcanard",
+      "commit": "601ed35467e0ac38819df17cd7c918de19f62d58",
+      "upstream": "https://github.com/dronecan/libcanard"
+    }
+  ],
+  "compiler": "ARM GCC 13.3.1",
+  "build_entry": "build.ps1",
+  "verification_entry": "verify.ps1",
+  "source_files": 5480,
+  "source_manifest": "verification/source-SHA256SUMS.txt",
+  "source_manifest_sha256": "d2ceec38cb8e577b54b8b2b4b7ef116088aee697a82b63288722b88789d6dd8c",
+  "firmware": {
+    "image": "firmware/ECFH743-Betaflight-2026.6.2-factory.hex",
+    "sha256": "3b897a4e5d6d3e4bb4444e4f9cd683b23a8a3b89f9f01cf53beec25403593be0",
+    "elf": "firmware/debug/ECFH743-Betaflight-2026.6.2.elf",
+    "elf_sha256": "b20a2e8ffaff347c6157fc78e25d137db891b8b35fa80f0c84c2c504366ad467",
+    "load_address": "0x08000000",
+    "configuration_range": [
+      "0x08020000",
+      "0x08040000"
+    ],
+    "factory_image_resets_configuration": true,
+    "status": "accepted-output-driver-and-targeted-board-regression",
+    "source_manifest_sha256": "d2ceec38cb8e577b54b8b2b4b7ef116088aee697a82b63288722b88789d6dd8c"
+  },
+  "validation": {
+    "build": "passed",
+    "board_software": "passed",
+    "portable_clean_build": "passed",
+    "final_visual": "unchanged-source-regression",
+    "external_peripheral_interoperability_tested": false,
+    "flight_tested": false,
+    "scope": "output_driver_factory_and_targeted_board_regression",
+    "physical_waveforms_tested": true,
+    "new_physical_tests_run": true,
+    "final_visual_basis": "unchanged_LED_source_and_host_policy_check_with_previous_physical_observation"
+  },
+  "ecf_revision": 4,
+  "source_frozen": true,
+  "mandatory_power_defaults_profile": "2026-10-27",
+  "firmware_build_pending": false,
+  "previous_default_release_preserved": true,
+  "historical_default_image_sha256": "2876fece7829795131f0210a73770633aff28bf701e702d53e5dc990c1eedfc4",
+  "default_power_profile": {
+    "voltage_divider": 11,
+    "current_mv_per_a": 20,
+    "zero_offset": 0,
+    "mode": "ADC_UART3",
+    "external_logic_max_v": 3.3
+  },
+  "source_date_epoch": 1792555200,
+  "default_interfaces": {
+    "1": "ELRS_CRSF",
+    "3": "spare",
+    "4": "unassigned",
+    "5": "MSP",
+    "6": "GPS1",
+    "7": "serial_ESC_telemetry",
+    "8": "disabled"
+  },
+  "led_profile": {
+    "version": "2026-10-27",
+    "boot_color": "cyan",
+    "boot_pulses": 3,
+    "boot_on_ms": 150,
+    "boot_off_ms": 150,
+    "runtime": "native_status_with_yellow_prearm_warning",
+    "manual": "LED-STATUS.md"
+  },
+  "release_date": "2026-10-28",
+  "previous_revision": 3,
+  "changes": [
+    "Use allocated timer DMA in DShot completion interrupt"
+  ],
+  "runtime_source_changed": true,
+  "previous_image_sha256": "22492541e86378274cef56490b33af627af11be7c1a1f4e34a2b8514be7f6189",
+  "previous_executable_products_identical": false
+}
