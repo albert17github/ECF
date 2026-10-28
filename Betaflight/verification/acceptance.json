@@ -1,0 +1,75 @@
+{
+  "updated_at": "2026-10-28T03:47:54.948950+00:00",
+  "project": "Betaflight",
+  "revision": 4,
+  "image_sha256": "3b897a4e5d6d3e4bb4444e4f9cd683b23a8a3b89f9f01cf53beec25403593be0",
+  "source_manifest_sha256": "d2ceec38cb8e577b54b8b2b4b7ef116088aee697a82b63288722b88789d6dd8c",
+  "passed": true,
+  "scope": "Output driver regressions, factory defaults, GPIO, output combinations, scoped physical timing and sensor/runtime observation",
+  "new_physical_tests_run": true,
+  "native_factory_settings_verified": true,
+  "factory_gpio_verified": true,
+  "native_arming_checks_preserved": true,
+  "bench_unarmed": true,
+  "external_peripheral_interoperability_tested": false,
+  "flight_tested": false,
+  "default_power_profile": {
+    "voltage_divider": 11,
+    "current_mv_per_a": 20,
+    "zero_offset": 0,
+    "mode": "ADC_UART3",
+    "external_logic_max_v": 3.3
+  },
+  "serial_roles": {
+    "1": "ELRS_CRSF",
+    "3": "spare",
+    "4": "unassigned",
+    "5": "MSP",
+    "6": "GPS1",
+    "7": "serial_ESC_telemetry",
+    "8": "disabled"
+  },
+  "host_output_driver_regression_passed": true,
+  "output_combinations": 4,
+  "physical_waveforms_tested": {
+    "channels": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "PWM400": true,
+    "DSHOT300": true,
+    "DSHOT150_600": false,
+    "amplitude_calibrated": false
+  },
+  "led": {
+    "host_policy_checks": 28,
+    "source_unchanged": true,
+    "new_physical_color_observation": false,
+    "previous_physical_observation": "previous-led-observation.json"
+  },
+  "runtime": {
+    "elapsed_seconds": 120.21799999999348,
+    "maximum_late_permille": 0,
+    "load_blocked_samples": 0,
+    "i2c_errors_start_end": [
+      22,
+      22
+    ]
+  },
+  "evidence_record_sha256": {
+    "factory": "752d97074252ea502e60d7c7cdd426c659e04257e298a62ac3918cac7ece049a",
+    "gpio": "abae481ae76f43cff10dd8b8a8ee633b7241779817c1ed3355590935c976d4f4",
+    "outputs": "b027c5f12e71c583ded17a26ebc9f760865ec5706ed0a20563993bc0cd906541",
+    "physical": "58c1f2a32e64d920a8175225f6bb9207bcc4f66c60da5baab573f3b49cc26555",
+    "runtime": "ea39fc3887a4525cc705e703d9beb68907d8e94a9fcf211ab1af5cfac915c275",
+    "burst": "01770c066ed69be80e0c338f6cc9720ae324f528dc19886f62c133cf36a7ff94"
+  },
+  "cross_firmware_usb_recovery": {
+    "older_revision_control_same_usb_enumeration_failure": true,
+    "USB_disconnect_reconnect_recovered": true,
+    "new_image_after_reconnect_regression_passed": true,
+    "root_cause_not_assigned_to_output_fix": true
+  }
+}

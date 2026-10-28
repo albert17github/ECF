@@ -1,0 +1,859 @@
+{
+  "board": "ECFH743",
+  "upstream_firmware": "Betaflight 2026.6.2",
+  "definition_basis": "2026-10-13 schematic with 2026-10-16 library numbering",
+  "edge_positions": 45,
+  "internal_usb_positions": 2,
+  "logic_level": "3.3 V",
+  "vin": "regulated 5 V; not a direct battery input",
+  "rows": [
+    {
+      "position": 1,
+      "connector": "H1.1",
+      "signal": "GND",
+      "label": "GND",
+      "function": "公共地",
+      "mcu_description": "—",
+      "mcu_pins": [],
+      "edge": true,
+      "resources": [],
+      "physical_contact_continuity_tested": false,
+      "default": "common_ground",
+      "configuration": "hardware"
+    },
+    {
+      "position": 2,
+      "connector": "H1.2",
+      "signal": "USB",
+      "label": "USB",
+      "function": "原始 USB 5V 电源 VUSB；非 USB 数据线",
+      "mcu_description": "电源",
+      "mcu_pins": [],
+      "edge": true,
+      "resources": [],
+      "physical_contact_continuity_tested": false,
+      "default": "hardware_power_connection",
+      "configuration": "hardware",
+      "external_load_tested": false
+    },
+    {
+      "position": 3,
+      "connector": "H1.3",
+      "signal": "GND",
+      "label": "GND",
+      "function": "公共地",
+      "mcu_description": "—",
+      "mcu_pins": [],
+      "edge": true,
+      "resources": [],
+      "physical_contact_continuity_tested": false,
+      "default": "common_ground",
+      "configuration": "hardware"
+    },
+    {
+      "position": 4,
+      "connector": "H1.4",
+      "signal": "5V0",
+      "label": "5V0",
+      "function": "外部稳压 5V 输入 VIN；不直接接电池",
+      "mcu_description": "电源",
+      "mcu_pins": [],
+      "edge": true,
+      "resources": [],
+      "physical_contact_continuity_tested": false,
+      "default": "hardware_power_connection",
+      "configuration": "hardware",
+      "external_load_tested": false
+    },
+    {
+      "position": 5,
+      "connector": "H1.5",
+      "signal": "C2R",
+      "label": "C2R",
+      "function": "FDCAN2_RX，控制器逻辑接收",
+      "mcu_description": "PB5",
+      "mcu_pins": [
+        "PB5"
+      ],
+      "edge": true,
+      "resources": [
+        "CAN_RX 2 B05"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "CAN2 selectable; native stack uses CAN1 by default",
+      "constraint": "3.3 V controller signals; carrier requires a transceiver and appropriate bus termination"
+    },
+    {
+      "position": 6,
+      "connector": "H1.6",
+      "signal": "C2T",
+      "label": "C2T",
+      "function": "FDCAN2_TX，控制器逻辑发送",
+      "mcu_description": "PB6",
+      "mcu_pins": [
+        "PB6"
+      ],
+      "edge": true,
+      "resources": [
+        "CAN_TX 2 B06"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "CAN2 selectable; native stack uses CAN1 by default",
+      "constraint": "3.3 V controller signals; carrier requires a transceiver and appropriate bus termination"
+    },
+    {
+      "position": 7,
+      "connector": "H1.7",
+      "signal": "C1R",
+      "label": "C1R",
+      "function": "FDCAN1_RX，控制器逻辑接收",
+      "mcu_description": "PB8",
+      "mcu_pins": [
+        "PB8"
+      ],
+      "edge": true,
+      "resources": [
+        "CAN_RX 1 B08"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "CAN1 enabled, 1 Mbit/s",
+      "constraint": "3.3 V controller signals; carrier requires a transceiver and appropriate bus termination"
+    },
+    {
+      "position": 8,
+      "connector": "H1.8",
+      "signal": "C1T",
+      "label": "C1T",
+      "function": "FDCAN1_TX，控制器逻辑发送",
+      "mcu_description": "PB9",
+      "mcu_pins": [
+        "PB9"
+      ],
+      "edge": true,
+      "resources": [
+        "CAN_TX 1 B09"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "CAN1 enabled, 1 Mbit/s",
+      "constraint": "3.3 V controller signals; carrier requires a transceiver and appropriate bus termination"
+    },
+    {
+      "position": 9,
+      "connector": "H1.9",
+      "signal": "SCK",
+      "label": "SCK",
+      "function": "SPI4_SCK",
+      "mcu_description": "PE2",
+      "mcu_pins": [
+        "PE2"
+      ],
+      "edge": true,
+      "resources": [
+        "SPI_SCK 4 E02"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "SPI4 resources available; no external sensor active by default",
+      "configuration": "native gyro_2 configuration and GYRO_CS/GYRO_EXTI resources",
+      "external_sensor_probe_verified": false
+    },
+    {
+      "position": 10,
+      "connector": "H1.10",
+      "signal": "NCS",
+      "label": "NCS",
+      "function": "SPI4 低有效 GPIO 软件片选",
+      "mcu_description": "PE3",
+      "mcu_pins": [
+        "PE3"
+      ],
+      "edge": true,
+      "resources": [
+        "GYRO_CS 2 E03"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "SPI4 resources available; no external sensor active by default",
+      "configuration": "native gyro_2 configuration and GYRO_CS/GYRO_EXTI resources",
+      "external_sensor_probe_verified": false
+    },
+    {
+      "position": 11,
+      "connector": "H1.11",
+      "signal": "INT",
+      "label": "INT",
+      "function": "外部中断输入 EXTI4",
+      "mcu_description": "PE4",
+      "mcu_pins": [
+        "PE4"
+      ],
+      "edge": true,
+      "resources": [
+        "GYRO_EXTI 2 E04"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "SPI4 resources available; no external sensor active by default",
+      "configuration": "native gyro_2 configuration and GYRO_CS/GYRO_EXTI resources",
+      "external_sensor_probe_verified": false
+    },
+    {
+      "position": 12,
+      "connector": "H1.12",
+      "signal": "SDI",
+      "label": "SDI",
+      "function": "SPI4_MISO，核心板数据输入",
+      "mcu_description": "PE5",
+      "mcu_pins": [
+        "PE5"
+      ],
+      "edge": true,
+      "resources": [
+        "SPI_SDI 4 E05"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "SPI4 resources available; no external sensor active by default",
+      "configuration": "native gyro_2 configuration and GYRO_CS/GYRO_EXTI resources",
+      "external_sensor_probe_verified": false
+    },
+    {
+      "position": 13,
+      "connector": "H1.13",
+      "signal": "SDO",
+      "label": "SDO",
+      "function": "SPI4_MOSI，核心板数据输出",
+      "mcu_description": "PE6",
+      "mcu_pins": [
+        "PE6"
+      ],
+      "edge": true,
+      "resources": [
+        "SPI_SDO 4 E06"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "SPI4 resources available; no external sensor active by default",
+      "configuration": "native gyro_2 configuration and GYRO_CS/GYRO_EXTI resources",
+      "external_sensor_probe_verified": false
+    },
+    {
+      "position": 14,
+      "connector": "H1.14",
+      "signal": "CKO",
+      "label": "CKO",
+      "function": "外接 IMU 时钟输出，TIM1_CH3",
+      "mcu_description": "PE13",
+      "mcu_pins": [
+        "PE13"
+      ],
+      "edge": true,
+      "resources": [],
+      "physical_contact_continuity_tested": false,
+      "default": "reserved, analog high impedance, no pull",
+      "configuration": "TIM1_CH3 clock pin reserved; external reference-clock generation is not enabled by this target",
+      "clock_output_verified": false
+    },
+    {
+      "position": 15,
+      "connector": "H1.15",
+      "signal": "AI1/U8T",
+      "label": "AI1",
+      "function": "ADC1_INP8／UART8_TX，二选一",
+      "mcu_description": "PC5 与 PE1 电气并接",
+      "mcu_pins": [
+        "PC5",
+        "PE1"
+      ],
+      "edge": true,
+      "resources": [
+        "ADC_BATT 1 C05"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "ADC voltage on PC5, 11:1; paired UART8 TX inactive high impedance",
+      "alternatives": [
+        "ADC_BATT 1 C05",
+        "SERIAL_TX 8 E01"
+      ],
+      "constraint": "Mutually exclusive external connections; UART mode clears the conflicting peripheral resources; maximum 3.3 V"
+    },
+    {
+      "position": 16,
+      "connector": "H1.16",
+      "signal": "AI2/U8R",
+      "label": "AI2",
+      "function": "ADC1_INP4／UART8_RX，二选一",
+      "mcu_description": "PC4 与 PE0 电气并接",
+      "mcu_pins": [
+        "PC4",
+        "PE0"
+      ],
+      "edge": true,
+      "resources": [
+        "ADC_CURR 1 C04"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "ADC current on PC4, 20 mV/A, zero offset 0; paired UART8 RX inactive high impedance",
+      "alternatives": [
+        "ADC_CURR 1 C04",
+        "SERIAL_RX 8 E00"
+      ],
+      "constraint": "Mutually exclusive external connections; UART mode clears the conflicting peripheral resources; maximum 3.3 V"
+    },
+    {
+      "position": 17,
+      "connector": "H1.17",
+      "signal": "CH1",
+      "label": "CH1",
+      "function": "板级输出 1，TIM2_CH1",
+      "mcu_description": "PA0",
+      "mcu_pins": [
+        "PA0"
+      ],
+      "edge": true,
+      "resources": [
+        "MOTOR 1 A00"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "QUADX motors 1-4, DShot300; disarmed",
+      "configuration": "native motor/servo resources; TIM2 channels share timing"
+    },
+    {
+      "position": 18,
+      "connector": "H1.18",
+      "signal": "CH2",
+      "label": "CH2",
+      "function": "板级输出 2，TIM2_CH2",
+      "mcu_description": "PA1",
+      "mcu_pins": [
+        "PA1"
+      ],
+      "edge": true,
+      "resources": [
+        "MOTOR 2 A01"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "QUADX motors 1-4, DShot300; disarmed",
+      "configuration": "native motor/servo resources; TIM2 channels share timing"
+    },
+    {
+      "position": 19,
+      "connector": "H1.19",
+      "signal": "CH3",
+      "label": "CH3",
+      "function": "板级输出 3，TIM2_CH3",
+      "mcu_description": "PA2",
+      "mcu_pins": [
+        "PA2"
+      ],
+      "edge": true,
+      "resources": [
+        "MOTOR 3 A02"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "QUADX motors 1-4, DShot300; disarmed",
+      "configuration": "native motor/servo resources; TIM2 channels share timing"
+    },
+    {
+      "position": 20,
+      "connector": "H1.20",
+      "signal": "CH4",
+      "label": "CH4",
+      "function": "板级输出 4，TIM2_CH4",
+      "mcu_description": "PA3",
+      "mcu_pins": [
+        "PA3"
+      ],
+      "edge": true,
+      "resources": [
+        "MOTOR 4 A03"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "QUADX motors 1-4, DShot300; disarmed",
+      "configuration": "native motor/servo resources; TIM2 channels share timing"
+    },
+    {
+      "position": 21,
+      "connector": "H2.1",
+      "signal": "GND",
+      "label": "GND",
+      "function": "公共地",
+      "mcu_description": "—",
+      "mcu_pins": [],
+      "edge": true,
+      "resources": [],
+      "physical_contact_continuity_tested": false,
+      "default": "common_ground",
+      "configuration": "hardware"
+    },
+    {
+      "position": 22,
+      "connector": "H2.2",
+      "signal": "3V3",
+      "label": "3V3",
+      "function": "系统 3.3V 输出 VSYS",
+      "mcu_description": "电源",
+      "mcu_pins": [],
+      "edge": true,
+      "resources": [],
+      "physical_contact_continuity_tested": false,
+      "default": "hardware_power_connection",
+      "configuration": "hardware",
+      "external_load_tested": false
+    },
+    {
+      "position": 23,
+      "connector": "H2.3",
+      "signal": "I3C",
+      "label": "I3C",
+      "function": "I2C3_SCL",
+      "mcu_description": "PA8",
+      "mcu_pins": [
+        "PA8"
+      ],
+      "edge": true,
+      "resources": [
+        "I2C_SCL 3 A08"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "I2C3 external compass, native supported-device probe",
+      "constraint": "External pull-ups to 3.3 V required; external device communication untested"
+    },
+    {
+      "position": 24,
+      "connector": "H2.4",
+      "signal": "I3D",
+      "label": "I3D",
+      "function": "I2C3_SDA",
+      "mcu_description": "PC9",
+      "mcu_pins": [
+        "PC9"
+      ],
+      "edge": true,
+      "resources": [
+        "I2C_SDA 3 C09"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "I2C3 external compass, native supported-device probe",
+      "constraint": "External pull-ups to 3.3 V required; external device communication untested"
+    },
+    {
+      "position": 25,
+      "connector": "H2.5",
+      "signal": "I4C/U3T",
+      "label": "I4C",
+      "function": "I2C4_SCL／USART3_TX，二选一",
+      "mcu_description": "PD12 与 PD8 电气并接",
+      "mcu_pins": [
+        "PD12",
+        "PD8"
+      ],
+      "edge": true,
+      "resources": [
+        "SERIAL_TX 3 D08"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "UART3 route selected, protocol unassigned; shared I2C4 inactive high impedance",
+      "alternatives": [
+        "I2C_SCL 4 D12",
+        "SERIAL_TX 3 D08"
+      ],
+      "constraint": "Mutually exclusive external connections; UART mode clears the conflicting peripheral resources; maximum 3.3 V"
+    },
+    {
+      "position": 26,
+      "connector": "H2.6",
+      "signal": "I4D/U3R",
+      "label": "I4D",
+      "function": "I2C4_SDA／USART3_RX，二选一",
+      "mcu_description": "PD13 与 PD9 电气并接",
+      "mcu_pins": [
+        "PD13",
+        "PD9"
+      ],
+      "edge": true,
+      "resources": [
+        "SERIAL_RX 3 D09"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "UART3 route selected, protocol unassigned; shared I2C4 inactive high impedance",
+      "alternatives": [
+        "I2C_SDA 4 D13",
+        "SERIAL_RX 3 D09"
+      ],
+      "constraint": "Mutually exclusive external connections; UART mode clears the conflicting peripheral resources; maximum 3.3 V"
+    },
+    {
+      "position": 27,
+      "connector": "H2.7",
+      "signal": "U4T",
+      "label": "U4T",
+      "function": "UART4_TX",
+      "mcu_description": "PD1",
+      "mcu_pins": [
+        "PD1"
+      ],
+      "edge": true,
+      "resources": [
+        "SERIAL_TX 4 D01"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "unassigned; native single-GPS baseline",
+      "configuration": "native serial RX, GPS, telemetry and MSP assignment"
+    },
+    {
+      "position": 28,
+      "connector": "H2.8",
+      "signal": "U4R",
+      "label": "U4R",
+      "function": "UART4_RX",
+      "mcu_description": "PD0",
+      "mcu_pins": [
+        "PD0"
+      ],
+      "edge": true,
+      "resources": [
+        "SERIAL_RX 4 D00"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "unassigned; native single-GPS baseline",
+      "configuration": "native serial RX, GPS, telemetry and MSP assignment"
+    },
+    {
+      "position": 29,
+      "connector": "H2.9",
+      "signal": "U1T",
+      "label": "U1T",
+      "function": "USART1_TX",
+      "mcu_description": "PA9",
+      "mcu_pins": [
+        "PA9"
+      ],
+      "edge": true,
+      "resources": [
+        "SERIAL_TX 1 A09"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "ELRS receiver / CRSF",
+      "configuration": "native serial RX, GPS, telemetry and MSP assignment"
+    },
+    {
+      "position": 30,
+      "connector": "H2.10",
+      "signal": "U1R",
+      "label": "U1R",
+      "function": "USART1_RX",
+      "mcu_description": "PA10",
+      "mcu_pins": [
+        "PA10"
+      ],
+      "edge": true,
+      "resources": [
+        "SERIAL_RX 1 A10"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "ELRS receiver / CRSF",
+      "configuration": "native serial RX, GPS, telemetry and MSP assignment"
+    },
+    {
+      "position": 31,
+      "connector": "H2.11",
+      "signal": "U6T",
+      "label": "U6T",
+      "function": "USART6_TX",
+      "mcu_description": "PC6",
+      "mcu_pins": [
+        "PC6"
+      ],
+      "edge": true,
+      "resources": [
+        "SERIAL_TX 6 C06"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "GPS1",
+      "configuration": "native serial RX, GPS, telemetry and MSP assignment"
+    },
+    {
+      "position": 32,
+      "connector": "H2.12",
+      "signal": "U6R",
+      "label": "U6R",
+      "function": "USART6_RX",
+      "mcu_description": "PC7",
+      "mcu_pins": [
+        "PC7"
+      ],
+      "edge": true,
+      "resources": [
+        "SERIAL_RX 6 C07"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "GPS1",
+      "configuration": "native serial RX, GPS, telemetry and MSP assignment"
+    },
+    {
+      "position": 33,
+      "connector": "H2.13",
+      "signal": "U5T",
+      "label": "U5T",
+      "function": "UART5_TX",
+      "mcu_description": "PB13",
+      "mcu_pins": [
+        "PB13"
+      ],
+      "edge": true,
+      "resources": [
+        "SERIAL_TX 5 B13"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "MSP bidirectional data link",
+      "configuration": "native serial RX, GPS, telemetry and MSP assignment"
+    },
+    {
+      "position": 34,
+      "connector": "H2.14",
+      "signal": "U5R",
+      "label": "U5R",
+      "function": "UART5_RX",
+      "mcu_description": "PB12",
+      "mcu_pins": [
+        "PB12"
+      ],
+      "edge": true,
+      "resources": [
+        "SERIAL_RX 5 B12"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "MSP bidirectional data link",
+      "configuration": "native serial RX, GPS, telemetry and MSP assignment"
+    },
+    {
+      "position": 35,
+      "connector": "H2.15",
+      "signal": "U7T",
+      "label": "U7T",
+      "function": "UART7_TX",
+      "mcu_description": "PE8",
+      "mcu_pins": [
+        "PE8"
+      ],
+      "edge": true,
+      "resources": [
+        "SERIAL_TX 7 E08"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "UART7 TX unused by receive-only ESC telemetry",
+      "configuration": "native serial RX, GPS, telemetry and MSP assignment"
+    },
+    {
+      "position": 36,
+      "connector": "H2.16",
+      "signal": "U7R",
+      "label": "U7R",
+      "function": "UART7_RX",
+      "mcu_description": "PE7",
+      "mcu_pins": [
+        "PE7"
+      ],
+      "edge": true,
+      "resources": [
+        "SERIAL_RX 7 E07"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "Native serial ESC telemetry receive",
+      "configuration": "native serial RX, GPS, telemetry and MSP assignment"
+    },
+    {
+      "position": 37,
+      "connector": "H2.17",
+      "signal": "CH8",
+      "label": "CH8",
+      "function": "板级输出 8，TIM4_CH4",
+      "mcu_description": "PD15",
+      "mcu_pins": [
+        "PD15"
+      ],
+      "edge": true,
+      "resources": [
+        "MOTOR 8 D15"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "output resource assigned, inactive in QUADX, analog high impedance",
+      "configuration": "native motor/servo resources; TIM3 and TIM4 share timing within each timer"
+    },
+    {
+      "position": 38,
+      "connector": "H2.18",
+      "signal": "CH7",
+      "label": "CH7",
+      "function": "板级输出 7，TIM4_CH3",
+      "mcu_description": "PD14",
+      "mcu_pins": [
+        "PD14"
+      ],
+      "edge": true,
+      "resources": [
+        "MOTOR 7 D14"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "output resource assigned, inactive in QUADX, analog high impedance",
+      "configuration": "native motor/servo resources; TIM3 and TIM4 share timing within each timer"
+    },
+    {
+      "position": 39,
+      "connector": "H2.19",
+      "signal": "CH6",
+      "label": "CH6",
+      "function": "板级输出 6，TIM3_CH3",
+      "mcu_description": "PB0",
+      "mcu_pins": [
+        "PB0"
+      ],
+      "edge": true,
+      "resources": [
+        "MOTOR 6 B00"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "output resource assigned, inactive in QUADX, analog high impedance",
+      "configuration": "native motor/servo resources; TIM3 and TIM4 share timing within each timer"
+    },
+    {
+      "position": 40,
+      "connector": "H2.20",
+      "signal": "CH5",
+      "label": "CH5",
+      "function": "板级输出 5，TIM3_CH4",
+      "mcu_description": "PB1",
+      "mcu_pins": [
+        "PB1"
+      ],
+      "edge": true,
+      "resources": [
+        "MOTOR 5 B01"
+      ],
+      "physical_contact_continuity_tested": false,
+      "default": "output resource assigned, inactive in QUADX, analog high impedance",
+      "configuration": "native motor/servo resources; TIM3 and TIM4 share timing within each timer"
+    },
+    {
+      "position": 41,
+      "connector": "H3.1",
+      "signal": "RST",
+      "label": "RST",
+      "function": "NRST，低有效复位",
+      "mcu_description": "NRST",
+      "mcu_pins": [],
+      "edge": true,
+      "resources": [],
+      "physical_contact_continuity_tested": false,
+      "default": "hardware NRST",
+      "configuration": "ST-Link hardware reset; no power interruption required in the verified normal flow"
+    },
+    {
+      "position": 42,
+      "connector": "H3.2",
+      "signal": "BOT",
+      "label": "BOT",
+      "function": "BOOT0，启动模式选择",
+      "mcu_description": "BOOT0",
+      "mcu_pins": [],
+      "edge": true,
+      "resources": [],
+      "physical_contact_continuity_tested": false,
+      "default": "hardware BOOT0",
+      "configuration": "hardware boot selection; pad actuation not retested in this stable-version session"
+    },
+    {
+      "position": 43,
+      "connector": "H3.3",
+      "signal": "GND",
+      "label": "GND",
+      "function": "公共地",
+      "mcu_description": "—",
+      "mcu_pins": [],
+      "edge": true,
+      "resources": [],
+      "physical_contact_continuity_tested": false,
+      "default": "common_ground",
+      "configuration": "hardware"
+    },
+    {
+      "position": 44,
+      "connector": "H3.4",
+      "signal": "DIO",
+      "label": "DIO",
+      "function": "SWDIO，调试数据",
+      "mcu_description": "PA13",
+      "mcu_pins": [
+        "PA13"
+      ],
+      "edge": true,
+      "resources": [],
+      "physical_contact_continuity_tested": false,
+      "default": "SWD debugger function retained",
+      "configuration": "native SWD"
+    },
+    {
+      "position": 45,
+      "connector": "H3.5",
+      "signal": "CLK",
+      "label": "CLK",
+      "function": "SWCLK，调试时钟",
+      "mcu_description": "PA14",
+      "mcu_pins": [
+        "PA14"
+      ],
+      "edge": true,
+      "resources": [],
+      "physical_contact_continuity_tested": false,
+      "default": "SWD debugger function retained",
+      "configuration": "native SWD"
+    },
+    {
+      "position": 46,
+      "connector": "内部 USB 接点",
+      "signal": "USB_DP",
+      "label": "DP",
+      "function": "USB D+；接点存在已见图面，网络与坐标待核对",
+      "mcu_description": "PA12",
+      "mcu_pins": [
+        "PA12"
+      ],
+      "edge": false,
+      "resources": [],
+      "physical_contact_continuity_tested": false,
+      "default": "USB full-speed data controller",
+      "configuration": "native VCP, MSC and ROM DFU; internal-pad continuity requires PCB verification"
+    },
+    {
+      "position": 47,
+      "connector": "内部 USB 接点",
+      "signal": "USB_DN",
+      "label": "DN",
+      "function": "USB D−；接点存在已见图面，网络与坐标待核对",
+      "mcu_description": "PA11",
+      "mcu_pins": [
+        "PA11"
+      ],
+      "edge": false,
+      "resources": [],
+      "physical_contact_continuity_tested": false,
+      "default": "USB full-speed data controller",
+      "configuration": "native VCP, MSC and ROM DFU; internal-pad continuity requires PCB verification"
+    }
+  ],
+  "shared_groups": {
+    "15_16": "ADC / UART8 mutually exclusive",
+    "25_26": "UART3 / I2C4 mutually exclusive",
+    "factory": "ADC_UART3",
+    "available_modes": [
+      "ADC_I2C4",
+      "ADC_UART3",
+      "UART8_I2C4",
+      "UART8_UART3"
+    ]
+  },
+  "physical_scope": "Factory configuration and GPIO verified; external device interoperability requires connected peripherals",
+  "default_power_profile": {
+    "voltage_divider": 11,
+    "current_mv_per_a": 20,
+    "zero_offset": 0,
+    "mode": "ADC_UART3",
+    "external_logic_max_v": 3.3
+  }
+}

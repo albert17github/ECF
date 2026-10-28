@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "source_sha256": "94ee7c8cbcb55b94c4088934bc71035c57e267c9c4a3248f2aba6bdb1840d2fd",
+  "output": "case=0 burst=1 configured_option=10 unrelated_dma_enabled=1 pass=1\ncase=1 burst=1 configured_option=11 unrelated_dma_enabled=1 pass=1\ncase=2 burst=1 configured_option=12 unrelated_dma_enabled=1 pass=1\ncase=3 burst=0 configured_option=10 unrelated_dma_enabled=1 pass=1\n",
+  "scope": "host regression with mocked peripheral registers; no physical timing claim"
+}

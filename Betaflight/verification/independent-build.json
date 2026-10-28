@@ -1,0 +1,20 @@
+{
+  "project": "Betaflight",
+  "revision": 4,
+  "passed": true,
+  "source_manifest_sha256": "d2ceec38cb8e577b54b8b2b4b7ef116088aee697a82b63288722b88789d6dd8c",
+  "clean_build_in_new_project": true,
+  "modified_source_allowed": false,
+  "compiler": "ARM GCC 13.3.1",
+  "products": {
+    "image": {
+      "sha256": "3b897a4e5d6d3e4bb4444e4f9cd683b23a8a3b89f9f01cf53beec25403593be0",
+      "bytes": 2333799
+    },
+    "elf": {
+      "sha256": "b20a2e8ffaff347c6157fc78e25d137db891b8b35fa80f0c84c2c504366ad467",
+      "bytes": 829132
+    }
+  },
+  "final_source_zip_proof": "final-source-zip-rebuild.json in the release attachment directory"
+}

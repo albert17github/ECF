@@ -1,0 +1,20 @@
+{
+  "protocol": "ECF experimental MSPv2 log-only extension",
+  "version": 1,
+  "status_command": "0x7EC0",
+  "control_command": "0x7EC1",
+  "control_payload": "ASCII ECFL plus action byte 0=stop,1=start",
+  "requires_disarmed": true,
+  "start_requires_mode": "NORMAL",
+  "start_requires_device": "SDCARD",
+  "maximum_seconds": 60,
+  "actuator_commands_sent": false,
+  "native_arming_checks_changed": false,
+  "validation": "Historical baseline protocol validation; this revision has brief regression scope",
+  "negative_payload_controls_rejected": 3,
+  "duplicate_start_rejected": true,
+  "explicit_stop_and_native_footer_verified": true,
+  "automatic_deadline_verified": true,
+  "automatic_stop_first_observed_seconds": 60.26500000001397,
+  "outputs_unchanged": true
+}

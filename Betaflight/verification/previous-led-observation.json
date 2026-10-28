@@ -1,0 +1,21 @@
+{
+  "previous_revision": 3,
+  "image_sha256": "22492541e86378274cef56490b33af627af11be7c1a1f4e34a2b8514be7f6189",
+  "physical_color_verified": true,
+  "observed": {
+    "boot_color": "cyan",
+    "startup_pulses": 3,
+    "normal_status_resumed": true,
+    "physical_color_verified": true,
+    "isolated_led_diagnostic_verified": true,
+    "host_policy_checks": 28
+  },
+  "source_sha256": "a8effe5daf86ad81aee9c407fe18fb5e1f8f23b3c89cebcff6d1e4b0cddc3852",
+  "all_led_source_files_unchanged": true,
+  "compared_sources": {
+    "source/src/main/drivers/light_ws2811strip.c": "a8effe5daf86ad81aee9c407fe18fb5e1f8f23b3c89cebcff6d1e4b0cddc3852",
+    "source/src/main/io/ledstrip.c": "7348a958f3906f2ef71f1c13836e632f3c3e7fe2693c29692e0617a5597f1cc3",
+    "source/src/platform/STM32/light_ws2811strip_hal.c": "fe0c05913edf330b189ca63c0709e14190848405f805405aedfe99411600fbb0"
+  },
+  "new_physical_observation": false
+}
