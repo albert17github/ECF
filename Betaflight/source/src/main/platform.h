@@ -1,0 +1,56 @@
+/*
+ * This file is part of Cleanflight and Betaflight.
+ *
+ * Cleanflight and Betaflight are free software. You can redistribute
+ * this software and/or modify this software under the terms of the
+ * GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option)
+ * any later version.
+ *
+ * Cleanflight and Betaflight are distributed in the hope that they
+ * will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this software.
+ *
+ * If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#pragma once
+
+#define NOINLINE __attribute__((noinline))
+
+#ifdef USE_CONFIG
+#include "config.h"
+#endif
+
+// USB product name: prefer BOARD_NAME from config.h; otherwise fall back to
+// the target-specific USBD_PRODUCT_STRING defined in target.h.
+#if defined(BOARD_NAME) && !defined(USBD_PRODUCT_STRING)
+#define USBD_PRODUCT_STRINGIFY_(x) #x
+#define USBD_PRODUCT_STRINGIFY(x) USBD_PRODUCT_STRINGIFY_(x)
+#define USBD_PRODUCT_STRING "Betaflight - " USBD_PRODUCT_STRINGIFY(BOARD_NAME)
+#endif
+
+#include "target/common_pre.h"
+
+// MCU specific platform from platform/X
+#include "platform/platform.h"
+
+#include "target.h"
+#include "target/common_post.h"
+#include "target/common_defaults_post.h"
+
+#if !defined(UNIT_TEST) && !ENABLE_SIMULATOR && !(USBD_DEBUG_LEVEL > 0)
+#ifdef ENABLE_STDIO_PREINCLUDE
+// Pre-include stdio.h so its declarations of sprintf/snprintf land before
+// the poison pragma. Toolchains like xtensa-esp-elf pull stdio.h in
+// transitively from IDF HAL headers; without this the declaration itself
+// trips the poison. Only platforms that opt in (see platform/platform.h) need
+// this; others keep the poison without dragging stdio.h into every TU.
+#include <stdio.h>
+#endif
+#pragma GCC poison sprintf snprintf
+#endif

@@ -1,0 +1,221 @@
+{
+  "upstream": "https://github.com/betaflight/blackbox-log-viewer",
+  "commit": "a84755c5e897c1a3a580424b64c0df066c12c6b4",
+  "official_parser_sources_unmodified": true,
+  "dependencies": {
+    "@babel/parser": {
+      "version": "7.29.9",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/babel/babel.git",
+        "directory": "packages/babel-parser"
+      }
+    },
+    "@vue/compiler-core": {
+      "version": "3.5.33",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vuejs/core.git",
+        "directory": "packages/compiler-core"
+      }
+    },
+    "@vue/compiler-dom": {
+      "version": "3.5.33",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vuejs/core.git",
+        "directory": "packages/compiler-dom"
+      }
+    },
+    "@vue/devtools-api": {
+      "version": "7.7.10",
+      "license": "MIT",
+      "repository": {
+        "directory": "packages/devtools-api",
+        "type": "git",
+        "url": "git+https://github.com/vuejs/devtools.git"
+      }
+    },
+    "@vue/devtools-kit": {
+      "version": "7.7.10",
+      "license": "MIT",
+      "repository": {
+        "directory": "packages/devtools-kit",
+        "type": "git",
+        "url": "git+https://github.com/vuejs/devtools.git"
+      }
+    },
+    "@vue/devtools-shared": {
+      "version": "7.7.10",
+      "license": "MIT",
+      "repository": {
+        "directory": "packages/shared",
+        "type": "git",
+        "url": "git+https://github.com/vuejs/devtools.git"
+      }
+    },
+    "@vue/reactivity": {
+      "version": "3.5.33",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vuejs/core.git",
+        "directory": "packages/reactivity"
+      }
+    },
+    "@vue/runtime-core": {
+      "version": "3.5.33",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vuejs/core.git",
+        "directory": "packages/runtime-core"
+      }
+    },
+    "@vue/runtime-dom": {
+      "version": "3.5.33",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vuejs/core.git",
+        "directory": "packages/runtime-dom"
+      }
+    },
+    "@vue/shared": {
+      "version": "3.5.33",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vuejs/core.git",
+        "directory": "packages/shared"
+      }
+    },
+    "birpc": {
+      "version": "2.9.0",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/antfu-collective/birpc.git"
+      }
+    },
+    "entities": {
+      "version": "7.0.1",
+      "license": "BSD-2-Clause",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/fb55/entities.git"
+      }
+    },
+    "estree-walker": {
+      "version": "2.0.2",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/Rich-Harris/estree-walker"
+      }
+    },
+    "hookable": {
+      "version": "5.5.3",
+      "license": "MIT",
+      "repository": "unjs/hookable"
+    },
+    "perfect-debounce": {
+      "version": "1.0.0",
+      "license": "MIT",
+      "repository": "unjs/perfect-debounce"
+    },
+    "pinia": {
+      "version": "3.0.4",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vuejs/pinia.git"
+      }
+    },
+    "semver": {
+      "version": "6.3.1",
+      "license": "ISC",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/npm/node-semver.git"
+      }
+    },
+    "source-map-js": {
+      "version": "1.2.2",
+      "license": "BSD-3-Clause",
+      "repository": "7rulnik/source-map-js"
+    },
+    "vue": {
+      "version": "3.5.33",
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vuejs/core.git"
+      }
+    }
+  },
+  "input_sha256": {
+    "deps/semver/semver.js": "d89ed53251e85463bf4300ae9a3e258dc75eb73eb2820d524bd05f4451bed3d4",
+    "parser/src/flightlog_fielddefs.js": "136d8a303834a0c93d4d2a834334ed876d5a29acac0691f48920cdeb26bf909f",
+    "parser/src/tools.js": "aa84d8af6f183113585718aca46b9549e70eb975c32a2c07c590ef9a617c9708",
+    "deps/@vue/shared/dist/shared.cjs.prod.js": "a1dfaca1c715fa50bf33fbb9b8da7c3fdf1c85273be08327f927af2c1d4663d5",
+    "deps/@vue/shared/dist/shared.cjs.js": "726f15f6f0339fb42e2e5fcd6c4384601055ad526768fb234678fda5f06f6372",
+    "deps/@vue/shared/index.js": "22aeabedc1f2782f67b05c54df4382d4e52a0e0c384ff02349372e2acd9974ed",
+    "deps/entities/dist/commonjs/decode-codepoint.js": "98d97fd43e4db015e5afa7c69b1055cd1ade8114530ea01734add86184125271",
+    "deps/entities/dist/commonjs/internal/decode-shared.js": "e68061084a578fa4f95bd96407f2a4e272bb38615ae1b1076d1181981ce95549",
+    "deps/entities/dist/commonjs/generated/decode-data-html.js": "80b85ad02696af10d597c1353db7eb01fbbe4db5b922ac8693c29cbe18d53ac4",
+    "deps/entities/dist/commonjs/generated/decode-data-xml.js": "07e89fa83ca837b188e4cc52a8d6d2b6983fc5a63b15abad789da9be2ea777b6",
+    "deps/entities/dist/commonjs/internal/bin-trie-flags.js": "ddb6a8fcaab3a1fb6d60c576bf10302a554d71869b6466a14fc11a800264559a",
+    "deps/entities/dist/commonjs/decode.js": "e318cd751279428b7d7e6e9e4c0dc7cc8a4c78e8c2bd00d42da9f8e7b3ef5c07",
+    "deps/@babel/parser/lib/index.js": "82d72e197e27bf909ae10ffc8d1a969aeb94fe96ec96c4e9cb685a0a8229e40c",
+    "deps/estree-walker/dist/umd/estree-walker.js": "183597c40a43d2a2ebda3dc85ae2dd70e107b3e5cec305b02a5bffa54e0f4b9b",
+    "deps/source-map-js/lib/base64.js": "651bf433cf05e9ec8cee0b94639483236a605d48279e83d3d5c5de81c21d6599",
+    "deps/source-map-js/lib/base64-vlq.js": "f3407e528f54ec0787bd0a71eeac0c99fffd98445916fcbe116dc69ca3be928b",
+    "deps/source-map-js/lib/util.js": "0629f3ae2f3049cda3a2e87ea651dcf0cc71108f4681795ab989a8ac1573fc03",
+    "deps/source-map-js/lib/array-set.js": "163bb3055aaea7140167740036a83161fd912c344b14f992754b80f21477d754",
+    "deps/source-map-js/lib/mapping-list.js": "35ddb82861f11a70ab84cb47d620fcb28d7f884bb444644e06bde815b836ef9e",
+    "deps/source-map-js/lib/source-map-generator.js": "07894c9ea1e674263e2e7694d43d4fb935e98549b93946205b9536c1420696c0",
+    "deps/source-map-js/lib/binary-search.js": "c7f4a47a125af0bd860443dfd71d2f412d1a97dcb53ab7038189d63b91dc32bd",
+    "deps/source-map-js/lib/quick-sort.js": "1e2857cc4f6c9c36b764ce529f39b9243bed27aed809e895d7cec04c8a869266",
+    "deps/source-map-js/lib/source-map-consumer.js": "9ad10db386da13c1f95e6a680d6298dbb306c77f57a9a3539e4595b723a7654b",
+    "deps/source-map-js/lib/source-node.js": "d1a0ef136bf0e974ba956506c88e91fef5d8681bbf10c486ff9566a7d6d76f3c",
+    "deps/source-map-js/source-map.js": "dc098456c2d9ab90a4c0a17cca9be16665b9813df20906553a98b0088a157be7",
+    "deps/@vue/compiler-core/dist/compiler-core.cjs.prod.js": "89c03de3a4841d5daece7dc5e8ba56dbb4f9144758b485436896c40aca7c523c",
+    "deps/@vue/compiler-core/dist/compiler-core.cjs.js": "408e074e3f4e90043e44914ece6109d58c1369f357814d5592a32b898162e5db",
+    "deps/@vue/compiler-core/index.js": "ccc969ede88026f2168f8a6ca482913664ac12b2e0cfe1e34cd211767e521a60",
+    "deps/@vue/compiler-dom/dist/compiler-dom.cjs.prod.js": "17f15385e13fb4e9633c9beb8eb938406f885c45616d7f198dcf1e4ea629642d",
+    "deps/@vue/compiler-dom/dist/compiler-dom.cjs.js": "2a33c644b1643dc4a8a76a66196d7ab9a32c998f3bce0b9b3500c133473cee18",
+    "deps/@vue/compiler-dom/index.js": "21407fc5cebe255208627dd039f2284156be88abbd9123281a79581d349b48c1",
+    "deps/@vue/reactivity/dist/reactivity.cjs.prod.js": "a0a3672318191666fec30c68cbdb1dab16ac073a36ee7b032485a2c3b87970cc",
+    "deps/@vue/reactivity/dist/reactivity.cjs.js": "e4b8e44b6f29268e011328956d3d784e39e2c58b7c857202503bdc93e458e20f",
+    "deps/@vue/reactivity/index.js": "ea58baa61892122ece77249d50c4b4bcdda46dd5233d6908d86d6bb4f874a109",
+    "deps/@vue/runtime-core/dist/runtime-core.cjs.prod.js": "fa0403c8a569671e931214ef5b2e1f719e5a9ce9272a37893112ff42e509a929",
+    "deps/@vue/runtime-core/dist/runtime-core.cjs.js": "ae6a0e98aadf8d11d27952f13ae9314dbd2f5b5b9afe27ca292197fc1d277c94",
+    "deps/@vue/runtime-core/index.js": "62c7b9f4f1090dd5217eccacffb381d56a5d27f60c0256e7f04915a77489ef82",
+    "deps/@vue/runtime-dom/dist/runtime-dom.cjs.prod.js": "9da691b2657357dc5f5ac5f51c77db2376359821a55ac83be334be851bcb783a",
+    "deps/@vue/runtime-dom/dist/runtime-dom.cjs.js": "8da9256c2d6d24523d1a592166db9e4aff197973317bd0c727346e12ab38e8a8",
+    "deps/@vue/runtime-dom/index.js": "32a727cae7f8ef6ff93696552dd16b5fd355207439f74421dd9f19d7193f866f",
+    "deps/vue/dist/vue.cjs.prod.js": "a230bdd23a4b0915bfbb290cd2433c72173f1e5eb02fe8dbea065d6a1c84b851",
+    "deps/vue/dist/vue.cjs.js": "4046dba26360e5224a2cb305f71ac9b046f05e1319e071b6acc30f317f669720",
+    "deps/vue/index.js": "a5287f6056bc5c2c569d318063ee043f55a0d323fa7262f64456d58fd574f928",
+    "deps/vue/index.mjs": "be2f35590bee45e69850d0d8d48f0b8c8f5c0ef0ecf8a7265ab12fb7add6584d",
+    "deps/@vue/devtools-shared/dist/index.js": "47b16caf2f74420406a23e7b631ad398de1fe37f34a82152709126f6d83aba6d",
+    "deps/perfect-debounce/dist/index.mjs": "0c22ec5d22ac0c45d9419b7b543513d128c8f83d05a5f47279c3fd1fbb31138e",
+    "deps/hookable/dist/index.mjs": "d062b9488f0492a1daead4b8ba916cc2f913dc3f38c9082279a1edd503ec7f75",
+    "deps/birpc/dist/index.mjs": "0414ab049d4606c4f36c94491f016e741f46e955792f330fd79412673a5e6d4b",
+    "deps/@vue/devtools-kit/dist/index.js": "f5a5daad673293ec09b9db7a7bb236796744bd793e177730998810e8033d931c",
+    "deps/@vue/devtools-api/dist/index.js": "c82af890da897f235512299cf6a309fd8ffbde23640acf23cc89cdbe34523898",
+    "deps/pinia/dist/pinia.mjs": "967352979c21dbdc79b32b32009157577e53e07586e351cf25163154c92c502f",
+    "parser/src/user_settings_data.js": "a42601c1f6d0145a4c8d40f28ace6d6643b5121436868c4279f1b8d2311c2cfe",
+    "parser/src/pref_storage.js": "4c18ee5977c896e7c780e947da87a9afe88d7ef5d67cc4bd519a8a8f19117f92",
+    "parser/src/stores/settings.js": "525e49bbf4500caa7e42dcc70822fe066cb197c4c2058608c967f79a315a94b6",
+    "parser/src/flightlog_fields_presenter.js": "e36abbd53209de409b6ec4e0c1b0fe8bc91e02a26077bde739ae16516f358229",
+    "parser/src/datastream.js": "2c455967aa4e5d2f50bf2ccfa455433182bb174f90bbe0aee30f28b44c3d0d70",
+    "parser/src/decoders.js": "a0f3810ea2219b5717cd2e08aac7856f1ba461656e11f2529857a2d39ecbc536",
+    "parser/src/flightlog_parser.js": "263a3e51e98a1deec671f5a14e498a3064df90944228b8ff3c8fce2074ea5529",
+    "verify_log.mjs": "da11f5b51ab89af13b19a5ce6584d0152d64a6f1cd43afd7142e2bcbdb4078a0"
+  }
+}

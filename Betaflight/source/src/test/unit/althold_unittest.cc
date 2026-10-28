@@ -1,0 +1,282 @@
+/*
+ * This file is part of Betaflight.
+ *
+ * Betaflight is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Betaflight is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Betaflight. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include <stdint.h>
+#include <stdbool.h>
+#include <limits.h>
+#include <string.h>
+
+extern "C" {
+
+    #include "platform.h"
+    #include "build/debug.h"
+    #include "pg/pg_ids.h"
+
+    #include "common/filter.h"
+    #include "common/vector.h"
+
+    #include "fc/core.h"
+    #include "fc/rc_controls.h"
+    #include "fc/runtime_config.h"
+
+    #include "flight/alt_hold.h"
+    #include "flight/autopilot_multirotor.h"
+    #include "flight/failsafe.h"
+    #include "flight/imu.h"
+    #include "flight/pid.h"
+    #include "flight/position.h"
+    #include "flight/position_estimator.h"
+    #include "flight/position_nav.h"
+
+    #include "io/gps.h"
+
+    #include "rx/rx.h"
+    #include "scheduler/scheduler.h"
+
+    #include "pg/alt_hold.h"
+    #include "pg/autopilot.h"
+
+    #include "sensors/acceleration.h"
+    #include "sensors/gyro.h"
+
+    PG_REGISTER(accelerometerConfig_t, accelerometerConfig, PG_ACCELEROMETER_CONFIG, 0);
+    PG_REGISTER(altHoldConfig_t, altHoldConfig, PG_ALTHOLD_CONFIG, 0);
+    PG_REGISTER(autopilotConfig_t, autopilotConfig, PG_AUTOPILOT, 0);
+    PG_REGISTER(gyroConfig_t, gyroConfig, PG_GYRO_CONFIG, 0);
+    PG_REGISTER(positionConfig_t, positionConfig, PG_POSITION, 0);
+    PG_REGISTER(rcControlsConfig_t, rcControlsConfig, PG_RC_CONTROLS_CONFIG, 0);
+
+    bool failsafeIsActive(void) { return false; }
+    timeUs_t currentTimeUs = 0;
+    bool isAltHoldActive();
+    extern float testAltitudeCm;
+    extern float testAltitudeDerivativeCmS;
+    extern float testCosTiltAngle;
+    extern throttleStatus_e testThrottleStatus;
+}
+
+#include "unittest_macros.h"
+#include "gtest/gtest.h"
+
+uint32_t millisRW;
+uint32_t millis() {
+    return millisRW;
+}
+
+class AltholdControlUnittest : public ::testing::Test {
+protected:
+    void SetUp() override {
+        memset(&attitude, 0, sizeof(attitude));
+        memset(&gpsSol, 0, sizeof(gpsSol));
+        memset(rcCommand, 0, sizeof(rcCommand));
+        flightModeFlags = 0;
+        millisRW = 0;
+        testAltitudeCm = 0.0f;
+        testAltitudeDerivativeCmS = 0.0f;
+        testCosTiltAngle = 1.0f;
+        testThrottleStatus = THROTTLE_LOW;
+
+        autopilotConfig_t *apCfg = autopilotConfigMutable();
+        apCfg->hoverThrottle = 1500;
+        apCfg->throttleMin = 1000;
+        apCfg->throttleMax = 2000;
+        apCfg->altitudeP = 50;
+        apCfg->altitudeI = 50;
+        apCfg->altitudeD = 50;
+        apCfg->altitudeF = 0;
+        apCfg->landingAltitudeM = 5;
+
+        altHoldConfig_t *ahCfg = altHoldConfigMutable();
+        ahCfg->deadband = 10;
+        ahCfg->climbRate = 50;
+
+        rxConfigMutable()->mincheck = 1050;
+
+        autopilotInit();
+        altHoldInit();
+        resetAltitudeControl();
+    }
+};
+
+TEST(AltholdUnittest, altHoldTransitionsTest)
+{
+    updateAltHold(currentTimeUs);
+    EXPECT_EQ(isAltHoldActive(), false);
+
+    flightModeFlags |= ALT_HOLD_MODE;
+    millisRW = 42;
+    updateAltHold(currentTimeUs);
+    EXPECT_EQ(isAltHoldActive(), true);
+
+    flightModeFlags ^= ALT_HOLD_MODE;
+    millisRW = 56;
+    updateAltHold(currentTimeUs);
+    EXPECT_EQ(isAltHoldActive(), false);
+
+    flightModeFlags |= ALT_HOLD_MODE;
+    millisRW = 64;
+    updateAltHold(currentTimeUs);
+    EXPECT_EQ(isAltHoldActive(), true);
+}
+
+TEST(AltholdUnittest, altHoldTransitionsTestUnfinishedExitEnter)
+{
+    altHoldInit();
+    EXPECT_EQ(isAltHoldActive(), false);
+
+    flightModeFlags |= ALT_HOLD_MODE;
+    millisRW = 42;
+    updateAltHold(currentTimeUs);
+    EXPECT_EQ(isAltHoldActive(), true);
+}
+
+TEST(AltholdUnittest, altHoldCapturesHoverThrottleWhenConfigZero)
+{
+    altHoldInit();
+    autopilotConfigMutable()->hoverThrottle = 0;
+    rcCommand[THROTTLE] = 1450.0f;
+
+    flightModeFlags |= ALT_HOLD_MODE;
+    updateAltHold(currentTimeUs);
+    EXPECT_EQ(autopilotGetEffectiveHoverThrottlePwm(), 1450);
+
+    flightModeFlags &= ~ALT_HOLD_MODE;
+    updateAltHold(currentTimeUs);
+    EXPECT_EQ(autopilotGetEffectiveHoverThrottlePwm(), AP_HOVER_THROTTLE_DEFAULT);
+}
+
+TEST_F(AltholdControlUnittest, AltitudeControlRaisesThrottleWhenBelowTarget)
+{
+    testAltitudeCm = 0.0f;
+    testAltitudeDerivativeCmS = 0.0f;
+    altitudeControl(100.0f, 0.01f, 0.0f, 500.0f);
+    const float belowTargetThrottle = getAutopilotThrottle();
+
+    resetAltitudeControl();
+    testAltitudeCm = 200.0f;
+    testAltitudeDerivativeCmS = 0.0f;
+    altitudeControl(100.0f, 0.01f, 0.0f, 500.0f);
+    const float aboveTargetThrottle = getAutopilotThrottle();
+
+    EXPECT_GT(belowTargetThrottle, aboveTargetThrottle);
+}
+
+TEST_F(AltholdControlUnittest, AltitudeControlRespectsVelocityLimit)
+{
+    testAltitudeCm = 0.0f;
+    testAltitudeDerivativeCmS = 0.0f;
+
+    altitudeControl(200.0f, 0.01f, 0.0f, 100.0f);
+    const float limitedThrottle = getAutopilotThrottle();
+
+    resetAltitudeControl();
+    altitudeControl(800.0f, 0.01f, 0.0f, 1000.0f);
+    const float highLimitThrottle = getAutopilotThrottle();
+
+    EXPECT_GT(highLimitThrottle, limitedThrottle);
+}
+
+TEST_F(AltholdControlUnittest, AltitudeControlCompensatesForTilt)
+{
+    testAltitudeCm = 100.0f;
+    testAltitudeDerivativeCmS = 0.0f;
+
+    testCosTiltAngle = 1.0f;
+    altitudeControl(100.0f, 0.01f, 0.0f, 500.0f);
+    const float levelThrottle = getAutopilotThrottle();
+
+    resetAltitudeControl();
+    testCosTiltAngle = 0.5f;
+    altitudeControl(100.0f, 0.01f, 0.0f, 500.0f);
+    const float tiltedThrottle = getAutopilotThrottle();
+
+    EXPECT_GT(tiltedThrottle, levelThrottle);
+}
+
+// STUBS
+
+extern "C" {
+    uint8_t armingFlags = 0;
+    int16_t debug[DEBUG16_VALUE_COUNT];
+    uint8_t debugMode;
+    uint16_t flightModeFlags = 0;
+    uint8_t stateFlags = 0;
+
+    acc_t acc;
+    attitudeEulerAngles_t attitude;
+    gpsSolutionData_t gpsSol;
+    gyro_t gyro;
+
+    float testAltitudeCm = 0.0f;
+    float testAltitudeDerivativeCmS = 0.0f;
+    float testCosTiltAngle = 1.0f;
+    throttleStatus_e testThrottleStatus = THROTTLE_LOW;
+
+    float getAltitudeCm(void) { return testAltitudeCm; }
+    float getAltitudeDerivative(void) { return testAltitudeDerivativeCmS; }
+    float getAltitudeCmControl(void) { return testAltitudeCm; }
+    float getAltitudeDerivativeControl(void) { return testAltitudeDerivativeCmS; }
+    float getCosTiltAngle(void) { return testCosTiltAngle; }
+    float getGpsDataIntervalSeconds(void) { return 0.01f; }
+
+    float rcCommand[4];
+
+    bool gpsHasNewData(uint16_t* gpsStamp) {
+        UNUSED(*gpsStamp);
+        return true;
+    }
+    float getSetpointRate(int axis)
+    {
+        UNUSED(axis);
+        return 0.0f;
+    }
+
+    float getMaxRcRate(int axis)
+    {
+        UNUSED(axis);
+        return 720.0f; // nonzero: autopilotInit divides maxVelocity by this
+    }
+
+    void GPS_distance2d(const gpsLocation_t* /*from*/, const gpsLocation_t* /*to*/, vector2_t* /*dest*/) { }
+
+    static positionEstimate3d_t stubEstimate = {};
+
+    const positionEstimate3d_t *positionEstimatorGetEstimate(void) { return &stubEstimate; }
+    void positionEstimatorEnableXY(bool /*enable*/) { }
+    bool positionEstimatorIsValidXY(void) { return false; }
+
+    void positionNavInit(void) { }
+    void positionNavReset(void) { }
+    void positionNavUpdate(float /*dt*/, const positionEstimate3d_t * /*est*/) { }
+    bool positionNavHasActiveTarget(void) { return false; }
+    bool positionNavTargetReached(void) { return false; }
+    vector3_t positionNavGetTargetVelocityCmS(void) { return (vector3_t){{0, 0, 0}}; }
+    const positionNavCommand_t *positionNavGetActiveCommand(void) { return NULL; }
+
+    void parseRcChannels(const char *input, rxConfig_t *rxConfig) {
+        UNUSED(input);
+        UNUSED(rxConfig);
+    }
+
+    timeDelta_t getTaskDeltaTimeUs(taskId_e taskId)
+    {
+        UNUSED(taskId);
+        return TASK_PERIOD_HZ(100); // default poshold rate in tests
+    }
+
+    throttleStatus_e calculateThrottleStatus() { return testThrottleStatus; }
+}
