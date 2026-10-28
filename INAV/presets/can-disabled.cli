@@ -1,0 +1,3 @@
+set dronecan_enabled = OFF
+set dronecan_loopback = OFF
+save

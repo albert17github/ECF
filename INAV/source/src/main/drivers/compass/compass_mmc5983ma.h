@@ -1,0 +1,3 @@
+/* SPDX-License-Identifier: GPL-3.0-or-later */
+#pragma once
+bool mmc5983maDetect(magDev_t *mag);

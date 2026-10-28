@@ -1,0 +1,5 @@
+set dronecan_enabled = ON
+set dronecan_device = 1
+set dronecan_loopback = OFF
+set dronecan_bitrate_kbps = 1000
+save

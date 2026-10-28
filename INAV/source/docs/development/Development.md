@@ -1,0 +1,237 @@
+# Development
+
+This document is primarily for developers only.
+
+## General principals
+
+1. Name everything well.
+2. Strike a balance between simplicity and not-repeating code.
+3. Methods that return a boolean should be named as a question, and should not change state.  e.g. 'isOkToArm()'
+4. Methods that start with the word 'find' can return a null, methods that start with 'get' should not.
+5. Methods should have verb or verb-phrase names, like `deletePage` or `save`.  Variables should not, they generally should be nouns.  Tell the system to 'do' something 'with' something.  e.g. deleteAllPages(pageList).
+6. Keep methods short - it makes it easier to test.
+7. Don't be afraid of moving code to a new file - it helps to reduce test dependencies.
+8. Avoid noise-words in variable names, like 'data' or 'info'.  Think about what you're naming and name it well.  Don't be afraid to rename anything.
+9. Avoid comments that describe what the code is doing, the code should describe itself.  Comments are useful however for big-picture purposes and to document content of variables.
+10. If you need to document a variable do it at the declaration, don't copy the comment to the `extern` usage since it will lead to comment rot.
+11. Seek advice from other developers - know you can always learn more.
+12. Be professional - attempts at humor or slating existing code in the codebase itself is not helpful when you have to change/fix it.
+13. Know that there's always more than one way to do something and that code is never final - but it does have to work.
+
+Before making any code contributions, take a note of the https://github.com/multiwii/baseflight/wiki/CodingStyle
+
+It is also advised to read about clean code, here are some useful links:
+
+* http://cleancoders.com/
+* http://en.wikipedia.org/wiki/SOLID_%28object-oriented_design%29
+* http://en.wikipedia.org/wiki/Code_smell
+* http://en.wikipedia.org/wiki/Code_refactoring
+* http://www.amazon.co.uk/Working-Effectively-Legacy-Robert-Martin/dp/0131177052
+
+## Unit testing
+
+Ideally, there should be tests for any new code. However, since this is a legacy codebase which was not designed to be tested this might be a bit difficult.
+
+If you want to make changes and want to make sure it's tested then focus on the minimal set of changes required to add a test.
+
+Tests currently live in the `test` folder and they use the google test framework.
+The tests are compiled and run natively on your development machine and not on the target platform.
+This allows you to develop tests and code and actually execute it to make sure it works without needing a development board or simulator.
+
+This project could really do with some functional tests which test the behaviour of the application.
+
+All pull requests to add/improve the testability of the code or testing methods are highly sought!
+
+Note: Tests are written in C++ and linked with with firmware's C code.
+
+### Running the tests.
+
+The tests and test build system is very simple and based off the googletest example files, it may be improved in due course. From the root folder of the project simply do:
+
+Test are configured from the top level directory. It is recommended to use a separate test directory, here named `testing`.
+
+```
+mkdir testing
+cd testing
+# define NULL toolchain ...
+cmake -DTOOLCHAIN= ..
+# Run the tests
+make check
+```
+
+This will build a set of executable files in the `src/test/unit` folder (below `testing`), one for each `*_unittest.cc` file.
+
+After they have been executed by the make invocation, you can still run them on the command line to execute the tests and to see the test report, for example:
+
+```
+src/test/unit/time_unittest
+Running main() from /home/jrh/Projects/fc/inav/testing/src/test/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 2 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 2 tests from TimeUnittest
+[ RUN      ] TimeUnittest.TestMillis
+[       OK ] TimeUnittest.TestMillis (0 ms)
+[ RUN      ] TimeUnittest.TestMicros
+[       OK ] TimeUnittest.TestMicros (0 ms)
+[----------] 2 tests from TimeUnittest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 2 tests.
+```
+
+You can also step-debug the tests in `gdb` (or IDE debugger).
+
+The tests are currently always compiled with debugging information enabled, there may be additional warnings, if you see any warnings please attempt to fix them and submit pull requests with the fixes.
+
+Tests are verified and working with (native) GCC 11.20.
+
+## Using git and github
+
+Ensure you understand the github workflow: https://guides.github.com/introduction/flow/index.html
+
+Please keep pull requests focused on one thing only, since this makes it easier to merge and test in a timely manner.
+
+If you need help with pull requests there are guides on github here:
+
+https://help.github.com/articles/creating-a-pull-request/
+
+The main flow for a contributing is as follows:
+
+1. Login to github, go to the INAV repository and press `fork`.
+2. Then using the command line/terminal on your computer: `git clone <url to YOUR fork>`
+3. `cd inav`
+4. `git checkout maintenance-10.x`
+5. `git checkout -b my-new-code`
+6. Make changes
+7. `git add <files that have changed>`
+8. `git commit`
+9. `git push origin my-new-code`
+10. Create pull request using github UI to merge your changes from your new branch into the appropriate target branch (see "Branching and release workflow" below)
+11. Repeat from step 4 for new other changes.
+
+The primary thing to remember is that separate pull requests should be created for separate branches.  Never create a pull request from your `master` branch.
+
+**Important:** Most contributions should target a maintenance branch, not `master`. See the branching section below for guidance on choosing the correct target branch.
+
+Later, you can get the changes from the INAV repo into your version branch by adding INAV as a git remote and merging from it as follows:
+
+1. `git remote add upstream https://github.com/iNavFlight/inav.git`
+2. `git checkout maintenance-10.x`
+3. `git fetch upstream`
+4. `git merge upstream/maintenance-10.x`
+5. `git push origin` is an optional step that will update your fork on github
+
+
+You can also perform the git commands using the git client inside Eclipse.  Refer to the Eclipse git manual.
+
+## Branching and release workflow
+
+INAV uses maintenance branches for active development and releases. The `master` branch tracks the current version by receiving merges from the current version maintenance branch.
+
+### Branch Types
+
+#### Maintenance Branches (Current and Next Major Version)
+
+**Current version branch** (e.g., `maintenance-9.x`):
+- Used for backward-compatible changes
+- Bug fixes, new features, and improvements that don't break compatibility
+- Changes here will be included in the next release of the current major version (e.g., 9.1, 9.2)
+- Does not create compatibility issues between firmware and configurator within the same major version
+
+**Next major version branch** (e.g., `maintenance-10.x`):
+- Used for changes that introduce compatibility requirements
+- Breaking changes that would cause issues between different major versions
+- New features that require coordinated firmware and configurator updates
+- Changes here will be included in the next major version release (e.g., 10.0)
+
+### Choosing the Right Target Branch
+
+When creating a pull request, target the appropriate branch:
+
+**Target the current version branch** (e.g., `maintenance-9.x`) if your change:
+- Fixes a bug
+- Adds a new feature that is backward-compatible
+- Updates documentation
+- Adds or updates hardware targets
+- Makes improvements that work with existing releases
+
+**Target the next major version branch** (e.g., `maintenance-10.x`) if your change:
+- Breaks compatibility with the current major version
+- Requires coordinated firmware and configurator updates
+- Changes MSP protocol in an incompatible way
+- Modifies data structures in a breaking way
+
+### Release Workflow
+
+1. Development occurs on the current version maintenance branch (e.g., `maintenance-9.x`)
+2. When ready for release, a release candidate is tagged from the maintenance branch
+3. Bug fixes during the RC period continue on the maintenance branch
+4. After final release, the maintenance branch is periodically merged into `master`, which is then merged into the next version branch
+5. The cycle continues with the maintenance branch receiving new changes for the next release
+
+**Merge flow:** `maintenance-9.x` → `master` → `maintenance-10.x`
+
+### Propagating Changes Between Branches
+
+Changes committed to the current version branch flow through master to the next major version branch.
+
+**Maintainer workflow:**
+- Changes in `maintenance-9.x` are merged into `master`
+- Changes in `master` are then merged into `maintenance-10.x`
+- This ensures fixes and features aren't lost when the next major version is released
+- Prevents users from experiencing bugs in v10.0 that were already fixed in v9.x
+
+**Merge flow:**
+```bash
+# Step 1: Merge current version to master
+git checkout master
+git merge maintenance-9.x
+git push upstream master
+
+# Step 2: Merge master to next version
+git checkout maintenance-10.x
+git merge master
+git push upstream maintenance-10.x
+```
+
+**Why use master as intermediate step:** This keeps master synchronized with the current version, so if a contributor accidentally branches from master, they get current version code without breaking changes from maintenance-10.x.
+
+### Example Timeline
+
+**Current state (example - during 9.x series):**
+- `maintenance-9.x` - Active development for INAV 9.1, 9.2, etc.
+- `master` - Mirror of maintenance-9.x (receives merges via merge flow)
+- `maintenance-10.x` - Breaking changes for future INAV 10.0
+
+**After INAV 10.0 is released:**
+- `maintenance-10.x` - Becomes active development for INAV 10.1, 10.2, etc.
+- `master` - Now mirrors maintenance-10.x (via merge flow)
+- `maintenance-11.x` - Breaking changes for future INAV 11.0
+
+### Working with Maintenance Branches
+
+To branch from the current maintenance branch instead of master:
+
+```bash
+# Fetch latest changes
+git fetch upstream
+
+# Create your feature branch from the maintenance branch
+git checkout -b my-new-feature upstream/maintenance-9.x
+
+# Make changes, commit, and push
+git push origin my-new-feature
+
+# Create PR targeting maintenance-9.x (not master)
+```
+
+When updating your fork:
+
+```bash
+# Get the latest maintenance branch changes
+git fetch upstream
+
+# Push directly from upstream to your fork (no local checkout needed)
+git push origin upstream/maintenance-9.x:maintenance-9.x
+```

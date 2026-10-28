@@ -1,0 +1,26 @@
+# ECF common interface preset. Preserve unrelated installation settings.
+set ecf_io_mode = 1
+serial 0 64 115200 115200 0 115200
+serial 2 0 115200 115200 0 115200
+serial 3 0 115200 115200 0 115200
+serial 4 1 115200 115200 0 115200
+serial 5 2 115200 115200 0 115200
+serial 6 262144 115200 115200 0 115200
+serial 7 0 115200 115200 0 115200
+set receiver_type = SERIAL
+set serialrx_provider = CRSF
+feature GPS
+feature TELEMETRY
+feature VBAT
+feature CURRENT_METER
+set vbat_meter_type = ADC
+set current_meter_type = ADC
+set adc_vbat_channel = 1
+set adc_current_channel = 2
+set vbat_scale = 1100
+set current_meter_scale = 200
+set current_meter_offset = 0
+set dronecan_enabled = ON
+set dronecan_device = 1
+set dronecan_loopback = OFF
+save

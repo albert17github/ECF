@@ -1,0 +1,14 @@
+set ecf_io_mode = 1
+# ECFH743 complete shared-pad profile; USB plus selected shared UARTs use MSP.
+serial 2 0 115200 115200 0 115200
+serial 7 0 115200 115200 0 115200
+set adc_vbat_channel = 1
+set adc_current_channel = 2
+set vbat_meter_type = ADC
+set current_meter_type = ADC
+set vbat_scale = 1100
+set current_meter_scale = 200
+set current_meter_offset = 0
+feature VBAT
+feature CURRENT_METER
+save
