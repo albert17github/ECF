@@ -1,0 +1,9 @@
+{
+  "path": "platforms/nuttx/NuttX/apps",
+  "commit": "e37940d8535f603a16b8f6f21c21edaf584218aa",
+  "repository": "PX4/NuttX-apps",
+  "archive": "platforms__nuttx__NuttX__apps.tar.gz",
+  "bytes": 3302521,
+  "sha256": "8a807bd12e4db94911a1adcb43487db6ae2c1968d1534909cf183736a0460cf8",
+  "url": "https://codeload.github.com/PX4/NuttX-apps/tar.gz/e37940d8535f603a16b8f6f21c21edaf584218aa"
+}
