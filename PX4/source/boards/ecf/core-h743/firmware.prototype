@@ -1,0 +1,13 @@
+{
+    "board_id": 65535,
+    "magic": "PX4FWv1",
+    "description": "ECF Core H743 private bench image; raw binary at 0x08000000 only",
+    "image": "",
+    "build_time": 0,
+    "summary": "ECF Core H743 bringup",
+    "version": "0.1",
+    "image_size": 0,
+    "image_maxsize": 2097152,
+    "git_identity": "",
+    "board_revision": 0
+}

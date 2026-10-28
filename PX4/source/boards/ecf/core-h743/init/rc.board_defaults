@@ -1,0 +1,47 @@
+#!/bin/sh
+# Generic Quad X; physical outputs 1..4 are Motor 1..4.
+# Channels 5..8 are available for assignable motor/servo functions in QGC.
+param set-default SYS_AUTOSTART 4001
+param set-default SYS_DM_BACKEND 1
+param set-default SDLOG_MODE -1
+param set-default PWM_MAIN_FUNC1 101
+param set-default PWM_MAIN_FUNC2 102
+param set-default PWM_MAIN_FUNC3 103
+param set-default PWM_MAIN_FUNC4 104
+param set-default PWM_MAIN_FUNC5 0
+param set-default PWM_MAIN_FUNC6 0
+param set-default PWM_MAIN_FUNC7 0
+param set-default PWM_MAIN_FUNC8 0
+# Protocol and rate are per timer group, not per individual pin.
+param set-default PWM_MAIN_TIM0 -4
+param set-default PWM_MAIN_TIM1 50
+param set-default PWM_MAIN_TIM2 50
+
+# Digital battery monitoring is supplied by the native INA238 driver.
+param set-default SENS_EN_INA238 0
+param set-default INA238_CURRENT 120
+param set-default INA238_SHUNT 0.0005
+param set-default BAT1_SOURCE 0
+param set-default BAT1_V_CHANNEL 8
+param set-default BAT1_I_CHANNEL 4
+param set-default BAT1_V_DIV 11
+param set-default BAT1_A_PER_V 50
+param set-default BAT_V_OFFS_CURR 0
+param set-default MAV_0_CONFIG 104
+param set-default MAV_1_CONFIG 0
+param set-default MAV_2_CONFIG 0
+param set-default GPS_1_CONFIG 201
+param set-default GPS_2_CONFIG 103
+param set-default RC_PORT_CONFIG 101
+param set-default RC_INPUT_PROTO 6
+param set-default SENS_EXT_I2C_PRB 1
+
+# Common ECF peripheral wiring; port labels retain the native board mapping.
+param set-default ECF_IO_MODE 1
+param set-default DSHOT_TEL_CFG 202
+param set-default SER_TEL4_BAUD 115200
+param set-default MAV_0_MODE 0
+param set-default MAV_0_RATE 2000
+param set-default UAVCAN_ENABLE 2
+param set-default UAVCAN_NODE_ID 10
+param set-default UAVCAN_BITRATE 1000000

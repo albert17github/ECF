@@ -1,0 +1,16 @@
+#!/bin/sh
+ecf_interfaces configure
+# Core front is ICM45686 +X. Its driver already converts to FRD.
+# ICM45686 internal oscillator initially; TIM1/CLKIN remains high impedance.
+icm45686 -s -b 1 -R 0 start
+bmp581 -I -b 2 -a 70 -f 400 start
+mmc5983ma -I -b 2 -a 48 -f 400 -R 4 start
+
+ecf_interfaces imu2
+if param compare SENS_EN_INA238 1
+then
+ board_adc start -n
+ ecf_interfaces power
+else
+ board_adc start
+fi

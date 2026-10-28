@@ -1,0 +1,3 @@
+# PX4 parameter export: system component name value MAV_PARAM_TYPE
+1	1	ECF_IO_MODE	3	6
+1	1	SENS_EN_INA238	0	6

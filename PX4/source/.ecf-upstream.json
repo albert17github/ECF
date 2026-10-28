@@ -1,0 +1,25 @@
+{
+  "project": "PX4",
+  "tag": "v1.17.0",
+  "commit": "d6f12ad1c4f70ad3230afd7d86e971421e02fef4",
+  "ecf_revision": 1,
+  "dependencies": {
+    "platforms/nuttx/NuttX/apps": "e37940d8535f603a16b8f6f21c21edaf584218aa",
+    "platforms/nuttx/NuttX/nuttx": "fb2fadf6f599c1406f052db013efd00a2518e72c",
+    "src/drivers/gps/devices": "0b9695881bd1e8f830ab4538ab3acc0050019eba",
+    "src/drivers/uavcan/libdronecan/dsdl": "993be80a62ec957c01fb41115b83663959a49f46",
+    "src/drivers/uavcan/libdronecan/libuavcan/dsdl_compiler/pydronecan": "19fdf2e5b383243ccdb1094edae0603cf11469e8",
+    "src/lib/crypto/monocypher": "baca5d31259c598540e4d1284bc8d8f793abf83a",
+    "src/lib/events/libevents": "9ef591c447fe0386d698bf6fb9a6d27e43988ee4",
+    "src/lib/heatshrink/heatshrink": "052e6de72f67f1777198bce98f3de62f7f3c16a0",
+    "src/modules/mavlink/mavlink": "33af200d25ec6f0925b49b1ba82bbf1294ea5f72",
+    "src/modules/mavlink/mavlink/pymavlink": "fcaa2c7d25e3169dc66155929c338487941555e9"
+  },
+  "nuttx_version_tag": "v0.0.0",
+  "port_stage": "complete_interface_sources_not_built",
+  "pending": [
+    "clean_build",
+    "hardware_acceptance",
+    "native_5v_monitor_hardware_unavailable"
+  ]
+}

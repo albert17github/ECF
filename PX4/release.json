@@ -1,0 +1,89 @@
+{
+  "project": "PX4",
+  "target": "ECFH743",
+  "px4_target": "ecf_core-h743_default",
+  "tag": "v1.17.0",
+  "commit": "d6f12ad1c4f70ad3230afd7d86e971421e02fef4",
+  "package_revision": 3,
+  "ecf_revision": 3,
+  "source_manifest": "verification/source-SHA256SUMS.txt",
+  "source_manifest_sha256": "cc7caca026d6fb57f8beb0d02156b128ae5cd737a095a5f12eafe169ac1e7d21",
+  "source_files": 21197,
+  "source_layout": "verification/source-layout.json",
+  "source_date_epoch": 1792555200,
+  "source_frozen": true,
+  "firmware_build_pending": false,
+  "compiler": "Ubuntu gcc-arm-none-eabi15:13.2.rel1-2 / 13.2.1",
+  "compiler_sha256": "38fc178604a84beb10f9adb8ea243bd5e0475a9e6e31c9270f53e2fcaa79ec59",
+  "binutils_package": "binutils-arm-none-eabi2.42-1ubuntu1+23",
+  "build_entry": "build.sh",
+  "validation": {
+    "build": "passed",
+    "board_software": "passed",
+    "portable_clean_build": "passed",
+    "final_visual": "unchanged-source-regression",
+    "external_peripheral_interoperability_tested": false,
+    "flight_tested": false,
+    "scope": "output_driver_factory_and_targeted_board_regression",
+    "physical_waveforms_tested": true,
+    "new_physical_tests_run": true,
+    "final_visual_basis": "unchanged_LED_source_and_host_policy_check_with_previous_physical_observation"
+  },
+  "usb_identity": {
+    "vid": "0x1209",
+    "pid": "0x0001",
+    "experimental_private_testing": true
+  },
+  "default_power_profile": {
+    "voltage_divider": 11,
+    "current_mv_per_a": 20,
+    "zero_offset": 0,
+    "mode": "ADC_UART3",
+    "external_logic_max_v": 3.3
+  },
+  "system_5v_measurement_available": false,
+  "native_power_checks_changed": false,
+  "verification_entry": "verify.ps1",
+  "firmware": {
+    "image": "firmware/ECFH743-PX4-1.17.0-factory.hex",
+    "sha256": "7815f628d52b16d3364ad862e4a02287f2889f6bc116b6f2d35d95cb948fa87d",
+    "elf": "firmware/debug/ECFH743-PX4-1.17.0.elf",
+    "elf_sha256": "6325491c93dd510f5ece9e3d0ba180548123eee9b67ed0b3281ce22db0f35f5d",
+    "source_manifest_sha256": "cc7caca026d6fb57f8beb0d02156b128ae5cd737a095a5f12eafe169ac1e7d21",
+    "load_address": "0x08000000",
+    "includes_bootloader": false,
+    "parameters_location": "SD FAT /ecf-px4/parameters.bson",
+    "parameters_cleared_by_flash": false,
+    "status": "accepted-output-driver-and-targeted-board-regression",
+    "parameters_backup_location": "SD FAT /parameters_backup.bson (native mutable backup)"
+  },
+  "mandatory_power_defaults_profile": "2026-10-27",
+  "previous_default_release_preserved": true,
+  "default_interfaces": {
+    "1": "ELRS_CRSF",
+    "3": "spare",
+    "4": "GPS2",
+    "5": "MAVLink2",
+    "6": "GPS1",
+    "7": "serial_ESC_telemetry",
+    "8": "disabled"
+  },
+  "led_profile": {
+    "version": "2026-10-27",
+    "boot_color": "white",
+    "boot_pulses": 3,
+    "boot_on_ms": 150,
+    "boot_off_ms": 150,
+    "runtime": "native_status",
+    "manual": "LED-STATUS.md"
+  },
+  "release_date": "2026-10-28",
+  "previous_revision": 2,
+  "changes": [
+    "Synchronize default shared-interface metadata",
+    "Correct ECF DShot inclusive ARR and nearest prescaler"
+  ],
+  "runtime_source_changed": true,
+  "previous_image_sha256": "3990dbb749d8ad7f8e341aa27d9ff274db5906447fd96d3a08b239af3bd38197",
+  "previous_executable_products_identical": false
+}

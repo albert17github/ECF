@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "ECF raw sensor axes; SD auto-format disabled; verify airframe before use"
+neopixel start

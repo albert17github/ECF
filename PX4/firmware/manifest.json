@@ -1,0 +1,27 @@
+{
+  "project": "PX4",
+  "target": "ECFH743",
+  "tag": "v1.17.0",
+  "commit": "d6f12ad1c4f70ad3230afd7d86e971421e02fef4",
+  "source_manifest_sha256": "174f29e864e87d155d00ed62789bfb07ac2f4d1be1e284d582173f3bc5da8675",
+  "image": "ECFH743-PX4-1.17.0-factory.hex",
+  "image_sha256": "3990dbb749d8ad7f8e341aa27d9ff274db5906447fd96d3a08b239af3bd38197",
+  "app_bytes": 1636344,
+  "load_address": "0x08000000",
+  "includes_bootloader": false,
+  "parameters_location": "SD FAT /ecf-px4/parameters.bson",
+  "parameters_cleared_by_flash": false,
+  "debug_symbols": true,
+  "hardware_validation": "pending",
+  "files": {
+    "ECFH743-PX4-1.17.0-factory.hex": {
+      "bytes": 5767712,
+      "sha256": "3990dbb749d8ad7f8e341aa27d9ff274db5906447fd96d3a08b239af3bd38197"
+    },
+    "debug/ECFH743-PX4-1.17.0.elf": {
+      "bytes": 39701676,
+      "sha256": "bb0a994c9a8b60a91bcba0f1f35e6de3e166a53eb84ea372f89640381bde5325"
+    }
+  },
+  "hardware_verification": "factory_defaults_led_and_brief_regression_passed"
+}

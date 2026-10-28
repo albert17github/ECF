@@ -1,0 +1,15 @@
+#!/bin/sh
+# Mount the existing FAT volume only. Never auto-format the soldered SD NAND.
+set STORAGE_CHECK no
+set STARTUP_TUNE 0
+if mount -t vfat /dev/mmcsd0 /fs/microsd
+then
+ if [ ! -d ${BOARD_ROOT_PATH} ]
+ then
+  mkdir ${BOARD_ROOT_PATH}
+ fi
+ if [ -d ${BOARD_ROOT_PATH} ]
+ then
+  set STORAGE_AVAILABLE yes
+ fi
+fi
