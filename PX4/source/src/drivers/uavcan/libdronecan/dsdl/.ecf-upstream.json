@@ -1,0 +1,9 @@
+{
+  "path": "src/drivers/uavcan/libdronecan/dsdl",
+  "commit": "993be80a62ec957c01fb41115b83663959a49f46",
+  "repository": "PX4/DSDL",
+  "archive": "src__drivers__uavcan__libdronecan__dsdl.tar.gz",
+  "bytes": 42970,
+  "sha256": "941850cf004795643db321c5066e88a4a92ca89086eba6410c201545a27137e7",
+  "url": "https://codeload.github.com/PX4/DSDL/tar.gz/993be80a62ec957c01fb41115b83663959a49f46"
+}

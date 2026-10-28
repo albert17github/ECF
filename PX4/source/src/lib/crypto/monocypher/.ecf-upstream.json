@@ -1,0 +1,9 @@
+{
+  "path": "src/lib/crypto/monocypher",
+  "commit": "baca5d31259c598540e4d1284bc8d8f793abf83a",
+  "repository": "PX4/Monocypher",
+  "archive": "src__lib__crypto__monocypher.tar.gz",
+  "bytes": 312184,
+  "sha256": "06bf44b040a77dda24a9e18aeacd368c84335bb8f04bcdbab61b207aac7c5e63",
+  "url": "https://codeload.github.com/PX4/Monocypher/tar.gz/baca5d31259c598540e4d1284bc8d8f793abf83a"
+}

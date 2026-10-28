@@ -1,0 +1,9 @@
+{
+  "path": "src/drivers/gps/devices",
+  "commit": "0b9695881bd1e8f830ab4538ab3acc0050019eba",
+  "repository": "PX4/PX4-GPSDrivers",
+  "archive": "src__drivers__gps__devices.tar.gz",
+  "bytes": 86092,
+  "sha256": "ee7f81369db39831699d635fa12a557412fe756124b2987007e5dd68dda62604",
+  "url": "https://codeload.github.com/PX4/PX4-GPSDrivers/tar.gz/0b9695881bd1e8f830ab4538ab3acc0050019eba"
+}

@@ -1,0 +1,9 @@
+{
+  "path": "src/lib/events/libevents",
+  "commit": "9ef591c447fe0386d698bf6fb9a6d27e43988ee4",
+  "repository": "mavlink/libevents",
+  "archive": "src__lib__events__libevents.tar.gz",
+  "bytes": 190511,
+  "sha256": "c585abefed9850979b36c307c27effeb3a6dcf88e59330b32c47f6ec8102ac5d",
+  "url": "https://codeload.github.com/mavlink/libevents/tar.gz/9ef591c447fe0386d698bf6fb9a6d27e43988ee4"
+}

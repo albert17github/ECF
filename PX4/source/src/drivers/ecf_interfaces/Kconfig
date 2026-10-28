@@ -1,0 +1,4 @@
+menuconfig DRIVERS_ECF_INTERFACES
+	bool "ecf_interfaces"
+	default n
+	depends on DRIVERS_POWER_MONITOR_INA238 && DRIVERS_IMU_INVENSENSE_ICM45686

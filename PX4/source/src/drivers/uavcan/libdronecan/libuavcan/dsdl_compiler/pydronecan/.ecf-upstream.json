@@ -1,0 +1,9 @@
+{
+  "path": "src/drivers/uavcan/libdronecan/libuavcan/dsdl_compiler/pydronecan",
+  "commit": "19fdf2e5b383243ccdb1094edae0603cf11469e8",
+  "repository": "dronecan/pydronecan",
+  "archive": "src__drivers__uavcan__libdronecan__libuavcan__dsdl_compiler__pydronecan.tar.gz",
+  "bytes": 64134,
+  "sha256": "2ac1489b63b46e87cde7333eaa5b3728d1f835f5e16c92309352b61fb41dd83e",
+  "url": "https://codeload.github.com/dronecan/pydronecan/tar.gz/19fdf2e5b383243ccdb1094edae0603cf11469e8"
+}
