@@ -1,17 +1,17 @@
 # Everything Can Fly · ECF
 
-以简单外设构建专属飞控，为多种固件开发提供统一的开源核心板。
+开源飞控核心板，以简单外设构建飞控，支持多种固件开发与适配。
 
-ECF 是基于 STM32H743 的开源飞控核心模块。本仓库提供 Betaflight、INAV、ArduPilot 和 PX4 的 ECF 板级适配源码、编译入口及固件。
+ECF 是基于 STM32H743 的开源飞控核心板。本仓库提供 Betaflight、INAV、ArduPilot 和 PX4 的板级源码、构建入口及固件。
 
 **使用范围：仅限科研、教学实验及小型娱乐项目，禁止用于大型货运或载人飞行器**。
 
 - 硬件开源：待补充。
 - 项目网页：待补充。
 
-核心板采用 STM32H743VIH6，集成 ICM-45686、BMP581、MMC5983MA 和 SD NAND；尺寸约 51 × 21mm，提供 45 个板边接口。VIN 使用稳压 5V，外部信号为 3.3V 逻辑。
+核心板采用 STM32H743VIH6，集成 ICM-45686、BMP581、MMC5983MA 和 SD NAND；尺寸约 51 × 21mm，提供 45 个板边接口位置。VIN 使用稳压 5V，外部信号为 3.3V 逻辑。
 
-核心板可搭配连接器底板使用，并按需要接入独立模拟电源监测模块及其他外设。
+简易底板与模拟电源模块为最小接入示例，可替换或自行设计。
 
 <img src="assets/ecf-core-photo.jpg" alt="ECF 核心板实物" width="560">
 
@@ -22,11 +22,11 @@ ECF 是基于 STM32H743 的开源飞控核心模块。本仓库提供 Betaflight
 - **ArduPilot：ArduCopter 4.7.2 / ECF r4**，源码与说明：[ArduPilot](ArduPilot/README.md)。
 - **PX4：v1.17.0 / ECF r3**，源码与说明：[PX4](PX4/README.md)。
 
-以上为 ECF 适配版本。各目录的 `release.json` 记录上游提交、依赖版本和镜像校验值；ArduPilot 当前提供 ArduCopter 构建。
+ECF 修订号对应板级适配版本。上游提交、依赖版本和镜像校验值见各目录 `release.json`；ArduPilot 当前仅提供 ArduCopter 构建。
 
 ## 引脚定义
 
-下图标出 45 个板边接口的位置、编号、丝印名称及可选功能；具体出厂用途见“默认配置”。
+下图列出 45 个板边位置的编号、丝印及可选功能，出厂用途见“默认配置”。
 
 ![ECF 核心板引脚图](assets/ecf-pinout.png)
 
@@ -37,9 +37,9 @@ ECF 是基于 STM32H743 的开源飞控核心模块。本仓库提供 Betaflight
 - **MMC5983MA**：I²C2，Betaflight、INAV 包含磁力计驱动适配，ArduPilot、PX4 使用已有驱动完成板级接入。
 - **存储与 USB**：已适配 SDMMC2 四位存储、原生日志及 USB 配置／数据连接。
 - **输出与状态灯**：已适配 CH1～CH8 的 PWM、普通 DShot 和板载 RGB 状态灯。同一定时器组共用输出时基；INAV 当前无双向 DShot 接收，PX4 双向 DShot 限于 CH1～CH4。
-- **外部接口**：已配置 CRSF、GPS、MSP／MAVLink2、串口 ESC 遥测和 DroneCAN，默认用途见下文。具体外设互通按型号另行验证。
+- **外部接口**：已配置 CRSF、GPS、MSP／MAVLink2、串口 ESC 遥测和 DroneCAN，默认用途见下文。外设互通须按实际型号验证。
 
-四套固件已逐一烧录并完成板载传感器基础调试，目前基本正常。现有台架记录包括日志、接口配置及 CH1／3／5／7 的 PWM400、DShot300 波形检查；尚未完成实飞验证。
+四套固件已逐一烧录，板载传感器基础调试结果基本正常。现有台架记录包括日志、接口配置及 CH1／3／5／7 的 PWM400、DShot300 波形检查；尚未完成实飞验证。
 
 <details>
 <summary>传感器界面截图</summary>
@@ -60,7 +60,7 @@ PX4：
 
 ## 默认配置
 
-以下为上述 ECF 版本的出厂配置，不含单台设备的传感器校准值。引脚编号按 USB-C 朝上的正面视图。
+以下为上述版本的出厂配置，不含单台设备校准值。单台设备须另行校准。引脚编号按 USB-C 朝上的正面视图。
 
 ### 功能复用与电源监测
 
@@ -72,7 +72,7 @@ PX4：
 
 模式参数为 INAV `ecf_io_mode=1`、ArduCopter `BRD_ALT_CONFIG=1`、PX4 `ECF_IO_MODE=1`；Betaflight 由默认资源映射选择上述组合。
 
-电压计与电流计默认均使用 **ADC 模拟采样**。参考电压分压为 **11∶1**（100kΩ／10kΩ），电流灵敏度为 **20mV/A**（50A/V），电流零偏为 **0**。各固件的比例参数为：
+电压、电流默认均为 **ADC 模拟采样**。参考电压分压为 **11∶1**（100kΩ／10kΩ），电流灵敏度为 **20mV/A**（50A/V），电流零偏为 **0**。各固件的比例参数为：
 
 - **Betaflight**：`vbat_scale=110`、`vbat_divider=10`、`vbat_multiplier=1`；`ibata_scale=200`、`ibata_offset=0`。
 - **INAV**：`vbat_scale=1100`；`current_meter_scale=200`、`current_meter_offset=0`。
@@ -110,9 +110,9 @@ ArduCopter／PX4 可选 I²C4 的 INA238 数字电源监测，须停用同组 UA
 - **ArduCopter**：Linux／WSL x86_64、ARM GCC 10.2.1（10-2020-q4-major）、Python 3.12.3、GNU Make、宿主 GCC；入口 `build.sh`。
 - **PX4**：Ubuntu 24.04 x86_64／WSL、ARM GCC 13.2.1、Python 3.12、CMake 3.28.3、Ninja 1.11.1、GNU Make、宿主 GCC；入口 `build.sh`，Windows 可使用 `build.ps1` 调用 WSL。
 
-各套工程包含对应源码、固定源码依赖和构建脚本。详细安装命令见各目录 README；工具链需按指定版本安装。四套源码包均已独立解压重建，HEX／ELF 与对应发布产物逐字节一致。
+各工程包含完整源码、固定依赖和构建脚本。工具链按指定版本安装，命令见各目录 README。四套源码包均已独立解压重建，HEX／ELF 与对应发布产物逐字节一致。
 
-从 Git 克隆编译时，使用以下方式保留源码原始换行，与校验清单一致；直接下载源码包无需此步骤。
+从 Git 克隆时，按以下步骤保留源码原始换行，以匹配校验清单。直接下载源码包无需此步骤。
 
 ```sh
 git clone --no-checkout https://github.com/albert17github/ECF.git
@@ -123,7 +123,7 @@ git checkout main
 
 ## 下载与使用
 
-下载入口：[Releases](https://github.com/albert17github/ECF/releases)。每套固件提供刷写包、完整源码包和 SHA-256 校验清单。刷写包包含最终镜像和安装说明；首次安装、后续升级及参数恢复按对应固件 README 操作。
+下载入口：[Releases](https://github.com/albert17github/ECF/releases)。每套固件提供刷写包、完整源码包和 SHA-256 校验清单。刷写包包含最终镜像和安装说明；首次安装、升级与参数恢复步骤见对应固件 README。
 
 调试 ELF 随完整源码包提供，位于包内 `firmware/debug/`。
 

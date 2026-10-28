@@ -91,4 +91,4 @@ python -m pip install -r tools/requirements-test.txt
 
 地面站重连若提示参数列表不完整，可在 Parameters → 工具 → 刷新重新获取参数；QGroundControl 5.1.0 台架检查已验证此恢复方式。状态灯颜色复核入口为 `tools/verify_arducopter_rgb.py`，每次临时覆盖后自动恢复正常显示。
 
-状态灯：开机以固件专用颜色短闪三次，运行状态和闪烁节奏见 [状态灯说明](LED-STATUS.md)。
+状态灯：保留原生通知灯语，初始化为红／蓝交替；运行状态见 [状态灯说明](LED-STATUS.md)。
