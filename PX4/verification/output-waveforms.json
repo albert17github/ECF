@@ -1,0 +1,681 @@
+{
+  "image_sha256": "7815f628d52b16d3364ad862e4a02287f2889f6bc116b6f2d35d95cb948fa87d",
+  "channels": [
+    1,
+    3,
+    5,
+    7
+  ],
+  "amplitude_calibrated": false,
+  "external_esc_connected": false,
+  "pwm": {
+    "test_completed": true,
+    "passed": true,
+    "captured_at": "2026-10-28T03:50:09.654514+00:00",
+    "channels": [
+      {
+        "ecf_channel": 1,
+        "scope_channel": 2,
+        "raw_sha256": "828b3554608df02063780bd0da9b6a4ce1e1b5c5d8a29eb42b456d46ab9a36c8",
+        "timing": {
+          "scope_channel": 2,
+          "mode": "PWM",
+          "sample_interval_ns": 100.0,
+          "voltage_calibration_tested": false,
+          "frequency_hz": 399.9040230344718,
+          "high_width_us": 1200.3,
+          "full_pulses": 4,
+          "widths_us": [
+            1200.3,
+            1200.3,
+            1200.3,
+            1200.2
+          ],
+          "passed": true
+        }
+      },
+      {
+        "ecf_channel": 3,
+        "scope_channel": 3,
+        "raw_sha256": "c25584f532b8f649ac3a00a580f589d2bb9a0efed8b5f7faea746d9ad8ae9c24",
+        "timing": {
+          "scope_channel": 3,
+          "mode": "PWM",
+          "sample_interval_ns": 100.0,
+          "voltage_calibration_tested": false,
+          "frequency_hz": 399.9040230344718,
+          "high_width_us": 1350.3,
+          "full_pulses": 4,
+          "widths_us": [
+            1350.3,
+            1350.3999999999999,
+            1350.3,
+            1350.3
+          ],
+          "passed": true
+        }
+      },
+      {
+        "ecf_channel": 5,
+        "scope_channel": 1,
+        "raw_sha256": "1bb0779cc6dd016357cb575a736b2e98c6fe3ff622252b04c77552450a900373",
+        "timing": {
+          "scope_channel": 1,
+          "mode": "PWM",
+          "sample_interval_ns": 100.0,
+          "voltage_calibration_tested": false,
+          "frequency_hz": 399.9040230344718,
+          "high_width_us": 1500.35,
+          "full_pulses": 4,
+          "widths_us": [
+            1500.3999999999999,
+            1500.3,
+            1500.3,
+            1500.3999999999999
+          ],
+          "passed": true
+        }
+      },
+      {
+        "ecf_channel": 7,
+        "scope_channel": 4,
+        "raw_sha256": "d99d9a9eac1c626d3f4349e87a315f7eb25714faa76ea5f5d8cc217c8b30aa2a",
+        "timing": {
+          "scope_channel": 4,
+          "mode": "PWM",
+          "sample_interval_ns": 100.0,
+          "voltage_calibration_tested": false,
+          "frequency_hz": 399.9040230344718,
+          "high_width_us": 1650.4,
+          "full_pulses": 4,
+          "widths_us": [
+            1650.4,
+            1650.4,
+            1650.4,
+            1650.3
+          ],
+          "passed": true
+        }
+      }
+    ]
+  },
+  "dshot300": {
+    "test_completed": true,
+    "passed": true,
+    "captured_at": "2026-10-28T03:50:19.692751+00:00",
+    "channels": [
+      {
+        "ecf_channel": 1,
+        "scope_channel": 2,
+        "raw_sha256": "0038bdee6875b1b885d95aecaf8c0ec67d9b443ba22b7c3c734c3e8afdb5240c",
+        "timing": {
+          "scope_channel": 2,
+          "mode": "DSHOT300",
+          "sample_interval_ns": 4.0,
+          "voltage_calibration_tested": false,
+          "frames": [
+            {
+              "frame_hex": "42e8",
+              "throttle_or_command": 535,
+              "telemetry": 0,
+              "crc_ok": true,
+              "bit_period_us": 3.299999999999999,
+              "zero_high_us": 1.1560000000000001,
+              "one_high_us": 2.3120000000000003
+            }
+          ],
+          "candidate_frame_lengths": [
+            16
+          ],
+          "frame_crc_passed": true,
+          "nominal_rate_timing_passed": true,
+          "bit_period_error_percent": [
+            -1.0000000000000342
+          ],
+          "passed": true
+        }
+      },
+      {
+        "ecf_channel": 3,
+        "scope_channel": 3,
+        "raw_sha256": "02e2f9a3849375370b4bc928a3c017b6a04acdfb3d4735f490c2a4b50a8675e5",
+        "timing": {
+          "scope_channel": 3,
+          "mode": "DSHOT300",
+          "sample_interval_ns": 4.0,
+          "voltage_calibration_tested": false,
+          "frames": [
+            {
+              "frame_hex": "6666",
+              "throttle_or_command": 819,
+              "telemetry": 0,
+              "crc_ok": true,
+              "bit_period_us": 3.299999999999999,
+              "zero_high_us": 1.1560000000000001,
+              "one_high_us": 2.3120000000000003
+            }
+          ],
+          "candidate_frame_lengths": [
+            16
+          ],
+          "frame_crc_passed": true,
+          "nominal_rate_timing_passed": true,
+          "bit_period_error_percent": [
+            -1.0000000000000342
+          ],
+          "passed": true
+        }
+      },
+      {
+        "ecf_channel": 5,
+        "scope_channel": 1,
+        "raw_sha256": "2d0cd34b7bd63520cc0d7e3fcd429fc4e9889b4a6f27c5a933cc0a04c3edcf10",
+        "timing": {
+          "scope_channel": 1,
+          "mode": "DSHOT300",
+          "sample_interval_ns": 4.0,
+          "voltage_calibration_tested": false,
+          "frames": [
+            {
+              "frame_hex": "89cd",
+              "throttle_or_command": 1102,
+              "telemetry": 0,
+              "crc_ok": true,
+              "bit_period_us": 3.299999999999999,
+              "zero_high_us": 1.1560000000000001,
+              "one_high_us": 2.3120000000000003
+            }
+          ],
+          "candidate_frame_lengths": [
+            16
+          ],
+          "frame_crc_passed": true,
+          "nominal_rate_timing_passed": true,
+          "bit_period_error_percent": [
+            -1.0000000000000342
+          ],
+          "passed": true
+        }
+      },
+      {
+        "ecf_channel": 7,
+        "scope_channel": 4,
+        "raw_sha256": "ac65d7d094a3edf84fd54e03c1ed18e5b6b1bb38c9ab73c86c586761f92fe33b",
+        "timing": {
+          "scope_channel": 4,
+          "mode": "DSHOT300",
+          "sample_interval_ns": 4.0,
+          "voltage_calibration_tested": false,
+          "frames": [
+            {
+              "frame_hex": "b60d",
+              "throttle_or_command": 1456,
+              "telemetry": 0,
+              "crc_ok": true,
+              "bit_period_us": 3.299999999999999,
+              "zero_high_us": 1.1560000000000001,
+              "one_high_us": 2.3120000000000003
+            }
+          ],
+          "candidate_frame_lengths": [
+            16
+          ],
+          "frame_crc_passed": true,
+          "nominal_rate_timing_passed": true,
+          "bit_period_error_percent": [
+            -1.0000000000000342
+          ],
+          "passed": true
+        }
+      }
+    ]
+  },
+  "dshot_rates": {
+    "150": {
+      "test_completed": true,
+      "passed": true,
+      "captured_at": "2026-10-28T03:56:33.188610+00:00",
+      "channels": [
+        {
+          "ecf_channel": 1,
+          "scope_channel": 2,
+          "raw_sha256": "9f2787bbf2eaaadf0fbd33ec0b484c821040b6378830685b04f5b79c14664265",
+          "timing": {
+            "scope_channel": 2,
+            "mode": "DSHOT150",
+            "sample_interval_ns": 20.0,
+            "voltage_calibration_tested": false,
+            "frames": [
+              {
+                "frame_hex": "42e8",
+                "throttle_or_command": 535,
+                "telemetry": 0,
+                "crc_ok": true,
+                "bit_period_us": 6.7,
+                "zero_high_us": 2.34,
+                "one_high_us": 4.68
+              }
+            ],
+            "candidate_frame_lengths": [
+              16
+            ],
+            "frame_crc_passed": true,
+            "nominal_rate_timing_passed": true,
+            "bit_period_error_percent": [
+              0.49999999999998934
+            ],
+            "passed": true
+          }
+        },
+        {
+          "ecf_channel": 3,
+          "scope_channel": 3,
+          "raw_sha256": "7a6dfb121c34b749de1192f076064d6af04b9a401e81546258d4c17ea39e3b25",
+          "timing": {
+            "scope_channel": 3,
+            "mode": "DSHOT150",
+            "sample_interval_ns": 20.0,
+            "voltage_calibration_tested": false,
+            "frames": [
+              {
+                "frame_hex": "6666",
+                "throttle_or_command": 819,
+                "telemetry": 0,
+                "crc_ok": true,
+                "bit_period_us": 6.7,
+                "zero_high_us": 2.34,
+                "one_high_us": 4.6899999999999995
+              }
+            ],
+            "candidate_frame_lengths": [
+              16
+            ],
+            "frame_crc_passed": true,
+            "nominal_rate_timing_passed": true,
+            "bit_period_error_percent": [
+              0.49999999999998934
+            ],
+            "passed": true
+          }
+        },
+        {
+          "ecf_channel": 5,
+          "scope_channel": 1,
+          "raw_sha256": "467bf0876c01d18e68b13ed64183370041cdd0d4088d46865cceef7b382056cf",
+          "timing": {
+            "scope_channel": 1,
+            "mode": "DSHOT150",
+            "sample_interval_ns": 20.0,
+            "voltage_calibration_tested": false,
+            "frames": [
+              {
+                "frame_hex": "89cd",
+                "throttle_or_command": 1102,
+                "telemetry": 0,
+                "crc_ok": true,
+                "bit_period_us": 6.7,
+                "zero_high_us": 2.34,
+                "one_high_us": 4.7
+              }
+            ],
+            "candidate_frame_lengths": [
+              16
+            ],
+            "frame_crc_passed": true,
+            "nominal_rate_timing_passed": true,
+            "bit_period_error_percent": [
+              0.49999999999998934
+            ],
+            "passed": true
+          }
+        },
+        {
+          "ecf_channel": 7,
+          "scope_channel": 4,
+          "raw_sha256": "fceb61fcfda5cc99c5d1cba40554bf237f560298090f397f48c0fa87d4b1f694",
+          "timing": {
+            "scope_channel": 4,
+            "mode": "DSHOT150",
+            "sample_interval_ns": 20.0,
+            "voltage_calibration_tested": false,
+            "frames": [
+              {
+                "frame_hex": "ad43",
+                "throttle_or_command": 1386,
+                "telemetry": 0,
+                "crc_ok": true,
+                "bit_period_us": 6.7,
+                "zero_high_us": 2.34,
+                "one_high_us": 4.7
+              }
+            ],
+            "candidate_frame_lengths": [
+              16
+            ],
+            "frame_crc_passed": true,
+            "nominal_rate_timing_passed": true,
+            "bit_period_error_percent": [
+              0.49999999999998934
+            ],
+            "passed": true
+          }
+        }
+      ]
+    },
+    "300": {
+      "test_completed": true,
+      "passed": true,
+      "captured_at": "2026-10-28T03:56:41.813094+00:00",
+      "channels": [
+        {
+          "ecf_channel": 1,
+          "scope_channel": 2,
+          "raw_sha256": "305d3bdac5a6e4e836081f972a194a1530feaa96dbf06f53ace73d83bf0c88a8",
+          "timing": {
+            "scope_channel": 2,
+            "mode": "DSHOT300",
+            "sample_interval_ns": 4.0,
+            "voltage_calibration_tested": false,
+            "frames": [
+              {
+                "frame_hex": "42e8",
+                "throttle_or_command": 535,
+                "telemetry": 0,
+                "crc_ok": true,
+                "bit_period_us": 3.299999999999999,
+                "zero_high_us": 1.1560000000000001,
+                "one_high_us": 2.3120000000000003
+              }
+            ],
+            "candidate_frame_lengths": [
+              16
+            ],
+            "frame_crc_passed": true,
+            "nominal_rate_timing_passed": true,
+            "bit_period_error_percent": [
+              -1.0000000000000342
+            ],
+            "passed": true
+          }
+        },
+        {
+          "ecf_channel": 3,
+          "scope_channel": 3,
+          "raw_sha256": "a034dcf199ec2f6825792e40d333635a5957599e334690363081ab785c973cdb",
+          "timing": {
+            "scope_channel": 3,
+            "mode": "DSHOT300",
+            "sample_interval_ns": 4.0,
+            "voltage_calibration_tested": false,
+            "frames": [
+              {
+                "frame_hex": "6666",
+                "throttle_or_command": 819,
+                "telemetry": 0,
+                "crc_ok": true,
+                "bit_period_us": 3.299999999999999,
+                "zero_high_us": 1.1560000000000001,
+                "one_high_us": 2.3120000000000003
+              }
+            ],
+            "candidate_frame_lengths": [
+              16
+            ],
+            "frame_crc_passed": true,
+            "nominal_rate_timing_passed": true,
+            "bit_period_error_percent": [
+              -1.0000000000000342
+            ],
+            "passed": true
+          }
+        },
+        {
+          "ecf_channel": 5,
+          "scope_channel": 1,
+          "raw_sha256": "bf4216a774dc0f5da79d41e5844e85e8e11e852436ca9aaf84908d0158db1aa7",
+          "timing": {
+            "scope_channel": 1,
+            "mode": "DSHOT300",
+            "sample_interval_ns": 4.0,
+            "voltage_calibration_tested": false,
+            "frames": [
+              {
+                "frame_hex": "89cd",
+                "throttle_or_command": 1102,
+                "telemetry": 0,
+                "crc_ok": true,
+                "bit_period_us": 3.299999999999999,
+                "zero_high_us": 1.1560000000000001,
+                "one_high_us": 2.3120000000000003
+              }
+            ],
+            "candidate_frame_lengths": [
+              16
+            ],
+            "frame_crc_passed": true,
+            "nominal_rate_timing_passed": true,
+            "bit_period_error_percent": [
+              -1.0000000000000342
+            ],
+            "passed": true
+          }
+        },
+        {
+          "ecf_channel": 7,
+          "scope_channel": 4,
+          "raw_sha256": "a440647dd5c6f77d67bdc15784f5117efdccd44f585ac79ab5576bf34e220a49",
+          "timing": {
+            "scope_channel": 4,
+            "mode": "DSHOT300",
+            "sample_interval_ns": 4.0,
+            "voltage_calibration_tested": false,
+            "frames": [
+              {
+                "frame_hex": "ad43",
+                "throttle_or_command": 1386,
+                "telemetry": 0,
+                "crc_ok": true,
+                "bit_period_us": 3.299999999999999,
+                "zero_high_us": 1.1560000000000001,
+                "one_high_us": 2.3100000000000005
+              }
+            ],
+            "candidate_frame_lengths": [
+              16
+            ],
+            "frame_crc_passed": true,
+            "nominal_rate_timing_passed": true,
+            "bit_period_error_percent": [
+              -1.0000000000000342
+            ],
+            "passed": true
+          }
+        }
+      ]
+    },
+    "600": {
+      "test_completed": true,
+      "passed": true,
+      "captured_at": "2026-10-28T04:00:49.290668+00:00",
+      "channels": [
+        {
+          "ecf_channel": 1,
+          "scope_channel": 2,
+          "raw_sha256": "4501c248febd1ac6dfb574e38a09ee3fd94494123e401dbd9ae8a2aa7bf650b8",
+          "timing": {
+            "scope_channel": 2,
+            "mode": "DSHOT600",
+            "sample_interval_ns": 20.0,
+            "voltage_calibration_tested": false,
+            "frames": [
+              {
+                "frame_hex": "42e8",
+                "throttle_or_command": 535,
+                "telemetry": 0,
+                "crc_ok": true,
+                "bit_period_us": 1.699999999999987,
+                "zero_high_us": 0.5800000000000001,
+                "one_high_us": 1.18
+              }
+            ],
+            "candidate_frame_lengths": [
+              16
+            ],
+            "frame_crc_passed": true,
+            "nominal_rate_timing_passed": true,
+            "bit_period_error_percent": [
+              1.9999999999992246
+            ],
+            "passed": true
+          }
+        },
+        {
+          "ecf_channel": 3,
+          "scope_channel": 3,
+          "raw_sha256": "51a594c6da7dbe352bd9aced5c32812144989c1134c4e454472e00b5dcc42b69",
+          "timing": {
+            "scope_channel": 3,
+            "mode": "DSHOT600",
+            "sample_interval_ns": 20.0,
+            "voltage_calibration_tested": false,
+            "frames": [
+              {
+                "frame_hex": "6666",
+                "throttle_or_command": 819,
+                "telemetry": 0,
+                "crc_ok": true,
+                "bit_period_us": 1.699999999999987,
+                "zero_high_us": 0.5800000000000001,
+                "one_high_us": 1.18
+              }
+            ],
+            "candidate_frame_lengths": [
+              16
+            ],
+            "frame_crc_passed": true,
+            "nominal_rate_timing_passed": true,
+            "bit_period_error_percent": [
+              1.9999999999992246
+            ],
+            "passed": true
+          }
+        },
+        {
+          "ecf_channel": 5,
+          "scope_channel": 1,
+          "raw_sha256": "0d2ba9e12b62b7ecca64617b6c8931bb3d79ad0b9ddda8bf3d2f082bb0cc7216",
+          "timing": {
+            "scope_channel": 1,
+            "mode": "DSHOT600",
+            "sample_interval_ns": 20.0,
+            "voltage_calibration_tested": false,
+            "frames": [
+              {
+                "frame_hex": "89cd",
+                "throttle_or_command": 1102,
+                "telemetry": 0,
+                "crc_ok": true,
+                "bit_period_us": 1.699999999999987,
+                "zero_high_us": 0.5800000000000001,
+                "one_high_us": 1.18
+              }
+            ],
+            "candidate_frame_lengths": [
+              16
+            ],
+            "frame_crc_passed": true,
+            "nominal_rate_timing_passed": true,
+            "bit_period_error_percent": [
+              1.9999999999992246
+            ],
+            "passed": true
+          }
+        },
+        {
+          "ecf_channel": 7,
+          "scope_channel": 4,
+          "raw_sha256": "6ec2a743d6e7d2e50618d552dbf9668a71dc070661851a3960164f1dab00f92e",
+          "timing": {
+            "scope_channel": 4,
+            "mode": "DSHOT600",
+            "sample_interval_ns": 20.0,
+            "voltage_calibration_tested": false,
+            "frames": [
+              {
+                "frame_hex": "ad43",
+                "throttle_or_command": 1386,
+                "telemetry": 0,
+                "crc_ok": true,
+                "bit_period_us": 1.699999999999987,
+                "zero_high_us": 0.6,
+                "one_high_us": 1.2
+              }
+            ],
+            "candidate_frame_lengths": [
+              16
+            ],
+            "frame_crc_passed": true,
+            "nominal_rate_timing_passed": true,
+            "bit_period_error_percent": [
+              1.9999999999992246
+            ],
+            "passed": true
+          }
+        }
+      ]
+    }
+  },
+  "timer_predictions": {
+    "150": {
+      "2": {
+        "prescaler": 66,
+        "auto_reload": 19,
+        "bit_period_us": 6.7
+      },
+      "3": {
+        "prescaler": 66,
+        "auto_reload": 19,
+        "bit_period_us": 6.7
+      },
+      "4": {
+        "prescaler": 66,
+        "auto_reload": 19,
+        "bit_period_us": 6.7
+      }
+    },
+    "300": {
+      "2": {
+        "prescaler": 32,
+        "auto_reload": 19,
+        "bit_period_us": 3.3
+      },
+      "3": {
+        "prescaler": 32,
+        "auto_reload": 19,
+        "bit_period_us": 3.3
+      },
+      "4": {
+        "prescaler": 32,
+        "auto_reload": 19,
+        "bit_period_us": 3.3
+      }
+    },
+    "600": {
+      "2": {
+        "prescaler": 16,
+        "auto_reload": 19,
+        "bit_period_us": 1.7
+      },
+      "3": {
+        "prescaler": 16,
+        "auto_reload": 19,
+        "bit_period_us": 1.7
+      },
+      "4": {
+        "prescaler": 16,
+        "auto_reload": 19,
+        "bit_period_us": 1.7
+      }
+    }
+  }
+}

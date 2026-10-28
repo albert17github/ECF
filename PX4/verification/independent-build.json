@@ -1,0 +1,20 @@
+{
+  "project": "PX4",
+  "revision": 3,
+  "passed": true,
+  "source_manifest_sha256": "cc7caca026d6fb57f8beb0d02156b128ae5cd737a095a5f12eafe169ac1e7d21",
+  "clean_build_in_new_project": true,
+  "modified_source_allowed": false,
+  "compiler": "Ubuntu gcc-arm-none-eabi15:13.2.rel1-2 / 13.2.1",
+  "products": {
+    "image": {
+      "sha256": "7815f628d52b16d3364ad862e4a02287f2889f6bc116b6f2d35d95cb948fa87d",
+      "bytes": 5767712
+    },
+    "elf": {
+      "sha256": "6325491c93dd510f5ece9e3d0ba180548123eee9b67ed0b3281ce22db0f35f5d",
+      "bytes": 39701672
+    }
+  },
+  "final_source_zip_proof": "final-source-zip-rebuild.json in the release attachment directory"
+}

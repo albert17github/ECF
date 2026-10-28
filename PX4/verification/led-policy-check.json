@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-28T03:30:56.274693+00:00",
+  "project": "PX4",
+  "passed": true,
+  "actual_source": "source/boards/ecf/core-h743/src/led.cpp",
+  "source_sha256": "9cc4a034bb13d06d61a2a7c6372706336296b7364fdda191b68a36750f661ace",
+  "checks": 25,
+  "timer_wrap_checked": false,
+  "armed_bypass_checked": false,
+  "final_native_state_restored": true,
+  "physical_color_observed": false
+}

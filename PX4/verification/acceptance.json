@@ -1,0 +1,78 @@
+{
+  "updated_at": "2026-10-28T04:03:15.646872+00:00",
+  "project": "PX4",
+  "revision": 3,
+  "image_sha256": "7815f628d52b16d3364ad862e4a02287f2889f6bc116b6f2d35d95cb948fa87d",
+  "source_manifest_sha256": "cc7caca026d6fb57f8beb0d02156b128ae5cd737a095a5f12eafe169ac1e7d21",
+  "passed": true,
+  "scope": "Output driver regressions, factory defaults, GPIO, output combinations, scoped physical timing and sensor/runtime observation",
+  "new_physical_tests_run": true,
+  "native_factory_settings_verified": true,
+  "factory_gpio_verified": true,
+  "native_arming_checks_preserved": true,
+  "bench_unarmed": true,
+  "external_peripheral_interoperability_tested": false,
+  "flight_tested": false,
+  "default_power_profile": {
+    "voltage_divider": 11,
+    "current_mv_per_a": 20,
+    "zero_offset": 0,
+    "mode": "ADC_UART3",
+    "external_logic_max_v": 3.3
+  },
+  "serial_roles": {
+    "1": "ELRS_CRSF",
+    "3": "spare",
+    "4": "GPS2",
+    "5": "MAVLink2",
+    "6": "GPS1",
+    "7": "serial_ESC_telemetry",
+    "8": "disabled"
+  },
+  "host_output_driver_regression_passed": true,
+  "output_combinations": 4,
+  "physical_waveforms_tested": {
+    "channels": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "PWM400": true,
+    "DSHOT300": true,
+    "DSHOT150_600": true,
+    "amplitude_calibrated": false
+  },
+  "led": {
+    "host_policy_checks": 25,
+    "source_unchanged": true,
+    "new_physical_color_observation": false,
+    "previous_physical_observation": "previous-led-observation.json"
+  },
+  "runtime": {
+    "seconds": 60.094000000011874,
+    "streams": {
+      "SYS_STATUS": {
+        "samples": 301,
+        "maximum_gap_seconds": 0.21900000001187436
+      },
+      "HIGHRES_IMU": {
+        "samples": 301,
+        "maximum_gap_seconds": 0.21900000001187436
+      },
+      "ATTITUDE": {
+        "samples": 300,
+        "maximum_gap_seconds": 0.29699999999138527
+      }
+    },
+    "maximum_load_permille": 422
+  },
+  "evidence_record_sha256": {
+    "factory": "50db42f5bacc43fe2d843d2effed917455d2302e806dfabc11e08de42e611380",
+    "gpio": "05d047b245a648fb089de65435d630be3bed6c0ba464ccfeaf8e19531f4cbc56",
+    "outputs": "15dc6bf2b77efac8f00771a483a2f8233261e347f5e4f9c6b68183cfa4a0cddb",
+    "physical": "1be22aefd7e710a17ba6721e2133070f424e1ceb6ec623eb68767c1b730e2400",
+    "runtime": "d22ce91a10de3bbcdba36b1596d040ae625593ece11b764c2ee95fafd8acf0ab",
+    "rates": "1d51cd499aa47eea00af63ce18eabe74cee71fd51550754e2d4aaf3d2cdbac74"
+  }
+}

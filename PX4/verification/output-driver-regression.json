@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "source_sha256": "4ae8593fc88ac96875bf3af11246e093423453076ffe38c45294038410c91084",
+  "output": "timer=0 rate=150000 actual=149253.731343 error_percent=-0.497512 arr=19 psc=66 pass=1\ntimer=0 rate=300000 actual=303030.303030 error_percent=1.010101 arr=19 psc=32 pass=1\ntimer=0 rate=600000 actual=588235.294118 error_percent=-1.960784 arr=19 psc=16 pass=1\ntimer=1 rate=150000 actual=149253.731343 error_percent=-0.497512 arr=19 psc=66 pass=1\ntimer=1 rate=300000 actual=303030.303030 error_percent=1.010101 arr=19 psc=32 pass=1\ntimer=1 rate=600000 actual=588235.294118 error_percent=-1.960784 arr=19 psc=16 pass=1\ntimer=2 rate=150000 actual=149253.731343 error_percent=-0.497512 arr=19 psc=66 pass=1\ntimer=2 rate=300000 actual=303030.303030 error_percent=1.010101 arr=19 psc=32 pass=1\ntimer=2 rate=600000 actual=588235.294118 error_percent=-1.960784 arr=19 psc=16 pass=1\ninvalid inputs rejected\n",
+  "scope": "host regression with mocked peripheral registers; no physical timing claim"
+}

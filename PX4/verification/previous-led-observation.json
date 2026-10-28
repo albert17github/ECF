@@ -1,0 +1,20 @@
+{
+  "previous_revision": 2,
+  "image_sha256": "3990dbb749d8ad7f8e341aa27d9ff274db5906447fd96d3a08b239af3bd38197",
+  "physical_color_verified": true,
+  "observed": {
+    "boot_color": "white",
+    "startup_pulses": 3,
+    "normal_status_resumed": true,
+    "physical_color_verified": true,
+    "isolated_led_diagnostic_verified": true,
+    "host_policy_checks": 25
+  },
+  "source_sha256": "9cc4a034bb13d06d61a2a7c6372706336296b7364fdda191b68a36750f661ace",
+  "all_led_source_files_unchanged": true,
+  "compared_sources": {
+    "source/boards/ecf/core-h743/src/led.cpp": "9cc4a034bb13d06d61a2a7c6372706336296b7364fdda191b68a36750f661ace",
+    "source/boards/ecf/core-h743/src/init.c": "8b73d04c5dc0853647ae91ddc9fd78bf91aa8c651471222b66ffd3a15323dc0c"
+  },
+  "new_physical_observation": false
+}
