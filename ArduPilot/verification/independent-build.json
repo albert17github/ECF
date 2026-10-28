@@ -1,0 +1,32 @@
+{
+  "project": "ArduCopter",
+  "revision": 4,
+  "passed": true,
+  "source_manifest_sha256": "f1656a8e4236772eeb1b5aea94f04bd0128eda81b241b79b57d2020ec4ac3fe0",
+  "clean_build_in_new_project": true,
+  "modified_source_allowed": false,
+  "compiler": "ARM GCC10.2.1 upstream-pinned10-2020-q4-major",
+  "products": {
+    "image": {
+      "sha256": "988c9505cf38bac39f3fa46d1655a9b91b7c5636cd0e2fbf9cd8788555c0f5bd",
+      "bytes": 5767712,
+      "byte_identical_previous": true
+    },
+    "elf": {
+      "sha256": "28e47c056f9c4c8a282f2b8ee75f68755cccf7eb0fb5a430517552e7894c3e65",
+      "bytes": 48400092,
+      "byte_identical_previous": true
+    },
+    "apj": {
+      "sha256": "3b9c0fd41ede4ec5c673d0fa654792f392f9862b0f505fee0919a664d5ad1c2b",
+      "bytes": 1311744,
+      "byte_identical_previous": true
+    },
+    "bootloader_elf": {
+      "sha256": "6d0cdc323f3d9df42f9f722d64612b1d32034784a85cbed1217200c70369b3e1",
+      "bytes": 2012236,
+      "byte_identical_previous": true
+    }
+  },
+  "final_source_zip_proof": "final-source-zip-rebuild.json in the release attachment directory"
+}

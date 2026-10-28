@@ -1,0 +1,53 @@
+{
+  "updated_at": "2026-10-28T03:33:12.139501+00:00",
+  "project": "ArduCopter",
+  "revision": 4,
+  "image_sha256": "988c9505cf38bac39f3fa46d1655a9b91b7c5636cd0e2fbf9cd8788555c0f5bd",
+  "source_manifest_sha256": "f1656a8e4236772eeb1b5aea94f04bd0128eda81b241b79b57d2020ec4ac3fe0",
+  "passed": true,
+  "scope": "Rebuild and metadata verification; prior bench evidence bound to byte-identical executable products",
+  "new_physical_tests_run": false,
+  "previous_revision": 3,
+  "previous_acceptance_sha256": "4a58daafd9263ce8171061f2ebf7bfcaac1f7521c0f97ff2190d69f029fc9db8",
+  "native_factory_settings_verified": true,
+  "factory_gpio_verified": true,
+  "native_arming_checks_preserved": true,
+  "external_peripheral_interoperability_tested": false,
+  "flight_tested": false,
+  "default_power_profile": {
+    "voltage_divider": 11,
+    "current_mv_per_a": 20,
+    "zero_offset": 0,
+    "mode": "ADC_UART3",
+    "external_logic_max_v": 3.3
+  },
+  "serial_roles": {
+    "1": "ELRS_CRSF",
+    "3": "spare",
+    "4": "GPS2",
+    "5": "MAVLink2",
+    "6": "GPS1",
+    "7": "serial_ESC_telemetry",
+    "8": "disabled"
+  },
+  "led": {
+    "boot_color": "native_red_blue_initialising",
+    "startup_pulses": null,
+    "normal_status_resumed": true,
+    "physical_color_verified": true,
+    "isolated_led_diagnostic_verified": true,
+    "host_policy_checks": 14
+  },
+  "physical_waveforms_tested": {
+    "channels": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "PWM400": true,
+    "DSHOT300": true,
+    "basis": "same_image_sha256",
+    "amplitude_calibrated": false
+  }
+}

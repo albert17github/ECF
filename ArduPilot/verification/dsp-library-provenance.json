@@ -1,0 +1,11 @@
+{
+  "version": "5.6.0",
+  "archive_sha256": "b62c18429a4eaf0c8c90ed5f5bbb9cb70d173f9685cc14b744b0930496e57c28",
+  "archive_bytes": 5331020,
+  "matched": true,
+  "tag_object": {
+    "sha": "b5f0603d6a584d1724d952fd8b0737458b90d62b",
+    "type": "commit",
+    "url": "https://api.github.com/repos/ARM-software/CMSIS_5/git/commits/b5f0603d6a584d1724d952fd8b0737458b90d62b"
+  }
+}

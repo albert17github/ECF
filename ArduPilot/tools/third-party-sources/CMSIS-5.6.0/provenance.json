@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/ARM-software/CMSIS_5",
+  "tag": "5.6.0",
+  "commit": "b5f0603d6a584d1724d952fd8b0737458b90d62b",
+  "sources": 326,
+  "scope": [
+    "CMSIS/DSP/Source/",
+    "CMSIS/DSP/Include/",
+    "CMSIS/DSP/Projects/GCC/",
+    "CMSIS/Core/Include/"
+  ],
+  "firmware_build_uses_unchanged_upstream_archive": true,
+  "matching_archive": "source/libraries/AP_GyroFFT/CMSIS_5/lib/libarm_cortexM7lfdp_math.a",
+  "matching_archive_sha256": "b62c18429a4eaf0c8c90ed5f5bbb9cb70d173f9685cc14b744b0930496e57c28",
+  "matching_archive_bytes": 5331020,
+  "exact_upstream_lfs_content_match": true
+}
