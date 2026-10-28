@@ -12,7 +12,7 @@
 
 ## 固件与构建
 
-`firmware/` 保存对应出厂 HEX、SHA-256 与调试 ELF。HEX 起始地址为 `0x08000000`，无独立引导程序。出厂镜像清除 `0x08020000–0x08040000` 参数区；烧录前备份配置，使用 STM32CubeProgrammer 经 ST-Link 或 ROM USB DFU 烧录、校验并复位。SD 日志不在 Flash 擦除范围。
+`firmware/` 保存对应出厂 HEX 和 SHA-256。调试 ELF 随完整源码包提供，位于包内 `firmware/debug/`。HEX 起始地址为 `0x08000000`，无独立引导程序。出厂镜像清除 `0x08020000–0x08040000` 参数区；烧录前备份配置，使用 STM32CubeProgrammer 经 ST-Link 或 ROM USB DFU 烧录、校验并复位。SD 日志不在 Flash 擦除范围。
 
 构建环境：Windows／PowerShell 7、ARM GCC 13.3.1、GNU Make、Git Bash、Python。工具链及构建工具通过 PATH 或构建入口参数指定。将工程解压到较短本地路径，例如 `D:/ECF/Betaflight/`，避免 Windows 工具的路径长度限制。
 

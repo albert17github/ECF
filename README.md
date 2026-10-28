@@ -4,10 +4,14 @@
 
 ECF 是基于 STM32H743 的开源飞控核心模块。本仓库提供 Betaflight、INAV、ArduPilot 和 PX4 的 ECF 板级适配源码、编译入口及固件。
 
+**使用范围：仅限科研、教学实验及小型娱乐项目，禁止用于大型货运或载人飞行器**。
+
 - 硬件开源：待补充。
 - 项目网页：待补充。
 
 核心板采用 STM32H743VIH6，集成 ICM-45686、BMP581、MMC5983MA 和 SD NAND；尺寸约 51 × 21mm，提供 45 个板边接口。VIN 使用稳压 5V，外部信号为 3.3V 逻辑。
+
+核心板可搭配连接器底板使用，并按需要接入独立模拟电源监测模块及其他外设。
 
 <img src="assets/ecf-core-photo.jpg" alt="ECF 核心板实物" width="560">
 
@@ -19,6 +23,12 @@ ECF 是基于 STM32H743 的开源飞控核心模块。本仓库提供 Betaflight
 - **PX4：v1.17.0 / ECF r3**，源码与说明：[PX4](PX4/README.md)。
 
 以上为 ECF 适配版本。各目录的 `release.json` 记录上游提交、依赖版本和镜像校验值；ArduPilot 当前提供 ArduCopter 构建。
+
+## 引脚定义
+
+下图标出 45 个板边接口的位置、编号、丝印名称及可选功能；具体出厂用途见“默认配置”。
+
+![ECF 核心板引脚图](assets/ecf-pinout.png)
 
 ## 传感器与驱动适配
 
@@ -75,15 +85,6 @@ ADC 输入限于 0～3.3V。更换底板后，按实际分压、灵敏度和零�
 
 ArduCopter／PX4 可选 I²C4 的 INA238 数字电源监测，须停用同组 UART3；参考配置为 **7 位地址 0x45、0.5mΩ 分流器、120A 换算量程**，须匹配实际模块。Betaflight／INAV 当前没有原生 INA238／INA226 电池监测后端。详细切换步骤见各固件 README 的“功能复用与电源监测”。
 
-<details>
-<summary>查看引脚图</summary>
-
-图中列出可选功能；出厂启用项以上述配置为准。
-
-![ECF 核心板引脚图](assets/ecf-pinout.png)
-
-</details>
-
 ### 串口与外设
 
 - **UART1（29／30）**：ELRS 接收机，CRSF 双线、非反相。
@@ -123,6 +124,8 @@ git checkout main
 ## 下载与使用
 
 下载入口：[Releases](https://github.com/albert17github/ECF/releases)。每套固件提供刷写包、完整源码包和 SHA-256 校验清单。刷写包包含最终镜像和安装说明；首次安装、后续升级及参数恢复按对应固件 README 操作。
+
+调试 ELF 随完整源码包提供，位于包内 `firmware/debug/`。
 
 ## 许可
 
