@@ -1,0 +1,2 @@
+# ECFH743 shared-pad mode; configure UART protocol separately.
+BRD_ALT_CONFIG 2

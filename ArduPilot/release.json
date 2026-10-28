@@ -1,0 +1,86 @@
+{
+  "project": "ArduCopter",
+  "target": "ECFH743",
+  "tag": "Copter-4.7.2",
+  "commit": "fb773567896014da007bca58358704d4a0d8516f",
+  "commit_role": "official stable upstream baseline",
+  "package_revision": 4,
+  "compiler": "ARM GCC10.2.1 upstream-pinned10-2020-q4-major",
+  "build_entry": "build.sh",
+  "source_files": 10802,
+  "source_manifest": "verification/source-SHA256SUMS.txt",
+  "source_manifest_sha256": "f1656a8e4236772eeb1b5aea94f04bd0128eda81b241b79b57d2020ec4ac3fe0",
+  "source_date_epoch": 1792532060,
+  "bootloader_address": "0x08000000",
+  "application_address": "0x08020000",
+  "parameter_region": [
+    "0x081c0000",
+    "0x08200000"
+  ],
+  "configuration_schema": "native ArduCopter4.7.2",
+  "validation": {
+    "build": "passed",
+    "board_software": "passed",
+    "portable_clean_build": "passed",
+    "final_visual": "passed",
+    "external_peripheral_interoperability_tested": false,
+    "flight_tested": false,
+    "scope": "rebuild_metadata_and_same_image_bench_evidence",
+    "physical_waveforms_tested": true,
+    "new_physical_tests_run": false,
+    "final_visual_basis": "previous_physical_observation_on_byte_identical_image"
+  },
+  "compiler_archive_sha256": "21134caa478bbf5352e239fbc6e2da3038f8d2207e089efc96c3b55f1edcd618",
+  "source_frozen": true,
+  "debug_symbols": true,
+  "debug_build": false,
+  "ecf_revision": 4,
+  "mandatory_power_defaults_profile": "2026-10-27",
+  "firmware_build_pending": false,
+  "historical_candidate_image_sha256": "f85e63d577c7f32e58eeac730859fda5126db6e1585d27b93fbe3c21b2110ec5",
+  "default_power_profile": {
+    "voltage_divider": 11,
+    "current_mv_per_a": 20,
+    "zero_offset": 0,
+    "mode": "ADC_UART3",
+    "external_logic_max_v": 3.3
+  },
+  "verify_entry": "verify.ps1",
+  "firmware": {
+    "image": "firmware/ECFH743-ArduCopter-4.7.2-factory.hex",
+    "sha256": "988c9505cf38bac39f3fa46d1655a9b91b7c5636cd0e2fbf9cd8788555c0f5bd",
+    "apj": "firmware/ECFH743-ArduCopter-4.7.2.apj",
+    "apj_sha256": "3b9c0fd41ede4ec5c673d0fa654792f392f9862b0f505fee0919a664d5ad1c2b",
+    "elf": "firmware/debug/ECFH743-ArduCopter-4.7.2.elf",
+    "elf_sha256": "28e47c056f9c4c8a282f2b8ee75f68755cccf7eb0fb5a430517552e7894c3e65",
+    "source_manifest_sha256": "f1656a8e4236772eeb1b5aea94f04bd0128eda81b241b79b57d2020ec4ac3fe0",
+    "includes_matching_bootloader": true,
+    "clears_parameters": true,
+    "status": "accepted-rebuild-and-identical-image-verification"
+  },
+  "previous_default_release_preserved": true,
+  "default_interfaces": {
+    "1": "ELRS_CRSF",
+    "3": "spare",
+    "4": "GPS2",
+    "5": "MAVLink2",
+    "6": "GPS1",
+    "7": "serial_ESC_telemetry",
+    "8": "disabled"
+  },
+  "led_profile": {
+    "version": "2026-10-27",
+    "boot_color": "native_red_blue_initialising",
+    "runtime": "native_standard_status",
+    "manual": "LED-STATUS.md",
+    "startup_identification": "native_initialising_pattern"
+  },
+  "release_date": "2026-10-28",
+  "previous_revision": 3,
+  "changes": [
+    "Refresh public delivery verification and documentation"
+  ],
+  "runtime_source_changed": false,
+  "previous_image_sha256": "988c9505cf38bac39f3fa46d1655a9b91b7c5636cd0e2fbf9cd8788555c0f5bd",
+  "previous_executable_products_identical": true
+}

@@ -1,0 +1,41 @@
+{
+  "project": "ArduCopter",
+  "target": "ECFH743",
+  "tag": "Copter-4.7.2",
+  "commit": "fb773567896014da007bca58358704d4a0d8516f",
+  "compiler": "ARM GCC 10.2.1",
+  "source_manifest_sha256": "f1656a8e4236772eeb1b5aea94f04bd0128eda81b241b79b57d2020ec4ac3fe0",
+  "app_bytes": 1481252,
+  "bootloader_bytes": 19068,
+  "image": "ECFH743-ArduCopter-4.7.2-factory.hex",
+  "image_sha256": "988c9505cf38bac39f3fa46d1655a9b91b7c5636cd0e2fbf9cd8788555c0f5bd",
+  "bootloader_address": "0x08000000",
+  "application_address": "0x08020000",
+  "parameter_region": [
+    "0x081c0000",
+    "0x08200000"
+  ],
+  "configuration_cleared_bytes": 262144,
+  "includes_matching_bootloader": true,
+  "debug_symbols": true,
+  "hardware_validation": "pending for this exact image",
+  "files": {
+    "ECFH743-ArduCopter-4.7.2-factory.hex": {
+      "bytes": 5767712,
+      "sha256": "988c9505cf38bac39f3fa46d1655a9b91b7c5636cd0e2fbf9cd8788555c0f5bd"
+    },
+    "ECFH743-ArduCopter-4.7.2.apj": {
+      "bytes": 1311744,
+      "sha256": "3b9c0fd41ede4ec5c673d0fa654792f392f9862b0f505fee0919a664d5ad1c2b"
+    },
+    "debug/ECFH743-ArduCopter-4.7.2.elf": {
+      "bytes": 48400092,
+      "sha256": "28e47c056f9c4c8a282f2b8ee75f68755cccf7eb0fb5a430517552e7894c3e65"
+    },
+    "debug/ECFH743-bootloader.elf": {
+      "bytes": 2012236,
+      "sha256": "6d0cdc323f3d9df42f9f722d64612b1d32034784a85cbed1217200c70369b3e1"
+    }
+  },
+  "hardware_verification": "factory_defaults_led_and_brief_regression_passed"
+}
