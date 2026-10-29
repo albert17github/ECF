@@ -19,6 +19,20 @@ ECF 是基于 STM32H743 的开源飞控核心板。本仓库提供 Betaflight、
   </a>
 </p>
 
+## 硬件规格
+
+以下为芯片规格与板级供电配置。实际主频、量程和采样率由各固件配置决定。
+
+- **MCU**：[STM32H743VIH6](https://www.st.com/en/microcontrollers-microprocessors/stm32h743vi.html)，Arm Cortex-M7，最高 **480MHz**，**2MB Flash、约 1MB RAM**，支持双精度 FPU 与 DSP 指令。
+- **IMU**：[ICM-45686](https://www.invensense.tdk.com/en-us/products/6-axis/icm-45686)，三轴陀螺仪＋三轴加速度计；最大量程分别为 **±4000°/s、±32g**，板上使用 SPI1。
+- **气压计**：[BMP581](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp581-ds004.pdf)，测量范围 **300～1250hPa**；手册典型相对精度 **±6Pa**（700～1100hPa、15～55°C、10kPa 步进，焊前条件），板上使用 I²C2。
+- **磁力计**：[MMC5983MA](https://media.digikey.com/pdf/Data%20Sheets/MEMSIC%20PDFs/MMC5983MA_RevA_4-3-19.pdf)，三轴磁场量程 **±8G（±0.8mT）**，支持 **18-bit 输出**；典型 RMS 噪声 **0.4mG**（BW=00、25°C、VDD=3.0V），板上使用 I²C2。
+- **输入选择**：[TPS2117](https://www.ti.com/lit/ds/symlink/tps2117.pdf) 在 USB 5V 与外部稳压 5V VIN 之间切换，优先使用 VIN。
+- **主电源**：[TPS62903](https://www.ti.com/lit/ds/symlink/tps62903.pdf) 同步降压，板上输出 **3.3V**，采用 **2.5MHz、强制 PWM** 配置；芯片连续输出能力为 **3A**。
+- **传感器电源**：[TPS7A2030](https://www.ti.com/lit/ds/symlink/tps7a20.pdf) 低噪声 LDO，由主 3.3V 产生 **3.0V**，为三颗传感器 VDD 供电；芯片输出能力为 **300mA**。传感器 VDDIO 与 I²C 上拉仍使用 3.3V。
+
+精度与噪声为原厂测试条件下的器件参数。3.3V 对外可用电流需扣除板内负载，并按输入能力及散热条件核定。
+
 ## 固件版本
 
 - **Betaflight：2026.6.2 / ECF r4**，源码与说明：[Betaflight](Betaflight/README.md)。
