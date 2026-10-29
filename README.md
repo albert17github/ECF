@@ -13,7 +13,11 @@ ECF 是基于 STM32H743 的开源飞控核心板。本仓库提供 Betaflight、
 
 简易底板与模拟电源模块为最小接入示例，可替换或自行设计。
 
-<img src="assets/ecf-core-photo.jpg" alt="ECF 核心板实物" width="560">
+<p align="center">
+  <a href="assets/ecf-core-photo.jpg">
+    <img src="assets/core-photo-crop.webp" alt="ECF 核心板实物（裁切，点击查看原图）" width="640">
+  </a>
+</p>
 
 ## 固件版本
 
@@ -28,7 +32,11 @@ ECF 修订号对应板级适配版本。上游提交、依赖版本和镜像校�
 
 下图列出 45 个板边位置的编号、丝印及可选功能，出厂用途见“默认配置”。
 
-![ECF 核心板引脚图](assets/ecf-pinout.png)
+<p align="center">
+  <a href="assets/ecf-pinout.png">
+    <img src="assets/ecf-pinout.png" alt="ECF 核心板 45 Pin 引脚图（点击查看原图）" width="1000">
+  </a>
+</p>
 
 ## 传感器与驱动适配
 
@@ -44,17 +52,35 @@ ECF 修订号对应板级适配版本。上游提交、依赖版本和镜像校�
 <details>
 <summary>传感器界面截图</summary>
 
-Betaflight：
-![Betaflight 传感器](assets/betaflight-sensors.png)
+<p align="center">
+  <strong>Betaflight · 传感器局部</strong><br>
+  <a href="assets/betaflight-sensors.png">
+    <img src="assets/betaflight-detail.webp" alt="Betaflight 传感器局部截图" width="340">
+  </a><br>
+  <a href="assets/betaflight-sensors.png">查看完整截图</a>
+</p>
 
-INAV：
-![INAV 传感器](assets/inav-sensors.png)
+<p align="center">
+  <strong>INAV · 传感器局部</strong><br>
+  <a href="assets/inav-sensors.png">
+    <img src="assets/inav-detail.webp" alt="INAV 传感器局部截图" width="570">
+  </a><br>
+  <a href="assets/inav-sensors.png">查看完整截图</a>
+</p>
 
-ArduCopter：
-![ArduCopter 传感器](assets/arducopter-sensors.png)
+<p align="center">
+  <strong>ArduCopter</strong><br>
+  <a href="assets/arducopter-sensors.png">
+    <img src="assets/arducopter-sensors.png" alt="ArduCopter 传感器完整截图" width="800">
+  </a>
+</p>
 
-PX4：
-![PX4 传感器](assets/px4-sensors.png)
+<p align="center">
+  <strong>PX4</strong><br>
+  <a href="assets/px4-sensors.png">
+    <img src="assets/px4-sensors.png" alt="PX4 传感器完整截图" width="800">
+  </a>
+</p>
 
 </details>
 
