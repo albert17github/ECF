@@ -4,7 +4,7 @@
 
 ECF 是基于 STM32H743 的开源飞控核心板。本仓库提供 Betaflight、INAV、ArduPilot 和 PX4 的板级源码、构建入口及固件。
 
-**使用范围：仅限科研、教学实验及小型娱乐项目，禁止用于大型货运或载人飞行器**。
+**设计用途与安全：** ECF 面向科研、教学实验及小型娱乐项目设计，尚未完成整机实飞验证，不适用于大型货运、载人飞行或其他安全关键用途。
 
 - 硬件开源：待补充。
 - 项目网页：待补充。
@@ -44,7 +44,7 @@ ECF 是基于 STM32H743 的开源飞控核心板。本仓库提供 Betaflight、
 - **ArduPilot：ArduCopter 4.7.2 / ECF r4**，源码与说明：[ArduPilot](ArduPilot/README.md)。
 - **PX4：v1.17.0 / ECF r3**，源码与说明：[PX4](PX4/README.md)。
 
-ECF 修订号对应板级适配版本。上游提交、依赖版本和镜像校验值见各目录 `release.json`；ArduPilot 当前仅提供 ArduCopter 构建。
+ECF 修订号对应板级适配版本。详细版本与构建信息见各目录说明；ArduPilot 当前仅提供 ArduCopter 构建。
 
 ## 引脚定义
 
@@ -65,11 +65,11 @@ ECF 修订号对应板级适配版本。上游提交、依赖版本和镜像校�
 - **输出与状态灯**：已适配 CH1～CH8 的 PWM、普通 DShot 和板载 RGB 状态灯。同一定时器组共用输出时基；INAV 当前无双向 DShot 接收，PX4 双向 DShot 限于 CH1～CH4。
 - **外部接口**：已配置 CRSF、GPS、MSP／MAVLink2、串口 ESC 遥测和 DroneCAN，默认用途见下文。外设互通须按实际型号验证。
 
-四套固件已逐一烧录，板载传感器基础调试结果基本正常。现有台架记录包括日志、接口配置及 CH1／3／5／7 的 PWM400、DShot300 波形检查；尚未完成实飞验证。
+四款固件已完成样机烧录、板载传感器读取、日志和接口配置检查，并测试了 CH1／3／5／7 的 PWM400、DShot300 输出。尚未完成整机实飞验证。
 
 ## 默认配置
 
-以下为上述版本的出厂配置，不含单台设备校准值。单台设备须另行校准。引脚编号按 USB-C 朝上的正面视图。
+以下为本文所列版本的出厂配置，不含单台设备校准值。单台设备须另行校准。引脚编号按 USB-C 朝上的正面视图。
 
 ### 功能复用与电源监测
 
@@ -119,9 +119,9 @@ ArduCopter／PX4 可选 I²C4 的 INA238 数字电源监测，须停用同组 UA
 - **ArduCopter**：Linux／WSL x86_64、ARM GCC 10.2.1（10-2020-q4-major）、Python 3.12.3、GNU Make、宿主 GCC；入口 `build.sh`。
 - **PX4**：Ubuntu 24.04 x86_64／WSL、ARM GCC 13.2.1、Python 3.12、CMake 3.28.3、Ninja 1.11.1、GNU Make、宿主 GCC；入口 `build.sh`，Windows 可使用 `build.ps1` 调用 WSL。
 
-各工程包含完整源码、固定依赖和构建脚本。工具链按指定版本安装，命令见各目录 README。四套源码包均已独立解压重建，HEX／ELF 与对应发布产物逐字节一致。
+各工程包含完整源码、所需依赖和编译脚本。按对应 README 安装工具并编译；发布源码已经重新编译检查。
 
-从 Git 克隆时，按以下步骤保留源码原始换行，以匹配校验清单。直接下载源码包无需此步骤。
+从 Git 下载时，按以下步骤保留源码原始换行。直接下载源码包无需此步骤。
 
 ```sh
 git clone --no-checkout https://github.com/albert17github/ECF.git
@@ -132,10 +132,12 @@ git checkout main
 
 ## 下载与使用
 
-下载入口：[Releases](https://github.com/albert17github/ECF/releases)。每套固件提供刷写包、完整源码包和 SHA-256 校验清单。刷写包包含最终镜像和安装说明；首次安装、升级与参数恢复步骤见对应固件 README。
+下载入口：[Releases](https://github.com/albert17github/ECF/releases)。每套固件提供刷写包、完整源码包和文件校验清单。刷写包包含最终镜像和安装说明；首次安装、升级与参数恢复步骤见对应固件 README。
 
 调试 ELF 随完整源码包提供，位于包内 `firmware/debug/`。
 
 ## 许可
+
+ECF 原创硬件设计采用 [CERN-OHL-W-2.0](https://spdx.org/licenses/CERN-OHL-W-2.0.html)，包括核心板、极简底板及模拟电压电流计的原理图、PCB、BOM 和配套设计资料；第三方器件资料与库遵循各自许可。允许复制、修改、制造和销售；分发设计或硬件时须保留声明、提供完整设计源文件或其获取地址，修改部分继续按本协议开放。通过已公开接口连接、且符合协议“外部材料”定义的独立模块可保留自身许可。
 
 Betaflight、INAV、ArduPilot 保留各自 GPLv3 许可，PX4 保留 BSD 3-Clause 许可；第三方代码遵循其随附声明。具体许可范围以各目录的 LICENSE 和源文件声明为准。
