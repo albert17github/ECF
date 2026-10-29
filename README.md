@@ -21,17 +21,21 @@ ECF 是基于 STM32H743 的开源飞控核心板。本仓库提供 Betaflight、
 
 ## 硬件规格
 
-以下为芯片规格与板级供电配置。实际主频、量程和采样率由各固件配置决定。
+以下为器件规格与板级连接。实际主频、量程、采样率和滤波设置由所用固件决定。
 
-- **MCU**：[STM32H743VIH6](https://www.st.com/en/microcontrollers-microprocessors/stm32h743vi.html)，Arm Cortex-M7，最高 **480MHz**，**2MB Flash、约 1MB RAM**，支持双精度 FPU 与 DSP 指令。
-- **IMU**：[ICM-45686](https://www.invensense.tdk.com/en-us/products/6-axis/icm-45686)，三轴陀螺仪＋三轴加速度计；最大量程分别为 **±4000°/s、±32g**，板上使用 SPI1。
-- **气压计**：[BMP581](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp581-ds004.pdf)，测量范围 **300～1250hPa**；手册典型相对精度 **±6Pa**（700～1100hPa、15～55°C、10kPa 步进，焊前条件），板上使用 I²C2。
-- **磁力计**：[MMC5983MA](https://media.digikey.com/pdf/Data%20Sheets/MEMSIC%20PDFs/MMC5983MA_RevA_4-3-19.pdf)，三轴磁场量程 **±8G（±0.8mT）**，支持 **18-bit 输出**；典型 RMS 噪声 **0.4mG**（BW=00、25°C、VDD=3.0V），板上使用 I²C2。
-- **输入选择**：[TPS2117](https://www.ti.com/lit/ds/symlink/tps2117.pdf) 在 USB 5V 与外部稳压 5V VIN 之间切换，优先使用 VIN。
-- **主电源**：[TPS62903](https://www.ti.com/lit/ds/symlink/tps62903.pdf) 同步降压，板上输出 **3.3V**，采用 **2.5MHz、强制 PWM** 配置；芯片连续输出能力为 **3A**。
-- **传感器电源**：[TPS7A2030](https://www.ti.com/lit/ds/symlink/tps7a20.pdf) 低噪声 LDO，由主 3.3V 产生 **3.0V**，为三颗传感器 VDD 供电；芯片输出能力为 **300mA**。传感器 VDDIO 与 I²C 上拉仍使用 3.3V。
+- **主控 STM32H743VIH6**：Arm Cortex-M7，最高 480MHz，2MB Flash、约 1MB RAM，支持双精度 FPU 与 DSP 指令；TFBGA100 封装。
+- **六轴 IMU ICM-45686**：三轴陀螺仪与三轴加速度计，最大量程分别为 ±4000°/s、±32g；原厂典型噪声密度分别为 3.8mdps/√Hz、70µg/√Hz。板上通过 SPI1 接入，用于角速度与加速度采集。
+- **气压计 BMP581**：压力测量范围 300～1250hPa；典型相对精度 ±6Pa（700～1100hPa、15～55°C、10kPa 步进），典型绝对精度 ±30Pa（300～1100hPa、−5～65°C）；最低带宽、最高分辨率设置下压力噪声为 0.08Pa。板上通过 I²C2 接入，用于气压与相对高度估计。
+- **磁力计 MMC5983MA**：三轴磁场量程 ±8G（±0.8mT），支持 18-bit 输出，18-bit 模式分辨率为 0.0625mG/LSB；典型总 RMS 噪声 0.4mG（BW=00、25°C、VDD=3.0V）。内置 SET/RESET，板上通过 I²C2 接入，用于磁场与航向估计。
+- **日志存储与状态指示**：MKDV4GCL-ABF SD NAND 通过 SDMMC2 四位总线连接，用于日志与运行数据；WS2812B-2020-V6 RGB 灯显示启动及运行状态。
+- **主电源 TPS62903**：同步降压芯片，器件输出电流能力为 3A；板上配置为 3.3V、2.5MHz、强制 PWM，供处理器、存储与数字接口使用。
+- **传感器电源 TPS7A2030**：300mA 低噪声 LDO，由系统 3.3V 产生传感器 VDD 3.0V；传感器 VDDIO、I²C 上拉仍使用系统 3.3V。
 
-精度与噪声为原厂测试条件下的器件参数。3.3V 对外可用电流需扣除板内负载，并按输入能力及散热条件核定。
+精度、噪声和分辨率为原厂规定条件下的器件参数；整板测量表现受滤波、安装、振动、温度和磁环境影响。3.3V 对外可用电流需扣除板内负载，并按输入能力及散热条件核定。
+
+参数资料：[STM32H743VIH6](https://www.st.com/en/microcontrollers-microprocessors/stm32h743vi.html)、[ICM-45686](https://www.invensense.tdk.com/en-us/products/6-axis/icm-45686)、[BMP581](https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmp581-ds004.pdf)、[MMC5983MA](https://www.memsic.com/Public/Uploads/uploadfile/files/20220119/MMC5983MADatasheetRevA.pdf)、[TPS62903](https://www.ti.com/product/TPS62903)、[TPS7A2030](https://www.ti.com/product/TPS7A20)。
+
+输入选择采用 **TPS2117**，在外部稳压 5V VIN 与 USB 5V 之间切换，优先使用 VIN。
 
 ## 固件版本
 
