@@ -2,12 +2,13 @@
 
 开源飞控核心板，以简单外设构建飞控，支持多种固件开发与适配。
 
-## 项目链接与资料
+## 项目链接
 
-- **GitHub 软件源码：** [albert17github/ECF](https://github.com/albert17github/ECF) — 四款固件源码、编译与使用说明。
-- **固件与源码下载：** [GitHub Releases](https://github.com/albert17github/ECF/releases) — 刷写包、源码包及安装说明。
-- **硬件设计资料：** [立创项目](https://oshwhub.com/albert17/project_ploxlieo) — 核心板、极简底板及模拟电压电流计的原理图、PCB 和 BOM（待公开）。
-- **项目主页与使用指南：** [Everything Can Fly](https://everything-can-fly-ecf.silly-vole-2201.chatgpt.site)（目前访问受限）。
+主页：[https://albertofficial.com/ECF](https://albertofficial.com/ECF)
+
+硬件：[立创开源项目](https://oshwhub.com/albert17/project_ploxlieo)
+
+软件：[GitHub](https://github.com/albert17github/ECF)
 
 ECF 是基于 STM32H743 的开源飞控核心板。本仓库提供 Betaflight、INAV、ArduPilot 和 PX4 的板级源码、构建入口及固件。
 
