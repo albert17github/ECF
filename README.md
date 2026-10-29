@@ -49,41 +49,6 @@ ECF 修订号对应板级适配版本。上游提交、依赖版本和镜像校�
 
 四套固件已逐一烧录，板载传感器基础调试结果基本正常。现有台架记录包括日志、接口配置及 CH1／3／5／7 的 PWM400、DShot300 波形检查；尚未完成实飞验证。
 
-<details>
-<summary>传感器界面截图</summary>
-
-<p align="center">
-  <strong>Betaflight · 传感器局部</strong><br>
-  <a href="assets/betaflight-sensors.png">
-    <img src="assets/betaflight-detail.webp" alt="Betaflight 传感器局部截图" width="340">
-  </a><br>
-  <a href="assets/betaflight-sensors.png">查看完整截图</a>
-</p>
-
-<p align="center">
-  <strong>INAV · 传感器局部</strong><br>
-  <a href="assets/inav-sensors.png">
-    <img src="assets/inav-detail.webp" alt="INAV 传感器局部截图" width="570">
-  </a><br>
-  <a href="assets/inav-sensors.png">查看完整截图</a>
-</p>
-
-<p align="center">
-  <strong>ArduCopter</strong><br>
-  <a href="assets/arducopter-sensors.png">
-    <img src="assets/arducopter-sensors.png" alt="ArduCopter 传感器完整截图" width="800">
-  </a>
-</p>
-
-<p align="center">
-  <strong>PX4</strong><br>
-  <a href="assets/px4-sensors.png">
-    <img src="assets/px4-sensors.png" alt="PX4 传感器完整截图" width="800">
-  </a>
-</p>
-
-</details>
-
 ## 默认配置
 
 以下为上述版本的出厂配置，不含单台设备校准值。单台设备须另行校准。引脚编号按 USB-C 朝上的正面视图。
